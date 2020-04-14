@@ -75,7 +75,7 @@
                         <ScrollBar layoutX="419.0" layoutY="40.0" orientation="VERTICAL" prefHeight="251.0" prefWidth="14.0" style="-fx-background-radius: 5;" />
                   <ImageView fitHeight="73.0" fitWidth="131.0" layoutX="277.0" layoutY="152.0" pickOnBounds="true" AnchorPane.bottomAnchor="110.33333333333331" AnchorPane.leftAnchor="277.0" AnchorPane.rightAnchor="25.333333333333314" AnchorPane.topAnchor="152.0">
                      <image>
-                        <Image url="@../Gambar/bubble%20chat.png" />
+                        <Image url="@../Gambar/bubble chat.png" />
                      </image>
                   </ImageView>
                   <Text layoutX="285.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Baik" wrappingWidth="100.0" />
