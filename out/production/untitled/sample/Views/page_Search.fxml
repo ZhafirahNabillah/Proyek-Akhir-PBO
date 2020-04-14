@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Page_Search">
+    <children>
+        <AnchorPane layoutY="-1.0" prefHeight="346.0" prefWidth="600.0" style="-fx-background-color: fe4068;">
+            <children>
+                <AnchorPane prefHeight="404.0" prefWidth="47.0" style="-fx-background-color: #ff9999;" />
+                <AnchorPane layoutX="30.0" layoutY="49.0" prefHeight="356.0" prefWidth="47.0" style="-fx-background-color: #ffcccc;">
+                    <children>
+                        <AnchorPane layoutY="62.0" prefHeight="46.0" prefWidth="47.0">
+                            <children>
+                                <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="13.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Gambar/clock.png" />
+                                    </image>
+                                </ImageView>
+                                <Button layoutY="5.0" mnemonicParsing="false" onAction="#clickHome" opacity="0.51" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #eb81a9;" />
+                            </children></AnchorPane>
+                        <ImageView fitHeight="22.0" fitWidth="29.0" layoutX="13.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Gambar/more.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="13.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Gambar/message.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="13.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Gambar/user (2).png" />
+                            </image>
+                        </ImageView>
+                    </children></AnchorPane>
+                <ImageView fitHeight="93.0" fitWidth="173.0" layoutX="-5.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Gambar/PPG_logo.png" />
+                    </image>
+                </ImageView>
+                <AnchorPane layoutX="125.0" layoutY="108.0" prefHeight="295.0" prefWidth="433.0" style="-fx-background-color: #ffcccc;">
+                    <children>
+                        <AnchorPane layoutY="-9.0" prefHeight="46.0" prefWidth="433.0" style="-fx-background-color: #ff9999; -fx-background-radius: 10;">
+                            <children>
+                                <ImageView fitHeight="39.0" fitWidth="36.0" layoutX="6.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Gambar/girl.png" />
+                                    </image>
+                                </ImageView>
+                                <Label layoutX="43.0" layoutY="8.0" text="Dewi Chantika Maya" />
+                                <Label layoutX="43.0" layoutY="24.0" text="\@chantika0600">
+                                    <font>
+                                        <Font size="10.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                  </AnchorPane>
+                        <Text layoutX="39.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sepanjang tahun 2018 di Sumsel tercatat 10 kasus kekerasan dalam pacaran. &quot;Ini yang melapor saja, belum lagi yang tidak melapor, masih sangat banyak,&quot; kata Direktur WCC Palembang Yeni Roslaini.Terdapat beberapa hal pemicu terjadinya kekerasan di masa pacaran, di antaranya, perempuan termakan bujuk rayuan laki-laki. Yeni pun mengingatkan agar perempuan tidak mudah termakan pujuk rayu.&quot;Kalau memang belum saatnya, katakan saja tidak mau." wrappingWidth="354.13670349121094">
+                            <font>
+                                <Font size="11.0" />
+                            </font>
+                        </Text>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="21.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Gambar/heart.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="69.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Gambar/comment (2).png" />
+                            </image>
+                        </ImageView>
+                        <Line endX="283.66668701171875" layoutX="123.0" layoutY="164.0" startX="-100.0" stroke="#9e9898" />
+                        <Text layoutX="48.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="27" />
+                        <Text layoutX="95.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="27" />
+                        <AnchorPane layoutY="207.0" prefHeight="46.0" prefWidth="433.0" style="-fx-background-color: #ff9999; -fx-background-radius: 10;">
+                            <children>
+                                <ImageView fitHeight="39.0" fitWidth="36.0" layoutX="6.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Gambar/girl.png" />
+                                    </image>
+                                </ImageView>
+                                <Label layoutX="43.0" layoutY="8.0" text="Zhafirah Nabillah" />
+                                <Label layoutX="43.0" layoutY="24.0" text="\@japer181099">
+                                    <font>
+                                        <Font size="10.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                        <ScrollBar layoutX="419.0" layoutY="40.0" orientation="VERTICAL" prefHeight="255.0" prefWidth="14.0" style="-fx-background-radius: 5;" />
+                        <Button layoutX="16.0" layoutY="173.0" mnemonicParsing="false" onAction="#clickLove" opacity="0.0" prefHeight="25.0" prefWidth="30.0" />
+                        <Button layoutX="65.0" layoutY="170.0" mnemonicParsing="false" onAction="#clickComment" opacity="0.0" prefHeight="25.0" prefWidth="30.0" />
+                  <AnchorPane layoutY="-23.0" prefHeight="63.0" prefWidth="433.0" style="-fx-background-color: #ffcccc; -fx-background-radius: 10; -fx-border-color: #000000;">
+                     <children>
+                        <Text layoutX="51.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dewi Chantika " wrappingWidth="107.794921875" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Button layoutY="-3.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="43.0" style="-fx-background-color: #ff00;">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Gambar/Untitled-1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <Text fill="#f50303" layoutX="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Irene" />
+                    </children>
+                </AnchorPane>
+                <TextField layoutX="125.0" layoutY="57.0" prefHeight="29.0" prefWidth="433.0" promptText="Cari postingan,username" style="-fx-background-color: #ffcccc;">
+                    <padding>
+                        <Insets left="45.0" />
+                    </padding>
+                </TextField>
+                <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="131.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Gambar/loupe.png" />
+                    </image>
+                </ImageView>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="22.0" layoutX="160.0" layoutY="61.0" stroke="BLACK" strokeType="INSIDE" width="3.0" />
+                <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="521.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Gambar/support.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="526.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Gambar/telegram (1).png" />
+                    </image>
+                </ImageView>
+                <Button layoutX="520.0" layoutY="58.0" mnemonicParsing="false" onAction="#clickArticle" opacity="0.0" prefHeight="25.0" prefWidth="36.0" />
+                <Button layoutX="513.0" layoutY="8.0" mnemonicParsing="false" onAction="#clickReport" opacity="0.0" prefHeight="36.0" prefWidth="55.0" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
