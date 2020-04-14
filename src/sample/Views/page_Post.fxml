@@ -57,41 +57,33 @@
                         <Image url="@../Gambar/PPG_logo.png" />
                     </image>
                 </ImageView>
-                <AnchorPane layoutX="125.0" layoutY="108.0" prefHeight="295.0" prefWidth="433.0" style="-fx-background-color: #ffcccc;">
+                <AnchorPane layoutX="119.0" layoutY="80.0" prefHeight="325.0" prefWidth="433.0" style="-fx-background-color: #ffcccc;">
                     <children>
                         <ScrollBar layoutX="419.0" layoutY="40.0" orientation="VERTICAL" prefHeight="255.0" prefWidth="14.0" style="-fx-background-radius: 5;" />
                         <Button fx:id="btnLikes" layoutX="20.0" layoutY="171.0" mnemonicParsing="false" onAction="#clickBtnLikes" prefHeight="25.0" prefWidth="16.0" style="-fx-background-color: #FFFFFF00;" />
                         <Button fx:id="btnComment" layoutX="73.0" layoutY="171.0" mnemonicParsing="false" onAction="#clickBtnComment" prefHeight="25.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF00;" />
-                  <AnchorPane layoutY="-8.0" prefHeight="44.0" prefWidth="433.0" style="-fx-background-color: #ff9999; -fx-background-radius: 10;" />
-                  <Text fill="#870a36" layoutX="58.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Irene Cynthia">
+                  <Text fill="#870a36" layoutX="61.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Irene Cynthia">
                      <font>
                         <Font size="13.0" />
                      </font>
                   </Text>
-                  <TextArea layoutX="65.0" layoutY="93.0" prefHeight="146.0" prefWidth="294.0" />
+                  <TextArea layoutX="60.0" layoutY="84.0" prefHeight="157.0" prefWidth="313.0" promptText="Tuliskan artikel atau cerita anda........" style="-fx-background-radius: 12;" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Button fx:id="btnPosting" layoutX="188.0" layoutY="256.0" mnemonicParsing="false" onAction="#clickBtnPostingan" prefHeight="36.0" prefWidth="64.0" style="-fx-background-color: #fe4680; -fx-background-radius: 20;" text="Posting" textFill="#f0ecec" />
                     </children>
                 </AnchorPane>
-                <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="131.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../Gambar/loupe.png" />
-                    </image>
-                </ImageView>
-                <Button fx:id="btnReport" layoutX="513.0" layoutY="8.0" mnemonicParsing="false" onAction="#clickBtnReport" prefHeight="36.0" prefWidth="55.0" style="-fx-background-color: #FFFFFF00;">
-               <graphic>
-                      <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
-                          <image>
-                              <Image url="@../Gambar/support.png" />
-                          </image>
-                      </ImageView>
-               </graphic></Button>
+            <AnchorPane layoutX="119.0" layoutY="58.0" prefHeight="44.0" prefWidth="433.0" style="-fx-background-color: #ff9999; -fx-background-radius: 10;">
+               <children>
+                  <Text fill="#870a36" layoutX="154.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="POSTINGAN ANDA">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
             </children>
         </AnchorPane>
-      <Text fill="#870a36" layoutX="277.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="POSTINGAN ANDA">
-         <font>
-            <Font name="Comic Sans MS Bold" size="14.0" />
-         </font>
-      </Text>
-      <ImageView fitHeight="86.0" fitWidth="55.0" layoutX="125.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="86.0" fitWidth="55.0" layoutX="125.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Gambar/Untitled-1.png" />
          </image>
