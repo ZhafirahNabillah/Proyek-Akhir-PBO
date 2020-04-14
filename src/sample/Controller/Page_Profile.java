@@ -31,7 +31,18 @@ public class Page_Profile {
     private TextField btnSearching;
 
     @FXML
+    private Button btnNext;
+
+    @FXML
+    private Button btnSetProfile;
+
+    @FXML
     void clickBtnHome(ActionEvent event) {
+
+    }
+
+    @FXML
+    void clickBtnNext(ActionEvent event) {
 
     }
 
@@ -50,6 +61,11 @@ public class Page_Profile {
 
     }
 
+    @FXML
+    void clickBtnSetProfile(ActionEvent event) {
+
+    }
+
     public void clickBtnHome(javafx.event.ActionEvent event) {
     }
 
@@ -60,5 +76,11 @@ public class Page_Profile {
     }
 
     public void clickBtnProfile(javafx.event.ActionEvent event) {
+    }
+
+    public void clickBtnNext(javafx.event.ActionEvent event) {
+    }
+
+    public void clickBtnSetProfile(javafx.event.ActionEvent event) {
     }
 }

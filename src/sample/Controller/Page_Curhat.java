@@ -20,10 +20,7 @@ public class Page_Curhat {
     private Button btnProfile;
 
     @FXML
-    private Button btnLikes;
-
-    @FXML
-    private Button btnComment;
+    private Button btnForm;
 
     @FXML
     private Button btnSend;
@@ -32,17 +29,12 @@ public class Page_Curhat {
     private Button btnReport;
 
     @FXML
-    void clickBtnComment(ActionEvent event) {
+    void clickBtnForm(ActionEvent event) {
 
     }
 
     @FXML
     void clickBtnHome(ActionEvent event) {
-
-    }
-
-    @FXML
-    void clickBtnLikes(ActionEvent event) {
 
     }
 
@@ -70,5 +62,25 @@ public class Page_Curhat {
     void clickBtnSend(ActionEvent event) {
 
     }
+    
+    public void clickBtnHome(javafx.event.ActionEvent event) {
+    }
 
+    public void clickBtnPost(javafx.event.ActionEvent event) {
+    }
+
+    public void clickBtnPsikolog(javafx.event.ActionEvent event) {
+    }
+
+    public void clickBtnProfile(javafx.event.ActionEvent event) {
+    }
+
+    public void clickBtnForm(javafx.event.ActionEvent event) {
+    }
+
+    public void clickBtnSend(javafx.event.ActionEvent event) {
+    }
+
+    public void clickBtnReport(javafx.event.ActionEvent event) {
+    }
 }
