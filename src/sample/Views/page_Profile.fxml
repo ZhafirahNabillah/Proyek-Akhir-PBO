@@ -66,12 +66,12 @@
                         <Image url="@../Gambar/Untitled-1.png" />
                      </image>
                   </ImageView>
-                  <Text fx:id="txt_Name" fill="WHITE" layoutX="88.0" layoutY="63.0" stroke="#939393f5" strokeType="OUTSIDE" strokeWidth="1.5" text="Irene Cynthia">
+                  <Text fx:id="txt_Name" fill="WHITE" layoutX="88.0" layoutY="63.0" stroke="#565151f5" strokeType="OUTSIDE" strokeWidth="1.5" text="Irene Cynthia">
                      <font>
                         <Font name="Comic Sans MS" size="25.0" />
                      </font>
                   </Text>
-                  <Text fx:id="txt_Username" fill="WHITE" layoutX="88.0" layoutY="90.0" stroke="#939393f5" strokeType="OUTSIDE" strokeWidth="1.5" text="\@cyth_irene">
+                  <Text fx:id="txt_Username" fill="WHITE" layoutX="88.0" layoutY="90.0" stroke="#565151f5" strokeType="OUTSIDE" strokeWidth="1.5" text="\@cyth_irene">
                      <font>
                         <Font name="Comic Sans MS" size="19.0" />
                      </font>
@@ -95,17 +95,16 @@
                               <Image url="@../Gambar/Untitled-1.png" />
                            </image>
                         </ImageView>
-                        <Text fill="#857e7e" layoutX="52.0" layoutY="27.0" stroke="#979494" strokeType="OUTSIDE" strokeWidth="0.0" text="Irene Cynthia">
+                        <Text fill="#565151" layoutX="52.0" layoutY="27.0" stroke="#979494" strokeType="OUTSIDE" strokeWidth="0.0" text="Irene Cynthia">
                            <font>
                               <Font name="Comic Sans MS" size="13.0" />
                            </font>
                         </Text>
-                        <Text fill="#979393" layoutX="52.0" layoutY="41.0" stroke="#979494" strokeType="OUTSIDE" strokeWidth="0.0" text="14/4/2020  10.00 AM">
+                        <Text fill="#565151" layoutX="52.0" layoutY="41.0" stroke="#979494" strokeType="OUTSIDE" strokeWidth="0.0" text="14/4/2020  10.00 AM">
                            <font>
                               <Font name="Comic Sans MS" size="9.0" />
                            </font>
                         </Text>
-                        <AnchorPane layoutX="10.0" layoutY="7.0" prefHeight="25.0" prefWidth="390.0" />
                         <AnchorPane layoutX="31.0" layoutY="60.0" prefHeight="136.0" prefWidth="348.0" style="-fx-background-color: #FFE4E1; -fx-background-radius: 8;">
                            <children>
                               <Text fill="#6f6969" layoutX="15.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Definisi Kekerasan dalam Rumah Tangga atau KDRT, sebagaimana dikemukakan  dalam Pasal 1 UU Nomor 23 tahun 2004 tentang Penghapusan Kekerasan dalam Rumah Tangga (UU PKDRT) adalah setiap perbuatan terhadap seseorang terutama perempuan, yang berakibat timbulnya kesengsaraan" wrappingWidth="318.0">
