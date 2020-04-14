@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ScrollBar?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -59,7 +58,6 @@
                 </ImageView>
                 <AnchorPane layoutX="119.0" layoutY="80.0" prefHeight="325.0" prefWidth="433.0" style="-fx-background-color: #ffcccc;">
                     <children>
-                        <ScrollBar layoutX="419.0" layoutY="40.0" orientation="VERTICAL" prefHeight="255.0" prefWidth="14.0" style="-fx-background-radius: 5;" />
                         <Button fx:id="btnLikes" layoutX="20.0" layoutY="171.0" mnemonicParsing="false" onAction="#clickBtnLikes" prefHeight="25.0" prefWidth="16.0" style="-fx-background-color: #FFFFFF00;" />
                         <Button fx:id="btnComment" layoutX="73.0" layoutY="171.0" mnemonicParsing="false" onAction="#clickBtnComment" prefHeight="25.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF00;" />
                   <Text fill="#870a36" layoutX="61.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Irene Cynthia">
