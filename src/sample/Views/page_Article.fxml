@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Page_Article">
+    <children>
+        <AnchorPane prefHeight="346.0" prefWidth="600.0" style="-fx-background-color: #fe4068;">
+            <children>
+                <AnchorPane prefHeight="407.0" prefWidth="57.0" style="-fx-background-color: #ff9999;" />
+                <AnchorPane layoutX="30.0" layoutY="14.0" prefHeight="393.0" prefWidth="47.0" style="-fx-background-color: #ffcccc;">
+                    <children>
+                        <AnchorPane layoutY="62.0" prefHeight="46.0" prefWidth="47.0">
+                            <children>
+                                <Button fx:id="btnHome" layoutY="2.0" mnemonicParsing="false" onAction="#clickBtnHome" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #ff00;" AnchorPane.bottomAnchor="8.0" AnchorPane.topAnchor="2.0">
+                                    <graphic>
+                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../Gambar/clock (2).png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic></Button>
+                            </children></AnchorPane>
+                        <Button fx:id="btnPost" layoutY="119.0" mnemonicParsing="false" onAction="#clickBtnPost" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #ff00;">
+                            <graphic>
+                                <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Gambar/plus.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic></Button>
+                        <Button fx:id="btnPsikolog" layoutY="174.0" mnemonicParsing="false" onAction="#clickBtnPsikolog" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #ff00;">
+                            <graphic>
+                                <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Gambar/message - Copy.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic></Button>
+                        <Button fx:id="btnProfile" layoutY="230.0" mnemonicParsing="false" onAction="#clickBtnProfile" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #AAAA;">
+                            <graphic>
+                                <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Gambar/user.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic></Button>
+                    </children></AnchorPane>
+                <AnchorPane layoutX="119.0" prefHeight="407.0" prefWidth="450.0" style="-fx-background-color: #ff9999; -fx-background-radius: 8;">
+                    <children>
+                        <TextField fx:id="btnSearching" layoutX="14.0" layoutY="53.0" prefHeight="25.0" prefWidth="248.0" promptText="Apa yang terbaru ?" style="-fx-background-color: #ffcccc;">
+                            <padding>
+                                <Insets left="40.0" />
+                            </padding></TextField>
+                        <ImageView fitHeight="18.0" fitWidth="23.0" layoutX="22.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+                            <image>
+                                <Image url="@../Gambar/loupe.png" />
+                            </image>
+                        </ImageView>
+                        <Line endX="-100.00001525878906" endY="-3.666656494140625" layoutX="146.0" layoutY="79.0" startX="-100.00001525878906" startY="-22.333343505859375" stroke="#8e8989" strokeMiterLimit="8.0" />
+                        <AnchorPane layoutX="16.0" layoutY="87.0" prefHeight="320.0" prefWidth="418.0" style="-fx-background-color: #ffcccc; -fx-background-radius: 10;">
+                            <children>
+                                <ScrollBar layoutX="404.0" layoutY="18.0" orientation="VERTICAL" prefHeight="288.0" prefWidth="14.0" />
+                                <ScrollBar layoutX="2.0" layoutY="305.0" prefHeight="14.0" prefWidth="406.0" />
+                                <AnchorPane layoutX="17.0" layoutY="13.0" prefHeight="281.0" prefWidth="373.0" style="-fx-background-color: #FFE4E1; -fx-background-radius: 8;">
+                                    <children>
+                                        <Text fill="#6f6969" layoutX="15.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chandra Iswinarno                                                   Rabu, 06 November 2019 | 14:09 WIB" wrappingWidth="348.0000305175781">
+                                            <font>
+                                                <Font name="Segoe UI" size="9.0" />
+                                            </font>
+                                        </Text>
+                                        <Text fill="#e87373" layoutX="15.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tahun 2019, Kekerasan Terhadap Perempuan di Jateng Nomor Satu Se-Indonesia" wrappingWidth="348.00003051757807">
+                                            <font>
+                                                <Font name="Square721 BT Bold" size="13.0" />
+                                            </font>
+                                        </Text>
+                              <Text fill="#2e2d2d" layoutX="12.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="           SuaraJawaTengah.id - Provinsi Jawa Tengah (Jateng) menduduki peringkat teratas kasus kekerasan terhadap perempuan di Indonesia. Dari Data Kementerian Pemberdayaan Perempuan dan Anak (KPPA) ada sekitar 1.332 kasus kekerasan yang terjadi dengan korban dari kalangan perempuan sebanyak 1.132 korban.Kepala Bidang Kualitas Hidup Perempuan Dinas Pemberdayaan Perempuan, Perlindungan Anak, Pengendalian Penduduk dan Keluarga Berencana (DP3AP2KB) Jateng Sri Dewi Indrajati membenarkan tingginya kasus kekerasan terhadap perempuan di wilayahnya. Meski begitu, ia membantah hal tersebut dianggap kemunduran dalam penanganan kasus kekerasan terhadap perempuan di Jateng.“Memang Jateng itu angkanya tinggi, tapi itu bisa jadi karena faktor lain. Seperti, pendataan yang bagus maupun mulai meningkatnya kesadaran masyarakat dalam melaporkan kasus kekerasan terhadap perempuan,” jelas Sri seperti diberitakan Solopos.com-jaringan Suara.com di Hotel Pesonna, Kota Semarang pada Selasa (6/11/2019)." wrappingWidth="348.00003051757807">
+                                 <font>
+                                    <Font name="Ebrima" size="9.0" />
+                                 </font>
+                              </Text>
+                              <Line endX="247.0" layoutX="112.0" layoutY="229.0" startX="-100.0" stroke="#c6b7b7" />
+                              <Text fill="#e87373" layoutX="11.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Komnas Perempuan : Korban Kekerasan Berbasis Gender Perlu Berani Bicara" wrappingWidth="348.00003051757807">
+                                 <font>
+                                    <Font name="Square721 BT Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                                    </children></AnchorPane>
+                            </children>
+                        </AnchorPane>
+                        <Button fx:id="btnSetProfile" layoutX="207.0" layoutY="66.0" mnemonicParsing="false" onAction="#clickBtnSetProfile" style="-fx-background-color: #ff00;" />
+                  <Text fill="WHITE" layoutX="28.0" layoutY="26.0" stroke="#958b8b" strokeType="OUTSIDE" text="Kumpulan Artikel dan Berita Terbaru" textAlignment="CENTER" wrappingWidth="373.3333333333332">
+                     <font>
+                        <Font name="Bungee Inline" size="19.0" />
+                     </font>
+                  </Text>
+                    </children></AnchorPane>
+                <ImageView fitHeight="89.0" fitWidth="138.0" layoutX="-5.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Gambar/PPG_logo.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
