@@ -1,26 +1,86 @@
 package sample.Controller;
 
-import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+
+import java.awt.event.ActionEvent;
 
 public class Page_Post {
-    public void clickBtnHome(ActionEvent actionEvent) {
+
+    @FXML
+    private Button btnHome;
+
+    @FXML
+    private Button btnPost;
+
+    @FXML
+    private Button btnPsikolog;
+
+    @FXML
+    private Button btnProfile;
+
+    @FXML
+    private Button btnLikes;
+
+    @FXML
+    private Button btnComment;
+
+    @FXML
+    private Button btnPosting;
+
+    @FXML
+    void clickBtnComment(ActionEvent event) {
+
     }
 
-    public void clickBtnPost(ActionEvent actionEvent) {
+    @FXML
+    void clickBtnHome(ActionEvent event) {
+
     }
 
-    public void clickBtnPsikolog(ActionEvent actionEvent) {
+    @FXML
+    void clickBtnLikes(ActionEvent event) {
+
     }
 
-    public void clickBtnProfile(ActionEvent actionEvent) {
+    @FXML
+    void clickBtnPost(ActionEvent event) {
+
     }
 
-    public void clickBtnLikes(ActionEvent actionEvent) {
+    @FXML
+    void clickBtnPostingan(ActionEvent event) {
+
     }
 
-    public void clickBtnComment(ActionEvent actionEvent) {
+    @FXML
+    void clickBtnProfile(ActionEvent event) {
+
     }
 
-    public void clickBtnPostingan(ActionEvent actionEvent) {
+    @FXML
+    void clickBtnPsikolog(ActionEvent event) {
+
+    }
+
+    public void clickBtnHome(javafx.event.ActionEvent actionEvent) {
+    }
+
+    public void clickBtnPost(javafx.event.ActionEvent actionEvent) {
+    }
+
+    public void clickBtnPsikolog(javafx.event.ActionEvent actionEvent) {
+    }
+
+    public void clickBtnProfile(javafx.event.ActionEvent actionEvent) {
+    }
+
+    public void clickBtnLikes(javafx.event.ActionEvent actionEvent) {
+    }
+
+    public void clickBtnComment(javafx.event.ActionEvent actionEvent) {
+    }
+
+    public void clickBtnPostingan(javafx.event.ActionEvent actionEvent) {
     }
 }
