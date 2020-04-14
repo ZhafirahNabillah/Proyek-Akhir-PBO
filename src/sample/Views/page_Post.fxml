@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Page_Post">
+    <children>
+        <AnchorPane prefHeight="346.0" prefWidth="600.0" style="-fx-background-color: fe4068;">
+            <children>
+                <AnchorPane prefHeight="404.0" prefWidth="47.0" style="-fx-background-color: #ff9999;" />
+                <AnchorPane layoutX="30.0" layoutY="49.0" prefHeight="356.0" prefWidth="47.0" style="-fx-background-color: #ffcccc;">
+                    <children>
+                        <AnchorPane layoutY="62.0" prefHeight="46.0" prefWidth="47.0">
+                            <children>
+                                <Button fx:id="btnHome" layoutY="2.0" mnemonicParsing="false" onAction="#clickBtnHome" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #ff00;" AnchorPane.bottomAnchor="8.0" AnchorPane.topAnchor="2.0">
+                           <graphic>
+                                      <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                              <Image url="@../Gambar/clock (2).png" />
+                                          </image>
+                                      </ImageView>
+                           </graphic></Button>
+                            </children></AnchorPane>
+                  <Button fx:id="btnPost" layoutY="120.0" mnemonicParsing="false" onAction="#clickBtnPost" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #aaaa;">
+                     <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@../Gambar/plus.png" />
+                                  </image>
+                              </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="btnPsikolog" layoutY="174.0" mnemonicParsing="false" onAction="#clickBtnPsikolog" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #ff00;">
+                     <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@../Gambar/message - Copy.png" />
+                                  </image>
+                              </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="btnProfile" layoutY="230.0" mnemonicParsing="false" onAction="#clickBtnProfile" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #ff00;">
+                     <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@../Gambar/user.png" />
+                                  </image>
+                              </ImageView>
+                     </graphic></Button>
+                    </children></AnchorPane>
+                <ImageView fitHeight="93.0" fitWidth="173.0" layoutX="-5.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Gambar/PPG_logo.png" />
+                    </image>
+                </ImageView>
+                <AnchorPane layoutX="125.0" layoutY="108.0" prefHeight="295.0" prefWidth="433.0" style="-fx-background-color: #ffcccc;">
+                    <children>
+                        <ScrollBar layoutX="419.0" layoutY="40.0" orientation="VERTICAL" prefHeight="255.0" prefWidth="14.0" style="-fx-background-radius: 5;" />
+                        <Button fx:id="btnLikes" layoutX="20.0" layoutY="171.0" mnemonicParsing="false" onAction="#clickBtnLikes" prefHeight="25.0" prefWidth="16.0" style="-fx-background-color: #FFFFFF00;" />
+                        <Button fx:id="btnComment" layoutX="73.0" layoutY="171.0" mnemonicParsing="false" onAction="#clickBtnComment" prefHeight="25.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF00;" />
+                  <AnchorPane layoutY="-8.0" prefHeight="44.0" prefWidth="433.0" style="-fx-background-color: #ff9999; -fx-background-radius: 10;" />
+                  <Text fill="#870a36" layoutX="58.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Irene Cynthia">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <TextArea layoutX="65.0" layoutY="93.0" prefHeight="146.0" prefWidth="294.0" />
+                    </children>
+                </AnchorPane>
+                <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="131.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Gambar/loupe.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="btnReport" layoutX="513.0" layoutY="8.0" mnemonicParsing="false" onAction="#clickBtnReport" prefHeight="36.0" prefWidth="55.0" style="-fx-background-color: #FFFFFF00;">
+               <graphic>
+                      <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                              <Image url="@../Gambar/support.png" />
+                          </image>
+                      </ImageView>
+               </graphic></Button>
+            </children>
+        </AnchorPane>
+      <Text fill="#870a36" layoutX="277.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="POSTINGAN ANDA">
+         <font>
+            <Font name="Comic Sans MS Bold" size="14.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="86.0" fitWidth="55.0" layoutX="125.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Gambar/Untitled-1.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>
