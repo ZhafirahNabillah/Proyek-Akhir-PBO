@@ -83,12 +83,15 @@ public class Dashboard {
     }
 
     public void clickBtnHome(javafx.event.ActionEvent event) {
+        ShowDashboard();
     }
 
     public void clickBtnPost(javafx.event.ActionEvent event) {
+        ShowPost();
     }
 
     public void clickBtnPsikolog(javafx.event.ActionEvent event) {
+        ShowChat();
     }
 
     public void clickBtnProfile(javafx.event.ActionEvent event) {
@@ -113,6 +116,48 @@ public class Dashboard {
             Parent root = loader.load();
 
             Page_Profile page_profile = loader.getController();
+
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+        }catch (Exception e){
+            System.err.println(e);
+        }
+    }
+    void ShowPost(){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/page_Post.fxml"));
+            Parent root = loader.load();
+
+            Page_Post page_post= loader.getController();
+
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+        }catch (Exception e){
+            System.err.println(e);
+        }
+    }
+    void ShowChat(){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/page_Curhat.fxml"));
+            Parent root = loader.load();
+
+            Page_Curhat page_curhat = loader.getController();
+
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+        }catch (Exception e){
+            System.err.println(e);
+        }
+    }
+    void ShowDashboard(){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/Dashboard.fxml"));
+            Parent root = loader.load();
+
+            Dashboard dashboard = loader.getController();
 
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
