@@ -9,8 +9,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import sample.Controller.Dashboard;
-import sample.Controller.Register;
 
 import java.awt.event.ActionEvent;
 
@@ -39,11 +37,12 @@ public class Login {
 
     @FXML
     void LogInClick(ActionEvent event) {
-
+//       (pakek helper) main.Helper.changePage(event, "dashboard");
     }
 
     @FXML
     void RegisterClick(ActionEvent event) {
+//        main.Helper.changePage(event, "register");
 
     }
 
@@ -56,8 +55,19 @@ public class Login {
     void clickBtnPsikolog(ActionEvent event) {
 
     }
-    
 
+    public void LogInClick(javafx.event.ActionEvent event) {ShowDashboard();
+
+    }
+
+    public void RegisterClick(javafx.event.ActionEvent event) {ShowRegister();
+    }
+
+    public void clickBtnAdmin(javafx.event.ActionEvent event) {ShowDashboardAdmin();
+    }
+
+    public void clickBtnPsikolog(javafx.event.ActionEvent event) {
+    }
     void ShowDashboard(){
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/dashboard.fxml"));
@@ -72,7 +82,6 @@ public class Login {
             System.err.println(e);
         }
     }
-
     void ShowRegister(){
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/register.fxml"));
@@ -87,18 +96,18 @@ public class Login {
             System.err.println(e);
         }
     }
+    void ShowDashboardAdmin(){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/admin_Dashboard.fxml"));
+            Parent root = loader.load();
 
-    public void LogInClick(javafx.event.ActionEvent event) {
-        ShowDashboard();
-    }
+            Admin_Dashboard admin_dashboard = loader.getController();
 
-    public void RegisterClick(javafx.event.ActionEvent event) {
-        ShowRegister();
-    }
-
-    public void clickBtnAdmin(javafx.event.ActionEvent event) {
-    }
-
-    public void clickBtnPsikolog(javafx.event.ActionEvent event) {
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+        }catch (Exception e){
+            System.err.println(e);
+        }
     }
 }
