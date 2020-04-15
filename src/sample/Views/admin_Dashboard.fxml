@@ -13,9 +13,10 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Admin_Dashboard">
     <children>
-        <AnchorPane prefHeight="346.0" prefWidth="600.0" style="-fx-background-color: fe4068;">
+        <AnchorPane prefHeight="346.0" prefWidth="600.0" style="-fx-background-color: #fe4680;">
             <children>
                 <AnchorPane prefHeight="405.0" prefWidth="47.0" style="-fx-background-color: #ff9999;" />
+                <AnchorPane layoutX="30.0" layoutY="49.0" prefHeight="356.0" prefWidth="47.0" style="-fx-background-color: #ffcccc;">
                     <children>
                         <AnchorPane layoutY="62.0" prefHeight="46.0" prefWidth="47.0">
                             <children>
@@ -44,6 +45,11 @@
                                     </image>
                                 </ImageView>
                             </graphic></Button>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="12.0" layoutY="318.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Gambar/bell.png" />
+                     </image>
+                  </ImageView>
                     </children></AnchorPane>
                 <ImageView fitHeight="93.0" fitWidth="173.0" layoutX="-5.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
                     <image>
@@ -53,55 +59,57 @@
                 <AnchorPane layoutX="125.0" layoutY="56.0" prefHeight="349.0" prefWidth="433.0" style="-fx-background-color: #ffcccc; -fx-background-radius: 10;">
                     <children>
                         <ScrollBar layoutX="419.0" layoutY="3.0" orientation="VERTICAL" prefHeight="341.0" prefWidth="14.0" style="-fx-background-radius: 5;" />
-                  <TabPane prefHeight="36.0" prefWidth="419.0" style="-fx-background-color: #ff9999;" tabClosingPolicy="UNAVAILABLE">
-                    <tabs>
-                      <Tab text="Pengguna">
-                        <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                        </content>
-                      </Tab>
-                      <Tab text="Psikolog">
-                        <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                        </content>
-                      </Tab>
-                    </tabs>
-                  </TabPane>
-                  <Line endX="295.0" layoutX="114.0" layoutY="68.0" startX="-100.0" stroke="#c1b6b6" />
-                  <Line endX="295.0" layoutX="114.0" layoutY="108.0" startX="-100.0" stroke="#c1b6b6" />
-                  <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="14.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                        <TabPane prefHeight="36.0" prefWidth="419.0" style="-fx-background-color: #ff9999;" tabClosingPolicy="UNAVAILABLE">
+                            <tabs>
+                                <Tab fx:id="userPage" onSelectionChanged="#ShowUser" text="Pengguna">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ff00;" />
+                                    </content>
+                                </Tab>
+                                <Tab text="Psikolog">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                    </content>
+                                </Tab>
+                            </tabs>
+                        </TabPane>
+                        <Line endX="295.0" layoutX="114.0" layoutY="68.0" startX="-100.0" stroke="#c1b6b6" />
+                        <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="14.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Gambar/girl.png" />
+                            </image>
+                        </ImageView>
+                        <Text layoutX="48.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Irenee Cynthia" />
+                        <Button fx:id="btnActivity" layoutX="358.0" layoutY="36.0" mnemonicParsing="false" onAction="#clickActivity" style="-fx-background-color: #fe4680; -fx-background-radius: 20;" text="Aktivitas" textFill="WHITE">
+                            <font>
+                                <Font size="10.0" />
+                            </font>
+                        </Button>
+                  <Line endX="295.0" layoutX="119.0" layoutY="107.0" startX="-100.0" stroke="#c1b6b6" />
+                  <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="19.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../Gambar/girl.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="14.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+                  <Text layoutX="53.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maya Chantika" />
+                  <Button fx:id="btnActivity1" layoutX="363.0" layoutY="75.0" mnemonicParsing="false" onAction="#clickActivity" style="-fx-background-color: #fe4680; -fx-background-radius: 20;" text="Aktivitas" textFill="WHITE">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Button>
+                  <Line endX="295.0" layoutX="119.0" layoutY="147.0" startX="-100.0" stroke="#c1b6b6" />
+                  <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="19.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../Gambar/girl.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="14.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Gambar/girl.png" />
-                     </image>
-                  </ImageView>
-                  <Text layoutX="48.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Irene Cynthia" />
-                  <Text layoutX="48.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aaaaa Bbbbb" />
-                  <Button fx:id="btnActivity" layoutX="358.0" layoutY="36.0" mnemonicParsing="false" onAction="#clickActivity" style="-fx-background-color: #fe4680; -fx-background-radius: 20;" text="Aktivitas" textFill="WHITE">
+                  <Text layoutX="53.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Virli galuh" />
+                  <Button fx:id="btnActivity11" layoutX="363.0" layoutY="115.0" mnemonicParsing="false" onAction="#clickActivity" style="-fx-background-color: #fe4680; -fx-background-radius: 20;" text="Aktivitas" textFill="WHITE">
                      <font>
                         <Font size="10.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnActivity" layoutX="358.0" layoutY="75.0" mnemonicParsing="false" onAction="#clickActivity" style="-fx-background-color: #fe4680; -fx-background-radius: 20;" text="Aktivitas" textFill="WHITE">
-                     <font>
-                        <Font size="10.0" />
-                     </font>
-                  </Button>
-                  <Text layoutX="47.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cccc Dddd" />
-                  <Button fx:id="btnActivity" layoutX="358.0" layoutY="116.0" mnemonicParsing="false" onAction="#clickActivity" style="-fx-background-color: #fe4680; -fx-background-radius: 20;" text="Aktivitas" textFill="WHITE">
-                     <font>
-                        <Font size="10.0" />
-                     </font>
-                  </Button>
+                  <ImageView fitHeight="36.0" fitWidth="41.0" layoutX="203.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true" />
                     </children>
                 </AnchorPane>
             </children>

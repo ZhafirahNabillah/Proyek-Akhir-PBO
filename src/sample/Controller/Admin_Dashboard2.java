@@ -3,7 +3,7 @@ package sample.Controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-
+import javafx.scene.control.Tab;
 
 public class Admin_Dashboard2 {
 
@@ -17,7 +17,21 @@ public class Admin_Dashboard2 {
     private Button btnPsikolog;
 
     @FXML
+    private Tab userPage;
+
+    @FXML
     private Button btnActivity;
+
+    @FXML
+    private Button btnActivity1;
+
+    @FXML
+    private Button btnActivity11;
+
+    @FXML
+    void ShowUser(ActionEvent event) {
+
+    }
 
     @FXML
     void clickActivity(ActionEvent event) {
