@@ -137,7 +137,7 @@ public class Page_Post {
     }
     void ShowDashboard(){
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/Dashboard.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/dashboard.fxml"));
             Parent root = loader.load();
 
             Dashboard dashboard = loader.getController();

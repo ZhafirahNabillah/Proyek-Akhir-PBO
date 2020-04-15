@@ -29,7 +29,7 @@ public class Register {
 
     void ShowLogin(){
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/login.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/User/login.fxml"));
             Parent root = loader.load();
 
             Login login = loader.getController();

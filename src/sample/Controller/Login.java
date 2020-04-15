@@ -9,6 +9,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import sample.Controller.Dashboard;
+import sample.Controller.Register;
 
 import java.awt.event.ActionEvent;
 
@@ -30,13 +32,31 @@ public class Login {
     private Button btnRegister;
 
     @FXML
+    private Button btnAdmin;
+
+    @FXML
+    private Button btnPsikolog;
+
+    @FXML
     void LogInClick(ActionEvent event) {
 
     }
+
     @FXML
     void RegisterClick(ActionEvent event) {
 
     }
+
+    @FXML
+    void clickBtnAdmin(ActionEvent event) {
+
+    }
+
+    @FXML
+    void clickBtnPsikolog(ActionEvent event) {
+
+    }
+    
 
     void ShowDashboard(){
         try {
@@ -74,5 +94,11 @@ public class Login {
 
     public void RegisterClick(javafx.event.ActionEvent event) {
         ShowRegister();
+    }
+
+    public void clickBtnAdmin(javafx.event.ActionEvent event) {
+    }
+
+    public void clickBtnPsikolog(javafx.event.ActionEvent event) {
     }
 }

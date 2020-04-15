@@ -58,11 +58,6 @@ public class Page_Curhat {
     }
 
     @FXML
-    void clickBtnReport(ActionEvent event) {
-
-    }
-
-    @FXML
     void clickBtnSend(ActionEvent event) {
 
     }
@@ -87,9 +82,6 @@ public class Page_Curhat {
     }
 
     public void clickBtnSend(javafx.event.ActionEvent event) {
-    }
-
-    public void clickBtnReport(javafx.event.ActionEvent event) {
     }
 
     void ShowProfile(){

@@ -96,7 +96,6 @@
                                     </children></AnchorPane>
                             </children>
                         </AnchorPane>
-                        <Button fx:id="btnSetProfile" layoutX="207.0" layoutY="66.0" mnemonicParsing="false" onAction="#clickBtnSetProfile" style="-fx-background-color: #ff00;" />
                   <Text fill="WHITE" layoutX="28.0" layoutY="26.0" stroke="#958b8b" strokeType="OUTSIDE" text="Kumpulan Artikel dan Berita Terbaru" textAlignment="CENTER" wrappingWidth="373.3333333333332">
                      <font>
                         <Font name="Bungee Inline" size="19.0" />

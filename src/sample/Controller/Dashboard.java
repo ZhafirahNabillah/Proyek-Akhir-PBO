@@ -105,6 +105,7 @@ public class Dashboard {
     }
 
     public void clickBtnArticle(javafx.event.ActionEvent event) {
+        ShowArticle();
     }
 
     public void clickBtnReport(javafx.event.ActionEvent event) {
@@ -158,6 +159,21 @@ public class Dashboard {
             Parent root = loader.load();
 
             Dashboard dashboard = loader.getController();
+
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+        }catch (Exception e){
+            System.err.println(e);
+        }
+    }
+
+    void ShowArticle(){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/Page_Article.fxml"));
+            Parent root = loader.load();
+
+            Page_Article page_article = loader.getController();
 
             Stage stage = new Stage();
             stage.setScene(new Scene(root));

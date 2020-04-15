@@ -61,6 +61,12 @@
                                 <Font name="Square721 BT Roman" size="11.0" />
                             </font>
                         </Button>
+                  <Button fx:id="btnAdmin" layoutX="26.0" layoutY="266.0" mnemonicParsing="false" onAction="#clickBtnAdmin" style="-fx-background-color: #fe4680; -fx-background-radius: 10;" text="Admin" textFill="WHITE">
+                     <font>
+                        <Font name="Square721 BT Roman" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnPsikolog" layoutX="166.0" layoutY="266.0" mnemonicParsing="false" onAction="#clickBtnPsikolog" style="-fx-background-color: #fe4680; -fx-background-radius: 10;" text="Psikolog" textFill="WHITE" />
                     </children>
                 </AnchorPane>
             </children>
