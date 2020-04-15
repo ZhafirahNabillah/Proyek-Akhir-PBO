@@ -120,6 +120,11 @@
                               <Button fx:id="btnNext" layoutX="265.0" layoutY="100.0" mnemonicParsing="false" onAction="#clickBtnNext" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #ff00;" text="Selanjutnya" textFill="#7e0e0e" underline="true" AnchorPane.topAnchor="100.0" />
                            </children></AnchorPane>
                         <Line endX="226.66668701171875" layoutX="153.0" layoutY="50.0" startX="-100.0" stroke="#a99d9d" />
+                        <ImageView fitHeight="13.0" fitWidth="14.0" layoutX="367.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Gambar/pen.png" />
+                           </image>
+                        </ImageView>
                      </children>
                   </AnchorPane>
                   <Button fx:id="btnSetProfile" layoutX="207.0" layoutY="66.0" mnemonicParsing="false" onAction="#clickBtnSetProfile" style="-fx-background-color: #ff00;">
