@@ -1,14 +1,11 @@
 package sample.Controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
+import static sample.Main.Helper.changePage;
 
-import java.awt.event.ActionEvent;
 
 public class DashboardController {
 
@@ -43,7 +40,7 @@ public class DashboardController {
     private Button btnReport;
 
     @FXML
-    void clickBtnArticle(ActionEvent event) {
+    void clickBtnArticle(ActionEvent event) {changePage(event, "page_Article");
 
     }
 
@@ -53,7 +50,7 @@ public class DashboardController {
     }
 
     @FXML
-    void clickBtnHome(ActionEvent event) {
+    void clickBtnHome(ActionEvent event) {changePage(event, "Dashboard");
 
     }
 
@@ -63,123 +60,22 @@ public class DashboardController {
     }
 
     @FXML
-    void clickBtnPost(ActionEvent event) {
+    void clickBtnPost(ActionEvent event) {changePage(event, "page_post");
 
     }
 
     @FXML
-    void clickBtnProfile(ActionEvent event) {
+    void clickBtnProfile(ActionEvent event) {changePage(event, "page_profile");
 
     }
 
     @FXML
-    void clickBtnPsikolog(ActionEvent event) {
+    void clickBtnPsikolog(ActionEvent event) {changePage(event, "page_curhat");
 
     }
 
     @FXML
-    void clickBtnReport(ActionEvent event) {
+    void clickBtnReport(ActionEvent event) {changePage(event, "");
 
-    }
-
-    public void clickBtnHome(javafx.event.ActionEvent event) {
-        ShowDashboard();
-    }
-
-    public void clickBtnPost(javafx.event.ActionEvent event) {
-        ShowPost();
-    }
-
-    public void clickBtnPsikolog(javafx.event.ActionEvent event) {
-        ShowChat();
-    }
-
-    public void clickBtnProfile(javafx.event.ActionEvent event) {
-        ShowProfile();
-    }
-
-    public void clickBtnLikes(javafx.event.ActionEvent event) {
-    }
-
-    public void clickBtnComment(javafx.event.ActionEvent event) {
-    }
-
-    public void clickBtnArticle(javafx.event.ActionEvent event) {
-        ShowArticle();
-    }
-
-    public void clickBtnReport(javafx.event.ActionEvent event) {
-    }
-
-    void ShowProfile(){
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/page_Profile.fxml"));
-            Parent root = loader.load();
-
-            PageProfileController page_profile = loader.getController();
-
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.show();
-        }catch (Exception e){
-            System.err.println(e);
-        }
-    }
-    void ShowPost(){
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/page_Post.fxml"));
-            Parent root = loader.load();
-
-            PagePostController page_post= loader.getController();
-
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.show();
-        }catch (Exception e){
-            System.err.println(e);
-        }
-    }
-    void ShowChat(){
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/page_Curhat.fxml"));
-            Parent root = loader.load();
-
-            PageCurhatController page_curhat = loader.getController();
-
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.show();
-        }catch (Exception e){
-            System.err.println(e);
-        }
-    }
-    void ShowDashboard(){
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/Dashboard.fxml"));
-            Parent root = loader.load();
-
-            DashboardController dashboard = loader.getController();
-
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.show();
-        }catch (Exception e){
-            System.err.println(e);
-        }
-    }
-
-    void ShowArticle(){
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/Page_Article.fxml"));
-            Parent root = loader.load();
-
-            PageArticleController page_article = loader.getController();
-
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.show();
-        }catch (Exception e){
-            System.err.println(e);
-        }
     }
 }

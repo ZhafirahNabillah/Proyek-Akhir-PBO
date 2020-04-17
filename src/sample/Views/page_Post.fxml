@@ -15,26 +15,16 @@
                 <AnchorPane prefHeight="404.0" prefWidth="47.0" style="-fx-background-color: #ff9999;" />
                 <AnchorPane layoutX="30.0" layoutY="49.0" prefHeight="356.0" prefWidth="47.0" style="-fx-background-color: #ffcccc;">
                     <children>
-                        <AnchorPane layoutY="62.0" prefHeight="46.0" prefWidth="47.0">
-                            <children>
-                                <Button fx:id="btnHome" layoutY="2.0" mnemonicParsing="false" onAction="#clickBtnHome" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #ff00;" AnchorPane.bottomAnchor="8.0" AnchorPane.topAnchor="2.0">
-                           <graphic>
-                                      <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                                          <image>
-                                              <Image url="@../Gambar/clock (2).png" />
-                                          </image>
-                                      </ImageView>
-                           </graphic></Button>
-                            </children></AnchorPane>
-                  <Button fx:id="btnPost" layoutY="120.0" mnemonicParsing="false" onAction="#clickBtnPost" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #aaaa;">
+                  <Button fx:id="btnPost" layoutY="131.0" mnemonicParsing="false" onAction="#clickBtnPost" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #aaaa;">
                      <graphic>
                               <ImageView fitHeight="22.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                                   <image>
                                       <Image url="@../Gambar/plus.png" />
                                   </image>
                               </ImageView>
-                     </graphic></Button>
-                  <Button fx:id="btnPsikolog" layoutY="174.0" mnemonicParsing="false" onAction="#clickBtnPsikolog" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #ff00;">
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnPsikolog" layoutY="187.0" mnemonicParsing="false" onAction="#clickBtnPsikolog" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #ff00;">
                      <graphic>
                               <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                   <image>
@@ -50,6 +40,15 @@
                                   </image>
                               </ImageView>
                      </graphic></Button>
+                  <Button layoutY="72.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="47.0" style="-fx-background-color: #ff00;">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Gambar/clock%20(2).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
                     </children></AnchorPane>
                 <ImageView fitHeight="93.0" fitWidth="173.0" layoutX="-5.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
                     <image>

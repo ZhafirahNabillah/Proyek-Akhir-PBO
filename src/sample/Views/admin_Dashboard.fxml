@@ -8,6 +8,8 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -81,12 +83,12 @@
                                                         <Insets left="-155.0" top="15.0" />
                                                     </HBox.margin>
                                                 </Text>
-                                                <Button fx:id="btnDetail" mnemonicParsing="false" onAction="#clickDetail" prefHeight="23.0" prefWidth="57.0" style="-fx-background-color: #fe4680; -fx-background-radius: 15;" text="Aktivitas" textFill="WHITE">
+                                                <Button fx:id="btnActivity" mnemonicParsing="false" onAction="#clickActivity" prefHeight="23.0" prefWidth="57.0" style="-fx-background-color: #fe4680; -fx-background-radius: 15;" text="Aktivitas" textFill="WHITE">
                                                     <font>
                                                         <Font name="Square721 BT Roman" size="10.0" />
                                                     </font>
                                                     <HBox.margin>
-                                                        <Insets bottom="5.0" left="250.0" top="5.0" />
+                                                        <Insets bottom="5.0" left="255.0" top="5.0" />
                                                     </HBox.margin>
                                                 </Button>
                                             </children>
@@ -111,7 +113,7 @@
                                                         <Insets left="-155.0" top="15.0" />
                                                     </HBox.margin>
                                                 </Text>
-                                                <Button fx:id="btnDetail" mnemonicParsing="false" onAction="#clickDetail" style="-fx-background-color: #fe4680; -fx-background-radius: 15;" text="Aktivitas" textFill="WHITE">
+                                                <Button fx:id="btnActivity2" mnemonicParsing="false" onAction="#clickActivity2" style="-fx-background-color: #fe4680; -fx-background-radius: 15;" text="Aktivitas" textFill="WHITE">
                                                     <font>
                                                         <Font name="Square721 BT Roman" size="10.0" />
                                                     </font>
@@ -144,7 +146,7 @@
                                                         <Insets left="-150.0" top="15.0" />
                                                     </HBox.margin>
                                                 </Text>
-                                                <Button fx:id="btnDetail" mnemonicParsing="false" onAction="#clickDetail" style="-fx-background-color: #fe4680; -fx-background-radius: 15;" text="Aktivitas" textFill="WHITE">
+                                                <Button fx:id="btnActivity3" mnemonicParsing="false" onAction="#clickActivity3" style="-fx-background-color: #fe4680; -fx-background-radius: 15;" text="Aktivitas" textFill="WHITE">
                                                     <font>
                                                         <Font name="Square721 BT Roman" size="10.0" />
                                                     </font>
@@ -162,7 +164,7 @@
                             <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffcccc;">
                                     <children>
-                                        <HBox layoutY="14.0" prefHeight="34.0" prefWidth="446.0">
+                                        <HBox layoutY="14.0" prefHeight="34.0" prefWidth="481.0">
                                             <children>
                                                 <ImageView fitHeight="31.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
                                                     <image>
@@ -172,41 +174,49 @@
                                                         <Insets left="10.0" />
                                                     </HBox.margin>
                                                 </ImageView>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nabilla Fira" wrappingWidth="150.0">
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Anita Medical,S. Psi" wrappingWidth="150.0">
                                                     <HBox.margin>
-                                                        <Insets left="20.0" />
+                                                        <Insets left="20.0" top="10.0" />
                                                     </HBox.margin>
                                                 </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\@nblfira" wrappingWidth="80.0">
-                                                    <HBox.margin>
-                                                        <Insets left="-155.0" top="15.0" />
-                                                    </HBox.margin>
-                                                </Text>
-                                                <Button fx:id="btnSee" mnemonicParsing="false" onAction="#clickSee" style="-fx-background-color: #ff00;" textFill="WHITE">
+                                                <Button fx:id="btnActivityPsi" mnemonicParsing="false" onAction="#clickActivityPsi" prefHeight="23.0" prefWidth="58.0" style="-fx-background-color: #fe4680; -fx-background-radius: 15;" text="Aktivitas" textFill="WHITE">
                                                     <font>
-                                                        <Font name="Square721 BT Roman" size="12.0" />
+                                                        <Font name="Square721 BT Roman" size="10.0" />
                                                     </font>
                                                     <HBox.margin>
-                                                        <Insets bottom="5.0" left="170.0" right="10.0" top="5.0" />
+                                                        <Insets bottom="5.0" left="170.0" top="5.0" />
                                                     </HBox.margin>
-                                                    <graphic>
-                                                        <ImageView fitHeight="20.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
-                                                            <image>
-                                                                <Image url="@../Gambar/correct.png" />
-                                                            </image>
-                                                        </ImageView>
-                                                    </graphic>
                                                 </Button>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="18/4/2020">
-                                                    <HBox.margin>
-                                                        <Insets bottom="5.0" left="5.0" top="10.0" />
-                                                    </HBox.margin>
-                                                    <font>
-                                                        <Font name="Square721 BT Bold" size="12.0" />
-                                                    </font>
-                                                </Text>
                                             </children>
                                         </HBox>
+                              <Line endX="337.66668701171875" endY="1.1444091796875E-5" layoutX="115.0" layoutY="48.0" startX="-100.0" stroke="#8a8181" AnchorPane.topAnchor="60.0" />
+                              <ImageView fitHeight="67.0" fitWidth="85.0" layoutX="174.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Gambar/girl.png" />
+                                 </image>
+                              </ImageView>
+                              <VBox layoutX="35.0" layoutY="150.0" prefHeight="133.0" prefWidth="100.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Lengkap" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Alamat Praktek" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pendidikan Terakhir" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal Lahir" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="No. Handphone" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="195.0" layoutY="151.0" prefHeight="136.0" prefWidth="224.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Anita Medical,S. Psi" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Jl. Kaliwates No.99 Blok D-3" wrappingWidth="180.0" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="S1 Psikologi UNAIR" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Jember, 31 Agustus 1985" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="081-117-118-119" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="AnitaMed" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="lindungiwanita" />
+                                 </children>
+                              </VBox>
                                     </children></AnchorPane>
                             </content>
                         </Tab>

@@ -4,6 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
+import static sample.Main.Helper.changePage;
+
 
 public class Register {
 
@@ -15,12 +17,12 @@ public class Register {
 
     @FXML
     void LogInClick(ActionEvent event) {
-
+        changePage(event, "login");
     }
 
     @FXML
     void RegisterClick(ActionEvent event) {
-
+        changePage(event, "login");
     }
 
 }

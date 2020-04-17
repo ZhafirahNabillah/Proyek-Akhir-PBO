@@ -42,7 +42,7 @@ public class LoginController {
     }
 
     @FXML
-    void clickBtnAdmin(ActionEvent event)  { changePage(event, "AdminDashboard2");
+    void clickBtnAdmin(ActionEvent event)  { changePage(event, "admin_Dashboard");
 
     }
 
@@ -50,47 +50,4 @@ public class LoginController {
     void clickBtnPsikolog(ActionEvent event) { changePage(event, "");
 
     }
-
-//    void ShowDashboard(){
-//        try {
-//            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/dashboard.fxml"));
-//            Parent root = loader.load();
-//
-//            Dashboard dashboard = loader.getController();
-//
-//            Stage stage = new Stage();
-//            stage.setScene(new Scene(root));
-//            stage.show();
-//        }catch (Exception e){
-//            System.err.println(e);
-//        }
-//    }
-//    void ShowRegister(){
-//        try {
-//            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/register.fxml"));
-//            Parent root = loader.load();
-//
-//            Register register = loader.getController();
-//
-//            Stage stage = new Stage();
-//            stage.setScene(new Scene(root));
-//            stage.show();
-//        }catch (Exception e){
-//            System.err.println(e);
-//        }
-//    }
-//    void ShowDashboardAdmin(){
-//        try {
-//            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/AdminDashboard.fxml"));
-//            Parent root = loader.load();
-//
-//            Admin_Dashboard admin_dashboard = loader.getController();
-//
-//            Stage stage = new Stage();
-//            stage.setScene(new Scene(root));
-//            stage.show();
-//        }catch (Exception e){
-//            System.err.println(e);
-//        }
-//    }
 }
