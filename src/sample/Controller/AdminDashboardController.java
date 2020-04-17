@@ -28,6 +28,8 @@ public class AdminDashboardController {
 
     @FXML
     private Button btnActivityPsi;
+    @FXML
+    private Button btnLogout;
 
     @FXML
     void clickActivity(ActionEvent event) {
@@ -63,5 +65,8 @@ public class AdminDashboardController {
     void clickReport(ActionEvent event) { changePage(event,"admin_report");
 
     }
+
+    @FXML
+    void clickLogout(ActionEvent event) {changePage(event,"login");}
 
 }

@@ -24,6 +24,9 @@ public class AdminReportController {
     private Button btnSee;
 
     @FXML
+    private Button btnLogout;
+
+    @FXML
     void clickAccount(ActionEvent event) {changePage(event,"admin_dashboard");
 
     }
@@ -45,6 +48,10 @@ public class AdminReportController {
 
     @FXML
     void clickSee(ActionEvent event) {
+
+    }
+    @FXML
+    void clickLogout(ActionEvent event){changePage(event,"login");
 
     }
 

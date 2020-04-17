@@ -20,6 +20,9 @@ public class AdminPostController {
     private Button btnSend;
 
     @FXML
+    private Button btnLogout;
+
+    @FXML
     void clickAccount(ActionEvent event) { changePage(event,"admin_dashboard");
 
     }
@@ -36,6 +39,11 @@ public class AdminPostController {
 
     @FXML
     void clickSend(ActionEvent event) {
+
+    }
+
+    @FXML
+    void clickLogout(ActionEvent event){changePage(event,"login");
 
     }
 

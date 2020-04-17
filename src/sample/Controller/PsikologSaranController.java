@@ -21,7 +21,19 @@ public class PsikologSaranController {
     private Button btnDetail;
 
     @FXML
+    private Button btnDetail2;
+
+    @FXML
+    private Button btnDetail3;
+
+    @FXML
     private Button btnVerify;
+
+    @FXML
+    private Button btnVerify2;
+
+    @FXML
+    private Button btnVerify3;
 
     @FXML
     void clickCurhat(ActionEvent event) {changePage(event,"psikolog_saran");
@@ -34,18 +46,38 @@ public class PsikologSaranController {
     }
 
     @FXML
+    void clickDetail2(ActionEvent event) {
+
+    }
+
+    @FXML
+    void clickDetail3(ActionEvent event) {
+
+    }
+
+    @FXML
     void clickLogout(ActionEvent event) {changePage(event,"login");
 
     }
 
     @FXML
     void clickProfile(ActionEvent event) {changePage(event,"psikolog_profile");
+        }
+
+    @FXML
+    void clickVerify(ActionEvent event) {changePage(event,"psikolog_verify");
 
     }
 
     @FXML
-    void clickVerify(ActionEvent event) {changePage(event,"");
+    void clickVerify2(ActionEvent event) {
 
     }
+
+    @FXML
+    void clickVerify3(ActionEvent event) {
+
+    }
+
 
 }

@@ -47,11 +47,15 @@
                                     </image>
                                 </ImageView>
                             </graphic></Button>
-                        <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="12.0" layoutY="318.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../Gambar/bell.png" />
-                            </image>
-                        </ImageView>
+                  <Button fx:id="btnLogout" layoutY="288.0" mnemonicParsing="false" onAction="#clickLogout" prefHeight="24.0" prefWidth="47.0" style="-fx-background-color: #ff00;">
+                     <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@../Gambar/logout.png" />
+                                  </image>
+                              </ImageView>
+                     </graphic>
+                  </Button>
                     </children></AnchorPane>
                 <ImageView fitHeight="93.0" fitWidth="173.0" layoutX="-5.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
                     <image>
