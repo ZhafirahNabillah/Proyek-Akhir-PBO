@@ -21,7 +21,7 @@
                     <children>
                         <AnchorPane layoutY="62.0" prefHeight="46.0" prefWidth="47.0">
                             <children>
-                                <Button fx:id="btnHome" layoutY="2.0" mnemonicParsing="false" onAction="#clickBtnHome" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #ff00;" AnchorPane.bottomAnchor="8.0" AnchorPane.topAnchor="2.0">
+                                <Button fx:id="btnAccount" layoutY="2.0" mnemonicParsing="false" onAction="#clickAccount" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #ff00;" AnchorPane.bottomAnchor="8.0" AnchorPane.topAnchor="2.0">
                                     <graphic>
                                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
@@ -38,7 +38,7 @@
                                     </image>
                                 </ImageView>
                             </graphic></Button>
-                        <Button fx:id="btnPsikolog" layoutY="174.0" mnemonicParsing="false" onAction="#clickBtnPsikolog" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #aaaa;">
+                        <Button fx:id="btnReport" layoutY="174.0" mnemonicParsing="false" onAction="#clickReport" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #aaaa;">
                             <graphic>
                                 <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                     <image>

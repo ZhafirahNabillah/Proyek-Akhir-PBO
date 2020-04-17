@@ -1,14 +1,12 @@
 package sample.Controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
 
-import java.awt.event.ActionEvent;
+import static sample.Main.Helper.changePage;
+
 
 public class SetProfileController {
 
@@ -62,7 +60,7 @@ public class SetProfileController {
     }
 
     @FXML
-    void clickBtnHome(ActionEvent event) {
+    void clickBtnHome(ActionEvent event) {changePage(event, "Dashboard");
 
     }
 
@@ -77,22 +75,22 @@ public class SetProfileController {
     }
 
     @FXML
-    void clickBtnPost(ActionEvent event) {
+    void clickBtnPost(ActionEvent event) {changePage(event, "page_post");
 
     }
 
     @FXML
-    void clickBtnProfile(ActionEvent event) {
+    void clickBtnProfile(ActionEvent event) {changePage(event, "page_profile");
 
     }
 
     @FXML
-    void clickBtnPsikolog(ActionEvent event) {
+    void clickBtnPsikolog(ActionEvent event) {changePage(event, "page_curhat");
 
     }
 
     @FXML
-    void clickBtnSetProfile(ActionEvent event) {
+    void clickBtnSetProfile(ActionEvent event) {changePage(event, "set_profile");
 
     }
 
@@ -104,95 +102,5 @@ public class SetProfileController {
     @FXML
     void clickBtnUsername(ActionEvent event) {
 
-    }
-
-    public void clickBtnHome(javafx.event.ActionEvent event) {ShowDashboard();
-    }
-
-    public void clickBtnPost(javafx.event.ActionEvent event) {ShowPost();
-    }
-
-    public void clickBtnPsikolog(javafx.event.ActionEvent event) {ShowChat();
-    }
-
-    public void clickBtnProfile(javafx.event.ActionEvent event) { ShowProfile();
-    }
-
-    public void clickBtnName(javafx.event.ActionEvent event) {
-    }
-
-    public void clickBtnStatus(javafx.event.ActionEvent event) {
-    }
-
-    public void clickBtnUsername(javafx.event.ActionEvent event) {
-    }
-
-    public void clickBtnEmail(javafx.event.ActionEvent event) {
-    }
-
-    public void clickBtnPassword(javafx.event.ActionEvent event) {
-    }
-
-    public void clickBtnSetProfile(javafx.event.ActionEvent event) {
-    }
-
-    public void clickBtnChangephoto(javafx.event.ActionEvent event) {
-    }
-
-    void ShowProfile(){
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/page_Profile.fxml"));
-            Parent root = loader.load();
-
-            PageProfileController page_profile = loader.getController();
-
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.show();
-        }catch (Exception e){
-            System.err.println(e);
-        }
-    }
-    void ShowPost(){
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/page_Post.fxml"));
-            Parent root = loader.load();
-
-            PagePostController page_post= loader.getController();
-
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.show();
-        }catch (Exception e){
-            System.err.println(e);
-        }
-    }
-    void ShowChat(){
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/page_Curhat.fxml"));
-            Parent root = loader.load();
-
-            PageCurhatController page_curhat = loader.getController();
-
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.show();
-        }catch (Exception e){
-            System.err.println(e);
-        }
-    }
-    void ShowDashboard(){
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/dashboard.fxml"));
-            Parent root = loader.load();
-
-            DashboardController dashboard = loader.getController();
-
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.show();
-        }catch (Exception e){
-            System.err.println(e);
-        }
     }
 }

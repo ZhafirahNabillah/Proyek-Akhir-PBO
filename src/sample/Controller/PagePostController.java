@@ -4,7 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
-
+import static sample.Main.Helper.changePage;
 
 public class PagePostController {
 
@@ -21,46 +21,31 @@ public class PagePostController {
     private Button btnProfile;
 
     @FXML
-    private Button btnLikes;
-
-    @FXML
-    private Button btnComment;
-
-    @FXML
     private Button btnPosting;
 
     @FXML
-    void clickBtnComment(ActionEvent event) {
+    void clickBtnHome(ActionEvent event) {changePage(event, "Dashboard");
 
     }
 
     @FXML
-    void clickBtnHome(ActionEvent event) {
+    void clickBtnPost(ActionEvent event) {changePage(event, "page_post");
 
     }
 
     @FXML
-    void clickBtnLikes(ActionEvent event) {
+    void clickBtnPostingan(ActionEvent event) {changePage(event, "");
 
     }
 
     @FXML
-    void clickBtnPost(ActionEvent event) {
+    void clickBtnProfile(ActionEvent event) {changePage(event, "page_profile");
 
     }
 
     @FXML
-    void clickBtnPostingan(ActionEvent event) {
+    void clickBtnPsikolog(ActionEvent event) {changePage(event, "page_curhat");
 
     }
 
-    @FXML
-    void clickBtnProfile(ActionEvent event) {
-
-    }
-
-    @FXML
-    void clickBtnPsikolog(ActionEvent event) {
-
-    }
 }
