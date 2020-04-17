@@ -19,6 +19,9 @@ public class Admin_Dashboard {
     private Button btnActivity;
 
     @FXML
+    private Button btnSet;
+
+    @FXML
     void clickActivity(ActionEvent event) {
 
     }
@@ -35,6 +38,10 @@ public class Admin_Dashboard {
 
     @FXML
     void clickPostArticle(ActionEvent event) {
+
+    }
+    @FXML
+    void clickSetting(ActionEvent event) {
 
     }
 

@@ -138,6 +138,15 @@
                               <Text layoutX="252.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="S1 Psikologi UNAIR" />
                               <Text layoutX="48.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No. Handphone" />
                               <Text layoutX="252.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="081-117-118-119" />
+                              <Button fx:id="btnSet" layoutX="364.0" layoutY="44.0" mnemonicParsing="false" onAction="#clickSetting" prefHeight="36.0" prefWidth="35.0" style="-fx-background-color: #ff00;">
+                                 <graphic>
+                                    <ImageView fitHeight="24.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Gambar/settings%20(2).png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
                            </children>
                         </AnchorPane>
                   </content>
