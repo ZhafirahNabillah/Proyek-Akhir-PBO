@@ -42,12 +42,12 @@ public class LoginController {
     }
 
     @FXML
-    void clickBtnAdmin(ActionEvent event)  { changePage(event, "admin_Dashboard");
+    void clickBtnAdmin(ActionEvent event)  { changePage(event, "admin_login");
 
     }
 
     @FXML
-    void clickBtnPsikolog(ActionEvent event) { changePage(event, "");
+    void clickBtnPsikolog(ActionEvent event) { changePage(event, "psikolog_login");
 
     }
 }
