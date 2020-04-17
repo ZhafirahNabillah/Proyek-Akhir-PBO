@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.Controller.Admin_Report"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <AnchorPane prefHeight="346.0" prefWidth="600.0" style="-fx-background-color: #fe4680;">
+            <children>
+                <AnchorPane prefHeight="405.0" prefWidth="47.0" style="-fx-background-color: #ff9999;" />
+                <AnchorPane layoutX="30.0" layoutY="49.0" prefHeight="356.0" prefWidth="47.0" style="-fx-background-color: #ffcccc;">
+                    <children>
+                        <AnchorPane layoutY="62.0" prefHeight="46.0" prefWidth="47.0">
+                            <children>
+                                <Button fx:id="btnHome" layoutY="2.0" mnemonicParsing="false" onAction="#clickBtnHome" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #ff00;" AnchorPane.bottomAnchor="8.0" AnchorPane.topAnchor="2.0">
+                                    <graphic>
+                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../Gambar/user.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic></Button>
+                            </children></AnchorPane>
+                        <Button fx:id="btnPostArticle" layoutY="119.0" mnemonicParsing="false" onAction="#clickPostArticle" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #aaaa;">
+                            <graphic>
+                                <ImageView fitHeight="22.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Gambar/plus.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic></Button>
+                        <Button fx:id="btnPsikolog" layoutY="174.0" mnemonicParsing="false" onAction="#clickBtnPsikolog" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #ff00;">
+                            <graphic>
+                                <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Gambar/folder.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic></Button>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="12.0" layoutY="318.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Gambar/bell.png" />
+                            </image>
+                        </ImageView>
+                    </children></AnchorPane>
+                <ImageView fitHeight="93.0" fitWidth="173.0" layoutX="-5.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Gambar/PPG_logo.png" />
+                    </image>
+                </ImageView>
+                <TabPane layoutX="101.0" layoutY="61.0" prefHeight="330.0" prefWidth="481.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="Postingan belum terverifikasi">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffcccc;">
+                                    <children>
+                                        <HBox layoutY="37.0" prefHeight="34.0" prefWidth="446.0">
+                                            <children>
+                                                <ImageView fitHeight="31.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../Gambar/girl.png" />
+                                                    </image>
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" />
+                                                    </HBox.margin>
+                                                </ImageView>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Irene Cynthia  " wrappingWidth="150.0">
+                                                    <HBox.margin>
+                                                        <Insets left="20.0" />
+                                                    </HBox.margin></Text>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\@cynthiairene">
+                                                    <HBox.margin>
+                                                        <Insets left="-155.0" top="15.0" />
+                                                    </HBox.margin>
+                                                </Text>
+                                                <Button fx:id="btnDetail" mnemonicParsing="false" onAction="#clickDetail" style="-fx-background-color: #fe4680;" text="Detail" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="Square721 BT Roman" size="12.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets bottom="5.0" left="247.0" right="10.0" top="5.0" />
+                                                    </HBox.margin>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                        <HBox layoutY="71.0" prefHeight="36.0" prefWidth="449.0">
+                                            <children>
+                                                <ImageView fitHeight="31.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../Gambar/girl.png" />
+                                                    </image>
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" />
+                                                    </HBox.margin>
+                                                </ImageView>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dewi Chantika Maya" wrappingWidth="150.0">
+                                                    <HBox.margin>
+                                                        <Insets left="20.0" />
+                                                    </HBox.margin>
+                                                </Text>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\@chantikamaya">
+                                                    <HBox.margin>
+                                                        <Insets left="-155.0" top="15.0" />
+                                                    </HBox.margin>
+                                                </Text>
+                                                <Button fx:id="btnDetail" mnemonicParsing="false" onAction="#clickDetail" style="-fx-background-color: #fe4680;" text="Detail" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="Square721 BT Roman" size="12.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets bottom="5.0" left="240.0" top="5.0" />
+                                                    </HBox.margin>
+                                                </Button>
+                                            </children>
+                                            <padding>
+                                                <Insets top="5.0" />
+                                            </padding>
+                                        </HBox>
+                                        <Line endX="330.3333740234375" endY="7.62939453125E-6" layoutX="118.0" layoutY="30.0" startX="-100.0" stroke="#8e8b8b" AnchorPane.topAnchor="29.0" />
+                                        <Text fill="#3b3737" layoutX="18.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senin, 17/1/2020" AnchorPane.topAnchor="8.0" />
+                                        <Line endX="330.3333740234375" endY="7.62939453125E-6" layoutX="114.0" layoutY="145.0" startX="-100.0" stroke="#8e8b8b" AnchorPane.topAnchor="150.0" />
+                                        <Text fill="#3b3737" layoutX="14.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selasa, 18/1/2020" AnchorPane.topAnchor="130.0" />
+                                        <HBox layoutX="1.0" layoutY="161.0" prefHeight="24.0" prefWidth="455.0">
+                                            <children>
+                                                <ImageView fitHeight="31.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../Gambar/girl.png" />
+                                                    </image>
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" />
+                                                    </HBox.margin>
+                                                </ImageView>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="VirliNabillah" wrappingWidth="150.0">
+                                                    <HBox.margin>
+                                                        <Insets left="20.0" />
+                                                    </HBox.margin>
+                                                </Text>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\@vrlibllh">
+                                                    <HBox.margin>
+                                                        <Insets left="-150.0" top="15.0" />
+                                                    </HBox.margin>
+                                                </Text>
+                                                <Button fx:id="btnDetail" mnemonicParsing="false" onAction="#clickDetail" style="-fx-background-color: #fe4680;" text="Detail" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="Square721 BT Roman" size="12.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets bottom="5.0" left="270.0" top="5.0" />
+                                                    </HBox.margin>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Postingan terverifikasi">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffcccc;">
+                                    <children>
+                                        <HBox layoutX="1.0" layoutY="41.0" prefHeight="34.0" prefWidth="446.0">
+                                            <children>
+                                                <ImageView fitHeight="31.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../Gambar/girl.png" />
+                                                    </image>
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" />
+                                                    </HBox.margin>
+                                                </ImageView>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nabilla Fira" wrappingWidth="150.0">
+                                                    <HBox.margin>
+                                                        <Insets left="20.0" />
+                                                    </HBox.margin>
+                                                </Text>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\@nblfira" wrappingWidth="80.0">
+                                                    <HBox.margin>
+                                                        <Insets left="-155.0" top="15.0" />
+                                                    </HBox.margin>
+                                                </Text>
+                                                <ImageView fitHeight="31.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../Gambar/correct.png" />
+                                                    </image>
+                                                    <HBox.margin>
+                                                        <Insets bottom="5.0" left="200.0" top="5.0" />
+                                                    </HBox.margin>
+                                                </ImageView>
+                                                <Button fx:id="btnSee" mnemonicParsing="false" onAction="#clickSee" style="-fx-background-color: #ff00;" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="Square721 BT Roman" size="12.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                                    </HBox.margin>
+                                                    <graphic>
+                                                        <ImageView fitHeight="20.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../Gambar/eye.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                    </graphic>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                        <Text fill="#3b3737" layoutX="14.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senin, 17/1/2020" AnchorPane.topAnchor="8.0" />
+                                        <Line endX="317.0" endY="9.5367431640625E-6" layoutX="115.0" layoutY="22.0" startX="-100.0" stroke="#a49f9f" AnchorPane.topAnchor="29.0" />
+                                        <HBox layoutX="1.0" layoutY="80.0" prefHeight="34.0" prefWidth="446.0">
+                                            <children>
+                                                <ImageView fitHeight="31.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../Gambar/girl.png" />
+                                                    </image>
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" />
+                                                    </HBox.margin>
+                                                </ImageView>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Risti Pramela" wrappingWidth="150.0">
+                                                    <HBox.margin>
+                                                        <Insets left="20.0" />
+                                                    </HBox.margin>
+                                                </Text>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\@rstimella" wrappingWidth="80.0">
+                                                    <HBox.margin>
+                                                        <Insets left="-155.0" top="15.0" />
+                                                    </HBox.margin>
+                                                </Text>
+                                                <ImageView fitHeight="22.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../Gambar/close-button.png" />
+                                                    </image>
+                                                    <HBox.margin>
+                                                        <Insets bottom="5.0" left="200.0" top="8.0" />
+                                                    </HBox.margin>
+                                                </ImageView>
+                                                <Button fx:id="btnSee" mnemonicParsing="false" onAction="#clickSee" style="-fx-background-color: #ff00;" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="Square721 BT Roman" size="12.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets bottom="5.0" left="15.0" right="10.0" top="5.0" />
+                                                    </HBox.margin>
+                                                    <graphic>
+                                                        <ImageView fitHeight="20.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../Gambar/eye.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                    </graphic>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                        <Text fill="#3b3737" layoutX="14.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selasa, 18/1/2020" AnchorPane.topAnchor="123.0" />
+                                        <Line endX="317.0" endY="9.5367431640625E-6" layoutX="115.0" layoutY="149.0" startX="-100.0" stroke="#a49f9f" AnchorPane.topAnchor="148.29289323091507" />
+                                        <HBox layoutX="1.0" layoutY="157.0" prefHeight="34.0" prefWidth="446.0">
+                                            <children>
+                                                <ImageView fitHeight="31.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../Gambar/girl.png" />
+                                                    </image>
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" />
+                                                    </HBox.margin>
+                                                </ImageView>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mazmi Kunta" wrappingWidth="150.0">
+                                                    <HBox.margin>
+                                                        <Insets left="20.0" />
+                                                    </HBox.margin>
+                                                </Text>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\@mmz0" wrappingWidth="80.0">
+                                                    <HBox.margin>
+                                                        <Insets left="-155.0" top="15.0" />
+                                                    </HBox.margin>
+                                                </Text>
+                                                <ImageView fitHeight="31.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../Gambar/correct.png" />
+                                                    </image>
+                                                    <HBox.margin>
+                                                        <Insets bottom="5.0" left="200.0" top="5.0" />
+                                                    </HBox.margin>
+                                                </ImageView>
+                                                <Button fx:id="btnSee" mnemonicParsing="false" onAction="#clickSee" style="-fx-background-color: #ff00;" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="Square721 BT Roman" size="12.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                                    </HBox.margin>
+                                                    <graphic>
+                                                        <ImageView fitHeight="20.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../Gambar/eye.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                    </graphic>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                    </children></AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

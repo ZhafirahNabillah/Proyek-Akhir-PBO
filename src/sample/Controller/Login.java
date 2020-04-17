@@ -1,5 +1,6 @@
 package sample.Controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,7 +11,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import java.awt.event.ActionEvent;
 
 public class Login {
 
@@ -37,7 +37,7 @@ public class Login {
 
     @FXML
     void LogInClick(ActionEvent event) {
-//       (pakek helper) main.Helper.changePage(event, "dashboard");
+//        main.Helper.changePage(event, "dashboard");
     }
 
     @FXML
@@ -56,18 +56,6 @@ public class Login {
 
     }
 
-    public void LogInClick(javafx.event.ActionEvent event) {ShowDashboard();
-
-    }
-
-    public void RegisterClick(javafx.event.ActionEvent event) {ShowRegister();
-    }
-
-    public void clickBtnAdmin(javafx.event.ActionEvent event) {ShowDashboardAdmin();
-    }
-
-    public void clickBtnPsikolog(javafx.event.ActionEvent event) {
-    }
     void ShowDashboard(){
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/dashboard.fxml"));
