@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -82,7 +83,7 @@
                                                 <Font name="Square721 BT Bold" size="13.0" />
                                             </font>
                                         </Text>
-                              <Text fill="#2e2d2d" layoutX="12.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="           SuaraJawaTengah.id - Provinsi Jawa Tengah (Jateng) menduduki peringkat teratas kasus kekerasan terhadap perempuan di Indonesia. Dari Data Kementerian Pemberdayaan Perempuan dan Anak (KPPA) ada sekitar 1.332 kasus kekerasan yang terjadi dengan korban dari kalangan perempuan sebanyak 1.132 korban.Kepala Bidang Kualitas Hidup Perempuan Dinas Pemberdayaan Perempuan, Perlindungan Anak, Pengendalian Penduduk dan Keluarga Berencana (DP3AP2KB) Jateng Sri Dewi Indrajati membenarkan tingginya kasus kekerasan terhadap perempuan di wilayahnya. Meski begitu, ia membantah hal tersebut dianggap kemunduran dalam penanganan kasus kekerasan terhadap perempuan di Jateng.“Memang Jateng itu angkanya tinggi, tapi itu bisa jadi karena faktor lain. Seperti, pendataan yang bagus maupun mulai meningkatnya kesadaran masyarakat dalam melaporkan kasus kekerasan terhadap perempuan,” jelas Sri seperti diberitakan Solopos.com-jaringan Suara.com di Hotel Pesonna, Kota Semarang pada Selasa (6/11/2019)." wrappingWidth="348.00003051757807">
+                              <Text fill="#2e2d2d" layoutX="12.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="348.00003051757807">
                                  <font>
                                     <Font name="Ebrima" size="9.0" />
                                  </font>
@@ -93,6 +94,15 @@
                                     <Font name="Square721 BT Bold" size="13.0" />
                                  </font>
                               </Text>
+                              <ScrollPane layoutX="11.0" layoutY="57.0" prefHeight="161.0" prefWidth="348.0" style="-fx-background-color: #ff00;">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Text layoutX="14.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="           SuaraJawaTengah.id - Provinsi Jawa Tengah (Jateng) menduduki peringkat teratas kasus kekerasan terhadap perempuan di Indonesia. Dari Data Kementerian Pemberdayaan Perempuan dan Anak (KPPA) ada sekitar 1.332 kasus kekerasan yang terjadi dengan korban dari kalangan perempuan sebanyak 1.132 korban.Kepala Bidang Kualitas Hidup Perempuan Dinas Pemberdayaan Perempuan, Perlindungan Anak, Pengendalian Penduduk dan Keluarga Berencana (DP3AP2KB) Jateng Sri Dewi Indrajati membenarkan tingginya kasus kekerasan terhadap perempuan di wilayahnya. Meski begitu, ia membantah hal tersebut dianggap kemunduran dalam penanganan kasus kekerasan terhadap perempuan di Jateng.“Memang Jateng itu angkanya tinggi, tapi itu bisa jadi karena faktor lain. Seperti, pendataan yang bagus maupun mulai meningkatnya kesadaran masyarakat dalam melaporkan kasus kekerasan terhadap perempuan,” jelas Sri seperti diberitakan Solopos.com-jaringan Suara.com di Hotel Pesonna, Kota Semarang pada Selasa (6/11/2019)." wrappingWidth="309.33331298828125" />
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </ScrollPane>
                                     </children></AnchorPane>
                             </children>
                         </AnchorPane>

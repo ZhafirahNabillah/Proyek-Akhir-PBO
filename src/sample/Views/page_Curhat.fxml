@@ -4,14 +4,12 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.PageCurhatController">
     <children>
@@ -74,11 +72,15 @@
                            <font>
                               <Font name="Square721 BT Bold" size="12.0" />
                            </font></Label>
-                        <ImageView fitHeight="36.0" fitWidth="26.0" layoutX="417.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Gambar/bell.png" />
-                           </image>
-                        </ImageView>
+                        <Button fx:id="btnNotif" layoutX="401.0" layoutY="5.0" mnemonicParsing="false" onAction="#clickNotif" style="-fx-background-color: #ff00;">
+                           <graphic>
+                              <ImageView fitHeight="36.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Gambar/bell.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
                             </children></AnchorPane>
                   <Button fx:id="btnSend" layoutX="400.0" layoutY="179.0" mnemonicParsing="false" onAction="#clickBtnSend" prefHeight="25.0" prefWidth="55.0" style="-fx-background-color: #fe4680; -fx-background-radius: 15;" text="KIrim" textFill="WHITE">
                      <font>
@@ -107,20 +109,11 @@
                               <Font name="Square721 BT Roman" size="12.0" />
                            </font>
                         </Label>
-                        <ComboBox layoutX="187.0" layoutY="110.0" prefHeight="25.0" prefWidth="108.0" promptText="Kawin" />
+                        <ComboBox cache="true" layoutX="187.0" layoutY="110.0" prefHeight="25.0" prefWidth="108.0" promptText="Kawin" visibleRowCount="2" />
                         <TextField layoutX="187.0" layoutY="77.0" prefHeight="15.0" prefWidth="77.0" promptText="Usia anda" />
-                        <TextField layoutX="187.0" layoutY="9.0" prefHeight="25.0" prefWidth="135.0" promptText="Nama lengkap anda" />
-                        <DatePicker layoutX="184.0" layoutY="44.0" />
-                        <ScrollPane layoutX="3.0" layoutY="152.0" prefHeight="155.0" prefWidth="367.0" AnchorPane.leftAnchor="8.0">
-                          <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="189.0" prefWidth="470.0">
-                                 <children>
-                                    <Text layoutX="92.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-                                    <TextArea layoutX="-4.0" prefHeight="155.0" prefWidth="356.0" promptText="Tuliskan Permasalahan dan Cerita anda secara detail.." />
-                                 </children>
-                              </AnchorPane>
-                          </content>
-                        </ScrollPane>
+                        <TextField layoutX="186.0" layoutY="9.0" prefHeight="25.0" prefWidth="135.0" promptText="Nama lengkap anda" />
+                        <DatePicker layoutX="186.0" layoutY="44.0" />
+                        <TextArea layoutX="13.0" layoutY="152.0" prefHeight="155.0" prefWidth="356.0" promptText="Tuliskan Permasalahan dan Cerita anda secara detail.." style="-fx-background-color: #ff9999;" />
                      </children>
                   </AnchorPane>
                     </children>

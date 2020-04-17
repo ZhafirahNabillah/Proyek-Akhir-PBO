@@ -24,6 +24,9 @@ public class PageCurhatController {
     private Button btnSend;
 
     @FXML
+    private Button btnNotif;
+
+    @FXML
     void clickBtnHome(ActionEvent event) {changePage(event, "Dashboard");
 
     }
@@ -45,6 +48,11 @@ public class PageCurhatController {
 
     @FXML
     void clickBtnSend(ActionEvent event) {
+
+    }
+
+    @FXML
+    void clickNotif(ActionEvent event) {
 
     }
 
