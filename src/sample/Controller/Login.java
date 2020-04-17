@@ -89,7 +89,7 @@ public class Login {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/admin_Dashboard.fxml"));
             Parent root = loader.load();
 
-            Admin_Dashboard admin_dashboard = loader.getController();
+            AdminDashboardController admin_dashboard = loader.getController();
 
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
