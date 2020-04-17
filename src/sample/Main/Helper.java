@@ -1,5 +1,6 @@
-package main;
+package sample.Main;
 
+import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -7,7 +8,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 
 public class Helper {
@@ -17,10 +17,9 @@ public class Helper {
 
         Parent view = null;
         try {
-            view = FXMLLoader.load(Helper.class.getResource("viewName"));
+            view = FXMLLoader.load(Helper.class.getResource("../Views/" + viewName + ".fxml"));
             Scene scene = new Scene(view);
             stage.setScene(scene);
-            stage.setResizable(false);
             stage.show();
         } catch (Exception e){
             e.printStackTrace();
@@ -32,11 +31,10 @@ public class Helper {
         Stage stage = (Stage) node.getScene().getWindow();
         Scene scene = new Scene(view);
         stage.setScene(scene);
-        stage.setResizable(false);
         stage.show();
     }
 
     public static FXMLLoader getLoader(String viewName){
-        return new FXMLLoader(Helper.class.getResource("viewName"));
+        return new FXMLLoader(Helper.class.getResource("../Views/" + viewName + ".fxml"));
     }
 }

@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 import java.awt.event.ActionEvent;
 
-public class Btn_Next {
+public class PageProfileController {
 
     @FXML
     private Button btnHome;
@@ -35,10 +35,18 @@ public class Btn_Next {
     private TextField btnSearching;
 
     @FXML
+    private Button btnNext;
+
+    @FXML
     private Button btnSetProfile;
 
     @FXML
     void clickBtnHome(ActionEvent event) {
+
+    }
+
+    @FXML
+    void clickBtnNext(ActionEvent event) {
 
     }
 
@@ -74,7 +82,10 @@ public class Btn_Next {
     public void clickBtnProfile(javafx.event.ActionEvent event) {ShowProfile();
     }
 
-    public void clickBtnSetProfile(javafx.event.ActionEvent event) {
+    public void clickBtnNext(javafx.event.ActionEvent event) {ShowbtnNext();
+    }
+
+    public void clickBtnSetProfile(javafx.event.ActionEvent event) {Showsetprofile();
     }
 
     void ShowProfile(){
@@ -82,7 +93,7 @@ public class Btn_Next {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/page_Profile.fxml"));
             Parent root = loader.load();
 
-            Page_Profile page_profile = loader.getController();
+            PageProfileController page_profile = loader.getController();
 
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
@@ -96,7 +107,7 @@ public class Btn_Next {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/page_Post.fxml"));
             Parent root = loader.load();
 
-            Page_Post page_post= loader.getController();
+            PagePostController page_post= loader.getController();
 
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
@@ -110,7 +121,7 @@ public class Btn_Next {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/page_Curhat.fxml"));
             Parent root = loader.load();
 
-            Page_Curhat page_curhat = loader.getController();
+            PageCurhatController page_curhat = loader.getController();
 
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
@@ -124,7 +135,35 @@ public class Btn_Next {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/dashboard.fxml"));
             Parent root = loader.load();
 
-            Dashboard dashboard = loader.getController();
+            DashboardController dashboard = loader.getController();
+
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+        }catch (Exception e){
+            System.err.println(e);
+        }
+    }
+    void ShowbtnNext(){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/btn_Next.fxml"));
+            Parent root = loader.load();
+
+            DashboardController dashboard = loader.getController();
+
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+        }catch (Exception e){
+            System.err.println(e);
+        }
+    }
+    void Showsetprofile(){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/set_Profile.fxml"));
+            Parent root = loader.load();
+
+            DashboardController dashboard = loader.getController();
 
             Stage stage = new Stage();
             stage.setScene(new Scene(root));

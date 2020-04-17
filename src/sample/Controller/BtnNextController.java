@@ -5,11 +5,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.awt.event.ActionEvent;
 
-public class Page_Curhat {
+public class BtnNextController {
 
     @FXML
     private Button btnHome;
@@ -24,18 +26,16 @@ public class Page_Curhat {
     private Button btnProfile;
 
     @FXML
-    private Button btnForm;
+    private Text txt_Name;
 
     @FXML
-    private Button btnSend;
+    private Text txt_Username;
 
     @FXML
-    private Button btnReport;
+    private TextField btnSearching;
 
     @FXML
-    void clickBtnForm(ActionEvent event) {
-
-    }
+    private Button btnSetProfile;
 
     @FXML
     void clickBtnHome(ActionEvent event) {
@@ -58,30 +58,23 @@ public class Page_Curhat {
     }
 
     @FXML
-    void clickBtnSend(ActionEvent event) {
+    void clickBtnSetProfile(ActionEvent event) {
 
     }
 
-    public void clickBtnHome(javafx.event.ActionEvent event) {
-        ShowDashboard();
+    public void clickBtnHome(javafx.event.ActionEvent event) {ShowDashboard();
     }
 
-    public void clickBtnPost(javafx.event.ActionEvent event) {
-        ShowPost();
+    public void clickBtnPost(javafx.event.ActionEvent event) {ShowPost();
     }
 
-    public void clickBtnPsikolog(javafx.event.ActionEvent event) {
-        ShowChat();
+    public void clickBtnPsikolog(javafx.event.ActionEvent event) {ShowChat();
     }
 
-    public void clickBtnProfile(javafx.event.ActionEvent event) {
-        ShowProfile();
+    public void clickBtnProfile(javafx.event.ActionEvent event) {ShowProfile();
     }
 
-    public void clickBtnForm(javafx.event.ActionEvent event) {
-    }
-
-    public void clickBtnSend(javafx.event.ActionEvent event) {
+    public void clickBtnSetProfile(javafx.event.ActionEvent event) {
     }
 
     void ShowProfile(){
@@ -89,7 +82,7 @@ public class Page_Curhat {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/page_Profile.fxml"));
             Parent root = loader.load();
 
-            Page_Profile page_profile = loader.getController();
+            PageProfileController page_profile = loader.getController();
 
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
@@ -103,7 +96,7 @@ public class Page_Curhat {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/page_Post.fxml"));
             Parent root = loader.load();
 
-            Page_Post page_post= loader.getController();
+            PagePostController page_post= loader.getController();
 
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
@@ -117,7 +110,7 @@ public class Page_Curhat {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/page_Curhat.fxml"));
             Parent root = loader.load();
 
-            Page_Curhat page_curhat = loader.getController();
+            PageCurhatController page_curhat = loader.getController();
 
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
@@ -128,10 +121,10 @@ public class Page_Curhat {
     }
     void ShowDashboard(){
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/Dashboard.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/dashboard.fxml"));
             Parent root = loader.load();
 
-            Dashboard dashboard = loader.getController();
+            DashboardController dashboard = loader.getController();
 
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
@@ -140,4 +133,5 @@ public class Page_Curhat {
             System.err.println(e);
         }
     }
+
 }

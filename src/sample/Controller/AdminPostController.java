@@ -4,7 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
-public class AdminDashboardController {
+public class AdminPostController {
 
     @FXML
     private Button btnHome;
@@ -16,15 +16,10 @@ public class AdminDashboardController {
     private Button btnPsikolog;
 
     @FXML
-    private Button btnActivity;
+    private Button btnDetail;
 
     @FXML
-    private Button btnSet;
-
-    @FXML
-    void clickActivity(ActionEvent event) {
-
-    }
+    private Button btnSee;
 
     @FXML
     void clickBtnHome(ActionEvent event) {
@@ -37,11 +32,17 @@ public class AdminDashboardController {
     }
 
     @FXML
+    void clickDetail(ActionEvent event) {
+
+    }
+
+    @FXML
     void clickPostArticle(ActionEvent event) {
 
     }
+
     @FXML
-    void clickSetting(ActionEvent event) {
+    void clickSee(ActionEvent event) {
 
     }
 

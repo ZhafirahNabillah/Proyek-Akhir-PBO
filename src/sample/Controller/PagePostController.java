@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 import java.awt.event.ActionEvent;
 
-public class Page_Post {
+public class PagePostController {
 
     @FXML
     private Button btnHome;
@@ -98,7 +98,7 @@ public class Page_Post {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/page_Profile.fxml"));
             Parent root = loader.load();
 
-            Page_Profile page_profile = loader.getController();
+            PageProfileController page_profile = loader.getController();
 
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
@@ -112,7 +112,7 @@ public class Page_Post {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/page_Post.fxml"));
             Parent root = loader.load();
 
-            Page_Post page_post= loader.getController();
+            PagePostController page_post= loader.getController();
 
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
@@ -126,7 +126,7 @@ public class Page_Post {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/page_Curhat.fxml"));
             Parent root = loader.load();
 
-            Page_Curhat page_curhat = loader.getController();
+            PageCurhatController page_curhat = loader.getController();
 
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
@@ -140,7 +140,7 @@ public class Page_Post {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/dashboard.fxml"));
             Parent root = loader.load();
 
-            Dashboard dashboard = loader.getController();
+            DashboardController dashboard = loader.getController();
 
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
