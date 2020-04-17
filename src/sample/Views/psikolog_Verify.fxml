@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.PsikologSaranController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.PsikologVerifyController">
     <children>
         <AnchorPane prefHeight="346.0" prefWidth="600.0" style="-fx-background-color: #fe4680;">
             <children>
@@ -27,24 +27,24 @@
                                     </image>
                                 </ImageView>
                             </graphic></Button>
-                          <Button fx:id="btnProfile" layoutY="142.0" mnemonicParsing="false" onAction="#clickProfile" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #ff00;" AnchorPane.bottomAnchor="178.0" AnchorPane.topAnchor="142.0">
-                     <graphic>
-                                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                                      <image>
-                                          <Image url="@../Gambar/user.png" />
-                                      </image>
-                                  </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button fx:id="btnLogout" layoutY="300.0" mnemonicParsing="false" onAction="#clickLogout" prefHeight="32.0" prefWidth="47.0" style="-fx-background-color: #ff00;">
-                     <graphic>
-                              <ImageView fitHeight="24.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
-                                  <image>
-                                      <Image url="@../Gambar/logout.png" />
-                                  </image>
-                              </ImageView>
-                     </graphic>
-                  </Button>
+                        <Button fx:id="btnProfile" layoutY="142.0" mnemonicParsing="false" onAction="#clickProfile" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #ff00;" AnchorPane.bottomAnchor="178.0" AnchorPane.topAnchor="142.0">
+                            <graphic>
+                                <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Gambar/user.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="btnLogout" layoutY="300.0" mnemonicParsing="false" onAction="#clickLogout" prefHeight="32.0" prefWidth="47.0" style="-fx-background-color: #ff00;">
+                            <graphic>
+                                <ImageView fitHeight="24.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Gambar/logout.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
                     </children></AnchorPane>
                 <ImageView fitHeight="93.0" fitWidth="173.0" layoutX="-5.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
                     <image>
@@ -196,14 +196,14 @@
                                                         </ImageView>
                                                     </graphic>
                                                 </Button>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="18/4/2020">
-                                       <HBox.margin>
-                                          <Insets bottom="5.0" left="5.0" top="10.0" />
-                                       </HBox.margin>
-                                       <font>
-                                          <Font name="Square721 BT Bold" size="12.0" />
-                                       </font>
-                                    </Text>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="18/4/2020">
+                                                    <HBox.margin>
+                                                        <Insets bottom="5.0" left="5.0" top="10.0" />
+                                                    </HBox.margin>
+                                                    <font>
+                                                        <Font name="Square721 BT Bold" size="12.0" />
+                                                    </font>
+                                                </Text>
                                             </children>
                                         </HBox>
                                         <Line endX="317.0" endY="9.5367431640625E-6" layoutX="115.0" layoutY="22.0" startX="-100.0" stroke="#a49f9f" AnchorPane.topAnchor="29.0" />
@@ -242,14 +242,14 @@
                                                         </ImageView>
                                                     </graphic>
                                                 </Button>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="18/4/2020">
-                                       <font>
-                                          <Font name="Square721 BT Bold" size="12.0" />
-                                       </font>
-                                       <HBox.margin>
-                                          <Insets left="5.0" top="10.0" />
-                                       </HBox.margin>
-                                    </Text>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="18/4/2020">
+                                                    <font>
+                                                        <Font name="Square721 BT Bold" size="12.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets left="5.0" top="10.0" />
+                                                    </HBox.margin>
+                                                </Text>
                                             </children>
                                         </HBox>
                                         <Line endX="317.0" endY="9.5367431640625E-6" layoutX="115.0" layoutY="127.0" startX="-100.0" stroke="#a49f9f" AnchorPane.topAnchor="126.29289323091507" />
@@ -288,14 +288,14 @@
                                                         </ImageView>
                                                     </graphic>
                                                 </Button>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="19/4/2020">
-                                       <font>
-                                          <Font name="Square721 BT Bold" size="12.0" />
-                                       </font>
-                                       <HBox.margin>
-                                          <Insets top="10.0" />
-                                       </HBox.margin>
-                                    </Text>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="19/4/2020">
+                                                    <font>
+                                                        <Font name="Square721 BT Bold" size="12.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets top="10.0" />
+                                                    </HBox.margin>
+                                                </Text>
                                             </children>
                                         </HBox>
                                     </children></AnchorPane>

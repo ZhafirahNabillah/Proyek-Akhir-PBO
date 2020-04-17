@@ -19,7 +19,7 @@ public class PsikologLoginController {
     private PasswordField password;
 
     @FXML
-    void LogInClick(ActionEvent event) { changePage(event,"psikolog_Report");
+    void LogInClick(ActionEvent event) { changePage(event,"psikolog_Saran");
 
     }
 

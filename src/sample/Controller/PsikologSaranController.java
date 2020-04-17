@@ -4,13 +4,15 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
+import static sample.Main.Helper.changePage;
+
 public class PsikologSaranController {
 
     @FXML
-    private Button btnPsikolog;
+    private Button btnCurhat;
 
     @FXML
-    private Button btnHome;
+    private Button btnProfile;
 
     @FXML
     private Button btnLogout;
@@ -19,30 +21,30 @@ public class PsikologSaranController {
     private Button btnDetail;
 
     @FXML
-    private Button btnSee;
+    private Button btnVerify;
 
     @FXML
-    void clickBtnHome(ActionEvent event) {
+    void clickCurhat(ActionEvent event) {changePage(event,"psikolog_saran");
 
     }
 
     @FXML
-    void clickBtnPsikolog(ActionEvent event) {
+    void clickDetail(ActionEvent event) {changePage(event,"psikolog_detail");
 
     }
 
     @FXML
-    void clickDetail(ActionEvent event) {
+    void clickLogout(ActionEvent event) {changePage(event,"login");
 
     }
 
     @FXML
-    void clickLogout(ActionEvent event) {
+    void clickProfile(ActionEvent event) {changePage(event,"psikolog_profile");
 
     }
 
     @FXML
-    void clickSee(ActionEvent event) {
+    void clickVerify(ActionEvent event) {changePage(event,"");
 
     }
 
