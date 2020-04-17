@@ -64,25 +64,16 @@
                         </Button>
                         <AnchorPane layoutX="15.0" layoutY="49.0" prefHeight="322.0" prefWidth="381.0" style="-fx-background-color: #fff9e3; -fx-background-radius: 8;">
                             <children>
-                                <ScrollPane layoutX="3.0" layoutY="152.0" prefHeight="155.0" prefWidth="367.0" AnchorPane.leftAnchor="8.0">
-                                    <content>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="221.0" prefWidth="375.0">
-                                            <children>
-                                                <Text layoutX="92.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-                                    <TextArea layoutX="-2.0" layoutY="-4.0" prefHeight="143.0" prefWidth="352.0" promptText="Tuliskan saran anda..." />
-                                            </children>
-                                        </AnchorPane>
-                                    </content>
-                                </ScrollPane>
-                        <ScrollPane prefHeight="143.0" prefWidth="367.0" AnchorPane.leftAnchor="8.0">
+                        <ScrollPane layoutX="14.0" layoutY="14.0" prefHeight="136.0" prefWidth="352.0" AnchorPane.leftAnchor="14.0">
                           <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="186.0" prefWidth="373.0">
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="186.0" prefWidth="373.0" style="-fx-background-color: #FFE4E1;">
                                  <children>
-                                    <Text layoutX="14.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sepanjang tahun 2018 di Sumsel tercatat 10 kasus kekerasan dalam pacaran. &quot;Ini yang melapor saja, belum lagi yang tidak melapor, masih sangat banyak,&quot; kata Direktur WCC Palembang Yeni Roslaini.Terdapat beberapa hal pemicu terjadinya kekerasan di masa pacaran, di antaranya, perempuan termakan bujuk rayuan laki-laki. Yeni pun mengingatkan agar perempuan tidak mudah termakan pujuk rayu.&quot;Kalau memang belum saatnya, katakan saja tidak mau." wrappingWidth="300.0" />
+                                    <Text layoutX="5.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sepanjang tahun 2018 di Sumsel tercatat 10 kasus kekerasan dalam pacaran. &quot;Ini yang melapor saja, belum lagi yang tidak melapor, masih sangat banyak,&quot; kata Direktur WCC Palembang Yeni Roslaini.Terdapat beberapa hal pemicu terjadinya kekerasan di masa pacaran, di antaranya, perempuan termakan bujuk rayuan laki-laki. Yeni pun mengingatkan agar perempuan tidak mudah termakan pujuk rayu.&quot;Kalau memang belum saatnya, katakan saja tidak mau." wrappingWidth="340.0000305175781" />
                                  </children>
                               </AnchorPane>
                           </content>
                         </ScrollPane>
+                        <TextArea layoutX="13.0" layoutY="161.0" prefHeight="143.0" prefWidth="352.0" promptText="Tuliskan saran anda..." />
                             </children>
                         </AnchorPane>
                     </children>
@@ -91,8 +82,17 @@
         </AnchorPane>
       <Accordion />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="179.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="32 tahun" />
-      <Text layoutX="405.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12 Agustus 1985" />
-      <Text layoutX="409.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menikah" />
+      <Text layoutX="179.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="32 tahun">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
+      <Text layoutX="405.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12 Agustus 1985">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
+      <Text layoutX="409.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menikah">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
     </children>
 </AnchorPane>
