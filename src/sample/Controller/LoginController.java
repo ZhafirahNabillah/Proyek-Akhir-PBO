@@ -32,12 +32,9 @@ public class LoginController {
     private Button btnPsikolog;
 
     @FXML
-    private CheckBox checkBox;
-
-    @FXML
     void LogInClick(ActionEvent event) {
         if (username.getText().equals("")&&password.getText().equals("")){
-            JOptionPane.showMessageDialog(null,"username dan password kosong", "Peringatan",JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null,"username dan password tidak terisi", "Peringatan",JOptionPane.WARNING_MESSAGE);
         }else {
             changePage(event,"Dashboard");
 
@@ -60,5 +57,4 @@ public class LoginController {
     void clickBtnPsikolog(ActionEvent event) { changePage(event, "psikolog_login");
 
     }
-
 }

@@ -35,7 +35,7 @@
                 </Label>
                 <AnchorPane layoutX="14.0" layoutY="63.0" prefHeight="321.0" prefWidth="249.0" style="-fx-background-color: #ff9999; -fx-background-radius: 20;">
                     <children>
-                        <CheckBox fx:id="checkBox" layoutX="29.0" layoutY="116.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="192.0" text="data yang saya isikan merupakan data asli" textFill="WHITE" wrapText="true">
+                        <CheckBox layoutX="29.0" layoutY="116.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="192.0" text="data yang saya isikan merupakan data asli" textFill="WHITE" wrapText="true">
                             <font>
                                 <Font name="Segoe UI Italic" size="9.0" />
                             </font>
