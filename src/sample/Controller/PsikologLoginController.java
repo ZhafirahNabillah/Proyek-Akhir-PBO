@@ -5,6 +5,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+
+import javax.swing.*;
+
 import static sample.Main.Helper.changePage;
 
 public class PsikologLoginController {
@@ -19,8 +22,11 @@ public class PsikologLoginController {
     private PasswordField password;
 
     @FXML
-    void LogInClick(ActionEvent event) { changePage(event,"psikolog_Saran");
-
+    void LogInClick(ActionEvent event) {
+        if (username.getText().equals("") && password.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "username dan password kosong", "Peringatan", JOptionPane.WARNING_MESSAGE);
+        } else {
+            changePage(event, "psikolog_saran");
+        }
     }
-
 }

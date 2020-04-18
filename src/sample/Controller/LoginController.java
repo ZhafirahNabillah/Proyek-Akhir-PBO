@@ -2,10 +2,7 @@ package sample.Controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 import javax.swing.*;
 
@@ -35,11 +32,15 @@ public class LoginController {
     private Button btnPsikolog;
 
     @FXML
+    private CheckBox checkBox;
+
+    @FXML
     void LogInClick(ActionEvent event) {
-        if (username.getText().equals("user")&&password.getText().equals("user")){
-            changePage(event,"Dashboard");
+        if (username.getText().equals("")&&password.getText().equals("")){
+            JOptionPane.showMessageDialog(null,"username dan password kosong", "Peringatan",JOptionPane.WARNING_MESSAGE);
         }else {
-            JOptionPane.showMessageDialog (null, "username dan password salah", "Peringatan", JOptionPane.WARNING_MESSAGE);
+            changePage(event,"Dashboard");
+
 //            JOptionPane.showMessageDialog (null, "Isi terlebih dahulu", "PERINGATAN", JOptionPane.INFORMATION_MESSAGE);
 //            JOptionPane.showMessageDialog (null, "Message", "Title", JOptionPane.WARNING_MESSAGE);
 //            JOptionPane.showMessageDialog (null, "Message", "Title", JOptionPane.ERROR_MESSAGE);
@@ -59,4 +60,5 @@ public class LoginController {
     void clickBtnPsikolog(ActionEvent event) { changePage(event, "psikolog_login");
 
     }
+
 }
