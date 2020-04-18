@@ -7,6 +7,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
+import javax.swing.*;
+
 import static sample.Main.Helper.changePage;
 
 public class LoginController {
@@ -33,8 +35,15 @@ public class LoginController {
     private Button btnPsikolog;
 
     @FXML
-    void LogInClick(ActionEvent event) { changePage(event, "Dashboard");
-
+    void LogInClick(ActionEvent event) {
+        if (username.getText().equals("user")&&password.getText().equals("user")){
+            changePage(event,"Dashboard");
+        }else {
+            JOptionPane.showMessageDialog (null, "username dan password salah", "Peringatan", JOptionPane.WARNING_MESSAGE);
+//            JOptionPane.showMessageDialog (null, "Isi terlebih dahulu", "PERINGATAN", JOptionPane.INFORMATION_MESSAGE);
+//            JOptionPane.showMessageDialog (null, "Message", "Title", JOptionPane.WARNING_MESSAGE);
+//            JOptionPane.showMessageDialog (null, "Message", "Title", JOptionPane.ERROR_MESSAGE);
+        }
     }
 
     @FXML

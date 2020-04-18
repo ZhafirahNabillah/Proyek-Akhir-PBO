@@ -8,6 +8,7 @@ import static sample.Main.Helper.changePage;
 
 
 public class DashboardController {
+     int number = 0;
 
     @FXML
     private Button btnHome;
@@ -41,22 +42,25 @@ public class DashboardController {
 
     @FXML
     void clickBtnArticle(ActionEvent event) {changePage(event, "page_Article");
-
     }
 
     @FXML
     void clickBtnComment(ActionEvent event) {
-
+        number++;
+        txtComment.setText(String.valueOf(number));
     }
 
     @FXML
-    void clickBtnHome(ActionEvent event) {changePage(event, "Dashboard");
+    void clickBtnHome(ActionEvent event) {
+
+        changePage(event, "Dashboard");
 
     }
 
     @FXML
     void clickBtnLikes(ActionEvent event) {
-
+        number++;
+        txtLikes.setText(String.valueOf(number));
     }
 
     @FXML
