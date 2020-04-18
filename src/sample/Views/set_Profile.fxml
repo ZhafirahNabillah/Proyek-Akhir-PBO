@@ -51,6 +51,15 @@
                                     </image>
                                 </ImageView>
                             </graphic></Button>
+                  <Button layoutY="317.0" mnemonicParsing="false" onAction="#clickLogout" prefHeight="32.0" prefWidth="47.0" style="-fx-background-color: #ff00;">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Gambar/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
                     </children></AnchorPane>
                 <AnchorPane layoutX="119.0" layoutY="34.0" prefHeight="365.0" prefWidth="450.0" style="-fx-background-color: #ff9999; -fx-background-radius: 8;">
                     <children>

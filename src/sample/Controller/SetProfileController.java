@@ -103,4 +103,8 @@ public class SetProfileController {
     void clickBtnUsername(ActionEvent event) {
 
     }
+    @FXML
+    void clickLogout(ActionEvent event){
+        changePage(event, "login");
+    }
 }
