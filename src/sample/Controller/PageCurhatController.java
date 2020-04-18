@@ -4,6 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
+import javax.swing.*;
+
 import static sample.Main.Helper.changePage;
 
 public class PageCurhatController {
@@ -48,7 +50,7 @@ public class PageCurhatController {
 
     @FXML
     void clickBtnSend(ActionEvent event) {
-
+        JOptionPane.showMessageDialog (null, "Berhasil Kirim !", "PEMBERITAHUAN", JOptionPane.INFORMATION_MESSAGE);
     }
 
     @FXML

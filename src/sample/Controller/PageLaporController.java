@@ -4,6 +4,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
+import javax.swing.*;
+
+import static sample.Main.Helper.changePage;
+
 public class PageLaporController {
 
     @FXML
@@ -19,33 +23,31 @@ public class PageLaporController {
     private Button btnHome;
 
     @FXML
-    void clickBtnHome(ActionEvent event) {
+    void clickBtnHome(ActionEvent event) { changePage(event,"Dashboard");
 
     }
 
     @FXML
-    void clickBtnPost(ActionEvent event) {
+    void clickBtnPost(ActionEvent event) { changePage(event,"page_post");
 
     }
 
     @FXML
-    void clickBtnProfile(ActionEvent event) {
+    void clickBtnProfile(ActionEvent event) {changePage(event,"page_profile");
 
     }
 
     @FXML
-    void clickBtnPsikolog(ActionEvent event) {
-
+    void clickBtnPsikolog(ActionEvent event) {changePage(event,"page_curhat");
     }
 
     @FXML
-    void clickLogout(ActionEvent event) {
-
+    void clickLogout(ActionEvent event) {changePage(event,"login");
     }
 
     @FXML
     void clickSend(ActionEvent event) {
-
+        JOptionPane.showMessageDialog (null, "Berhasil Kirim !", "PEMBERITAHUAN", JOptionPane.INFORMATION_MESSAGE);
     }
 
 }

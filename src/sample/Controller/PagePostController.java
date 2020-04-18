@@ -4,6 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
+import javax.swing.*;
+
 import static sample.Main.Helper.changePage;
 
 public class PagePostController {
@@ -34,8 +36,8 @@ public class PagePostController {
     }
 
     @FXML
-    void clickBtnPostingan(ActionEvent event) {changePage(event, "");
-
+    void clickBtnPostingan(ActionEvent event) {
+        JOptionPane.showMessageDialog (null, "Data sedang diverifikasi !", "PEMBERITAHUAN", JOptionPane.INFORMATION_MESSAGE);
     }
 
     @FXML
