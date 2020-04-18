@@ -48,4 +48,9 @@ public class PagePostController {
 
     }
 
+    @FXML
+    void clickLogout(ActionEvent event) {
+        changePage(event,"login");
+    }
+
 }

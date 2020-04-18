@@ -79,7 +79,11 @@ public class DashboardController {
     }
 
     @FXML
-    void clickBtnReport(ActionEvent event) {changePage(event, "");
+    void clickBtnReport(ActionEvent event) {changePage(event, "page_lapor");
+
+    }
+    @FXML
+    void clickLogout(ActionEvent event) {changePage(event,"login");
 
     }
 }

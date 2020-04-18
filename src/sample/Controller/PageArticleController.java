@@ -45,4 +45,8 @@ public class PageArticleController {
     void clickBtnPsikolog(ActionEvent event) {changePage(event, "page_curhat");
 
     }
+    @FXML
+    void clickLogout(ActionEvent event) { changePage(event,"login");
+
+    }
 }

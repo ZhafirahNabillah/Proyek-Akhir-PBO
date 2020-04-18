@@ -55,5 +55,8 @@ public class PageCurhatController {
     void clickNotif(ActionEvent event) {
 
     }
-
+    @FXML
+    void clickLogout(ActionEvent event) {
+        changePage(event,"login");
+    }
 }

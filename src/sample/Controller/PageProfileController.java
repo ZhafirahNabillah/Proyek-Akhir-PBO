@@ -67,4 +67,9 @@ public class PageProfileController {
     void clickBtnSetProfile(ActionEvent event) {changePage(event, "set_profile");
 
     }
+
+    @FXML
+    void clickLogout(ActionEvent event) { changePage(event,"login");
+
+    }
 }
