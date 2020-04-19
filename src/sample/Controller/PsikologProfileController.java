@@ -25,4 +25,9 @@ public class PsikologProfileController {
 
     }
 
+    @FXML
+    void clickLogout(ActionEvent event){
+        changePage(event,"login");
+    }
+
 }

@@ -34,7 +34,7 @@
                                     </image>
                                 </ImageView>
                             </graphic></Button>
-                  <Button layoutX="-2.0" layoutY="270.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="50.0" style="-fx-background-color: #FF00;">
+                  <Button layoutX="-2.0" layoutY="270.0" mnemonicParsing="false" onAction="#clickLogout" prefHeight="37.0" prefWidth="50.0" style="-fx-background-color: #FF00;">
                      <graphic>
                         <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                            <image>
