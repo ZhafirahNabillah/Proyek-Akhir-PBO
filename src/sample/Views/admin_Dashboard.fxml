@@ -87,7 +87,7 @@
                                                         <Insets left="-155.0" top="15.0" />
                                                     </HBox.margin>
                                                 </Text>
-                                                <Button fx:id="btnActivity" mnemonicParsing="false" onAction="#clickActivity" prefHeight="23.0" prefWidth="57.0" style="-fx-background-color: #fe4680; -fx-background-radius: 15;" text="Aktivitas" textFill="WHITE">
+                                                <Button fx:id="btnAkun1" mnemonicParsing="false" onAction="#clickAkun1" prefHeight="23.0" prefWidth="70.0" style="-fx-background-color: #fe4680; -fx-background-radius: 15;" text="Detail Akun" textFill="WHITE">
                                                     <font>
                                                         <Font name="Square721 BT Roman" size="10.0" />
                                                     </font>
@@ -117,7 +117,7 @@
                                                         <Insets left="-155.0" top="15.0" />
                                                     </HBox.margin>
                                                 </Text>
-                                                <Button fx:id="btnActivity2" mnemonicParsing="false" onAction="#clickActivity2" style="-fx-background-color: #fe4680; -fx-background-radius: 15;" text="Aktivitas" textFill="WHITE">
+                                                <Button fx:id="btnAlun2" mnemonicParsing="false" onAction="#clickAkun2" style="-fx-background-color: #fe4680; -fx-background-radius: 15;" text="Detail Akun" textFill="WHITE">
                                                     <font>
                                                         <Font name="Square721 BT Roman" size="10.0" />
                                                     </font>
@@ -150,7 +150,7 @@
                                                         <Insets left="-150.0" top="15.0" />
                                                     </HBox.margin>
                                                 </Text>
-                                                <Button fx:id="btnActivity3" mnemonicParsing="false" onAction="#clickActivity3" style="-fx-background-color: #fe4680; -fx-background-radius: 15;" text="Aktivitas" textFill="WHITE">
+                                                <Button fx:id="btnAkun3" mnemonicParsing="false" onAction="#clickAkun3" style="-fx-background-color: #fe4680; -fx-background-radius: 15;" text="Detail Akun" textFill="WHITE">
                                                     <font>
                                                         <Font name="Square721 BT Roman" size="10.0" />
                                                     </font>
@@ -183,14 +183,14 @@
                                                         <Insets left="20.0" top="10.0" />
                                                     </HBox.margin>
                                                 </Text>
-                                                <Button fx:id="btnActivityPsi" mnemonicParsing="false" onAction="#clickActivityPsi" prefHeight="23.0" prefWidth="58.0" style="-fx-background-color: #fe4680; -fx-background-radius: 15;" text="Aktivitas" textFill="WHITE">
-                                                    <font>
-                                                        <Font name="Square721 BT Roman" size="10.0" />
-                                                    </font>
-                                                    <HBox.margin>
-                                                        <Insets bottom="5.0" left="170.0" top="5.0" />
-                                                    </HBox.margin>
-                                                </Button>
+                                    <Button fx:id="btnUbah" mnemonicParsing="false" onAction="#clickUbah" prefHeight="23.0" prefWidth="46.0" style="-fx-background-color: #fe4680; -fx-background-radius: 15;" text="Ubah" textFill="WHITE">
+                                       <font>
+                                          <Font name="Square721 BT Roman" size="10.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Button>
                                             </children>
                                         </HBox>
                               <Line endX="337.66668701171875" endY="1.1444091796875E-5" layoutX="115.0" layoutY="48.0" startX="-100.0" stroke="#8a8181" AnchorPane.topAnchor="60.0" />

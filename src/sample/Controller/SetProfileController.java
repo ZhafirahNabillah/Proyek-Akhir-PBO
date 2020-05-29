@@ -32,13 +32,16 @@ public class SetProfileController {
     private Button btnName;
 
     @FXML
-    private Button btnStatus;
+    private Button btnBirth;
 
     @FXML
-    private Button btnUsername;
+    private Button btnHandphone;
 
     @FXML
     private Button btnEmail;
+
+    @FXML
+    private Button btnUsername;
 
     @FXML
     private Button btnPassword;
@@ -48,6 +51,14 @@ public class SetProfileController {
 
     @FXML
     private Button btnChangephoto;
+
+    @FXML
+    private Button btnLogOut;
+
+    @FXML
+    void clickBtnBirth(ActionEvent event) {
+
+    }
 
     @FXML
     void clickBtnChangephoto(ActionEvent event) {
@@ -93,12 +104,10 @@ public class SetProfileController {
     void clickBtnSetProfile(ActionEvent event) {changePage(event, "set_profile");
 
     }
-
     @FXML
-    void clickBtnStatus(ActionEvent event) {
+    void clickBtnHandphone(ActionEvent event) {
 
     }
-
     @FXML
     void clickBtnUsername(ActionEvent event) {
 

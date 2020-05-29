@@ -18,36 +18,37 @@ public class AdminDashboardController {
     private Button btnReport;
 
     @FXML
-    private Button btnActivity;
+    private Button btnAkun1;
 
     @FXML
-    private Button btnActivity2;
+    private Button btnAkun2;
 
     @FXML
-    private Button btnActivity3;
+    private Button btnAkun3;
 
-    @FXML
-    private Button btnActivityPsi;
     @FXML
     private Button btnLogout;
 
     @FXML
-    void clickActivity(ActionEvent event) {
+    private Button btnUbah;
+
+    @FXML
+    void clickAkun1(ActionEvent event) {
+        changePage(event,"admin_DetailAktivitas");
+    }
+
+    @FXML
+    void clickAkun2(ActionEvent event) {
 
     }
 
     @FXML
-    void clickActivity2(ActionEvent event) {
+    void clickAkun3(ActionEvent event) {
 
     }
 
     @FXML
-    void clickActivity3(ActionEvent event) {
-
-    }
-
-    @FXML
-    void clickActivityPsi(ActionEvent event) {
+    void clickUbah(ActionEvent event) {
 
     }
 

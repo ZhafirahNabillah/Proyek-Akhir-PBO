@@ -6,7 +6,7 @@ import javafx.scene.control.Button;
 
 import static sample.Main.Helper.changePage;
 
-public class AdminAktivitasController {
+public class AdminDetailReport {
 
     @FXML
     private Button btnAccount;
@@ -21,16 +21,22 @@ public class AdminAktivitasController {
     private Button btnLogout;
 
     @FXML
-    private Button btnAkun;
+    private Button btnSelesai;
+
+    @FXML
+    private Button btnLaporan;
+
+    @FXML
+    private Button btnSee;
 
     @FXML
     void clickAccount(ActionEvent event) {
-        changePage(event,"admin_Dashboard");
+
     }
 
     @FXML
-    void clickAkun(ActionEvent event) {
-        changePage(event,"admin_Dashboard");
+    void clickLaporan(ActionEvent event) {
+
     }
 
     @FXML
@@ -46,6 +52,16 @@ public class AdminAktivitasController {
     @FXML
     void clickReport(ActionEvent event) {
         changePage(event,"admin_Report");
+    }
+
+    @FXML
+    void clickSee(ActionEvent event) {
+
+    }
+
+    @FXML
+    void clickSelesai(ActionEvent event) {
+
     }
 
 }
