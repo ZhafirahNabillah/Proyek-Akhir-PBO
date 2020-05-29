@@ -70,17 +70,12 @@
                         <Image url="@../Gambar/background profil.jpg" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="121.0" fitWidth="201.0" layoutX="5.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Gambar/Untitled-1.png" />
-                     </image>
-                  </ImageView>
-                  <Text fx:id="txt_Name" fill="WHITE" layoutX="88.0" layoutY="63.0" stroke="#565151f5" strokeType="OUTSIDE" strokeWidth="1.5" text="Irene Cynthia">
+                  <Text fx:id="txt_Name" fill="WHITE" layoutX="31.0" layoutY="63.0" stroke="#565151f5" strokeType="OUTSIDE" strokeWidth="1.5" text="(Nama)">
                      <font>
                         <Font name="Comic Sans MS" size="25.0" />
                      </font>
                   </Text>
-                  <Text fx:id="txt_Username" fill="WHITE" layoutX="88.0" layoutY="90.0" stroke="#565151f5" strokeType="OUTSIDE" strokeWidth="1.5" text="\@cyth_irene">
+                  <Text fx:id="txt_Username" fill="WHITE" layoutX="31.0" layoutY="90.0" stroke="#565151f5" strokeType="OUTSIDE" strokeWidth="1.5" text="cyth_irene">
                      <font>
                         <Font name="Comic Sans MS" size="19.0" />
                      </font>
@@ -97,17 +92,12 @@
                   <Line endX="-100.00001525878906" endY="-3.666656494140625" layoutX="146.0" layoutY="143.0" startX="-100.00001525878906" startY="-22.333343505859375" stroke="#8e8989" strokeMiterLimit="8.0" />
                   <AnchorPane layoutX="15.0" layoutY="154.0" prefHeight="219.0" prefWidth="418.0" style="-fx-background-color: #ffcccc; -fx-background-radius: 10;">
                      <children>
-                        <ImageView fitHeight="74.0" fitWidth="97.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Gambar/Untitled-1.png" />
-                           </image>
-                        </ImageView>
-                        <Text fill="#565151" layoutX="52.0" layoutY="27.0" stroke="#979494" strokeType="OUTSIDE" strokeWidth="0.0" text="Irene Cynthia">
+                        <Text fill="#565151" layoutX="31.0" layoutY="30.0" stroke="#979494" strokeType="OUTSIDE" strokeWidth="0.0" text="cynth_irene">
                            <font>
                               <Font name="Comic Sans MS" size="13.0" />
                            </font>
                         </Text>
-                        <Text fill="#565151" layoutX="52.0" layoutY="41.0" stroke="#979494" strokeType="OUTSIDE" strokeWidth="0.0" text="14/4/2020  10.00 AM">
+                        <Text fill="#565151" layoutX="31.0" layoutY="44.0" stroke="#979494" strokeType="OUTSIDE" strokeWidth="0.0" text="14/4/2020  10.00 AM">
                            <font>
                               <Font name="Comic Sans MS" size="9.0" />
                            </font>
@@ -137,7 +127,7 @@
                         </ScrollPane>
                      </children>
                   </AnchorPane>
-                  <Button fx:id="btnSetProfile" layoutX="207.0" layoutY="66.0" mnemonicParsing="false" onAction="#clickBtnSetProfile" style="-fx-background-color: #ff00;">
+                  <Button fx:id="btnDetail" layoutX="207.0" layoutY="66.0" mnemonicParsing="false" onAction="#clickBtnDetail" style="-fx-background-color: #ff00;">
                      <graphic>
                         <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>

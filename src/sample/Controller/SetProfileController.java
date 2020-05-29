@@ -5,9 +5,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 
-import static sample.Main.Helper.changePage;
-
-
 public class SetProfileController {
 
     @FXML
@@ -23,97 +20,45 @@ public class SetProfileController {
     private Button btnProfile;
 
     @FXML
+    private Button btnLogOut;
+
+    @FXML
     private Text txt_Name;
 
     @FXML
     private Text txt_Username;
 
     @FXML
-    private Button btnName;
+    private Button btnSimpan;
 
     @FXML
-    private Button btnBirth;
-
-    @FXML
-    private Button btnHandphone;
-
-    @FXML
-    private Button btnEmail;
-
-    @FXML
-    private Button btnUsername;
-
-    @FXML
-    private Button btnPassword;
-
-    @FXML
-    private Button btnSetProfile;
-
-    @FXML
-    private Button btnChangephoto;
-
-    @FXML
-    private Button btnLogOut;
-
-    @FXML
-    void clickBtnBirth(ActionEvent event) {
+    void clickBtnHome(ActionEvent event) {
 
     }
 
     @FXML
-    void clickBtnChangephoto(ActionEvent event) {
+    void clickBtnPost(ActionEvent event) {
 
     }
 
     @FXML
-    void clickBtnEmail(ActionEvent event) {
+    void clickBtnProfile(ActionEvent event) {
 
     }
 
     @FXML
-    void clickBtnHome(ActionEvent event) {changePage(event, "Dashboard");
+    void clickBtnPsikolog(ActionEvent event) {
 
     }
 
     @FXML
-    void clickBtnName(ActionEvent event) {
+    void clickBtnSimpan(ActionEvent event) {
 
     }
 
     @FXML
-    void clickBtnPassword(ActionEvent event) {
+    void clickLogout(ActionEvent event) {
 
     }
 
-    @FXML
-    void clickBtnPost(ActionEvent event) {changePage(event, "page_post");
-
-    }
-
-    @FXML
-    void clickBtnProfile(ActionEvent event) {changePage(event, "page_profile");
-
-    }
-
-    @FXML
-    void clickBtnPsikolog(ActionEvent event) {changePage(event, "page_curhat");
-
-    }
-
-    @FXML
-    void clickBtnSetProfile(ActionEvent event) {changePage(event, "set_profile");
-
-    }
-    @FXML
-    void clickBtnHandphone(ActionEvent event) {
-
-    }
-    @FXML
-    void clickBtnUsername(ActionEvent event) {
-
-    }
-    @FXML
-    void clickLogout(ActionEvent event){
-        changePage(event, "login");
-    }
 }

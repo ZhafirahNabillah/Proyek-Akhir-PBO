@@ -3,13 +3,12 @@ package sample.Controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
 import static sample.Main.Helper.changePage;
 
 
-public class PageProfileController {
+public class DetailProfileController {
 
     @FXML
     private Button btnHome;
@@ -30,13 +29,46 @@ public class PageProfileController {
     private Text txt_Username;
 
     @FXML
-    private TextField btnSearching;
+    private Button btnName;
 
     @FXML
-    private Button btnNext;
+    private Button btnBirth;
+
+    @FXML
+    private Button btnHandphone;
+
+    @FXML
+    private Button btnEmail;
+
+    @FXML
+    private Button btnUsername;
+
+    @FXML
+    private Button btnPassword;
 
     @FXML
     private Button btnDetail;
+
+    @FXML
+    private Button btnChangephoto;
+
+    @FXML
+    private Button btnLogOut;
+
+    @FXML
+    void clickBtnBirth(ActionEvent event) {
+
+    }
+
+    @FXML
+    void clickBtnChangephoto(ActionEvent event) {
+
+    }
+
+    @FXML
+    void clickBtnEmail(ActionEvent event) {
+
+    }
 
     @FXML
     void clickBtnHome(ActionEvent event) {changePage(event, "Dashboard");
@@ -44,7 +76,12 @@ public class PageProfileController {
     }
 
     @FXML
-    void clickBtnNext(ActionEvent event) {changePage(event, "btn_next");
+    void clickBtnName(ActionEvent event) {
+
+    }
+
+    @FXML
+    void clickBtnPassword(ActionEvent event) {
 
     }
 
@@ -64,12 +101,19 @@ public class PageProfileController {
     }
 
     @FXML
-    void clickBtnDetail(ActionEvent event) {changePage(event, "detail_profile");
+    void clickBtnDetail(ActionEvent event) {changePage(event, "detail_Profile");
 
     }
-
     @FXML
-    void clickLogout(ActionEvent event) { changePage(event,"login");
+    void clickBtnHandphone(ActionEvent event) {
 
+    }
+    @FXML
+    void clickBtnUsername(ActionEvent event) {
+
+    }
+    @FXML
+    void clickLogout(ActionEvent event){
+        changePage(event, "login");
     }
 }
