@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="powerpuffgirls.Controller.AdminDetailReport">
+    <children>
+        <AnchorPane prefHeight="346.0" prefWidth="600.0" style="-fx-background-color: #fe4680;">
+            <children>
+                <AnchorPane prefHeight="405.0" prefWidth="47.0" style="-fx-background-color: #ff9999;" />
+                <AnchorPane layoutX="30.0" layoutY="49.0" prefHeight="356.0" prefWidth="47.0" style="-fx-background-color: #ffcccc;">
+                    <children>
+                        <AnchorPane layoutY="62.0" prefHeight="46.0" prefWidth="47.0" />
+                  <VBox layoutY="28.0" prefHeight="200.0" prefWidth="47.0">
+                     <children>
+                                <Button fx:id="btnAccount" mnemonicParsing="false" onAction="#clickAccount" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #ff00;">
+                                    <graphic>
+                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../Gambar/user.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin></Button>
+                              <Button fx:id="btnPostArticle" mnemonicParsing="false" onAction="#clickPostArticle" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #ff00;">
+                                  <graphic>
+                                      <ImageView fitHeight="22.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                              <Image url="@../Gambar/plus.png" />
+                                          </image>
+                                      </ImageView>
+                                  </graphic>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                              <Button fx:id="btnReport" mnemonicParsing="false" onAction="#clickReport" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #aaaa;">
+                                  <graphic>
+                                      <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                              <Image url="@../Gambar/folder.png" />
+                                          </image>
+                                      </ImageView>
+                                  </graphic>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="btnVerify" mnemonicParsing="false" onAction="#clickVerify" style="-fx-background-color: #ff00;">
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Gambar/bell.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin></Button>
+                        <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#clickLogout" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #ff00;">
+                           <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="@../Gambar/logout.png" />
+                                        </image>
+                                    </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets top="80.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                    </children></AnchorPane>
+                <ImageView fitHeight="93.0" fitWidth="173.0" layoutX="-5.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Gambar/PPG_logo.png" />
+                    </image>
+                </ImageView>
+                <TabPane layoutX="101.0" layoutY="61.0" prefHeight="330.0" prefWidth="481.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="Laporan Diterima">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffcccc;">
+                                    <children>
+                              <Button fx:id="btnSelesai" layoutX="233.0" layoutY="266.0" mnemonicParsing="false" onAction="#clickSelesai" style="-fx-background-color: #fe4680; -fx-background-radius: 10;" text="Selesai" textFill="WHITE" />
+                              <Button fx:id="btnLaporan" layoutX="148.0" layoutY="266.0" mnemonicParsing="false" onAction="#clickLaporan" style="-fx-background-color: #fe4680; -fx-background-radius: 10;" text="Kembali" textFill="WHITE" />
+                              <ScrollPane layoutX="-23.0" layoutY="-86.0" prefHeight="348.0" prefWidth="505.0">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                                    <HBox layoutX="15.0" layoutY="84.0" prefHeight="269.0" prefWidth="490.0" style="-fx-background-color: #ffcccc;">
+                                             <children>
+                                                <VBox prefHeight="123.0" prefWidth="133.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal Laporan" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Pelapor">
+                                                         <VBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Alamat Pelapor">
+                                                         <VBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nomer Handphone">
+                                                         <VBox.margin>
+                                                            <Insets top="20.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kronologi Kejadian">
+                                                         <VBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                </VBox>
+                                                <VBox prefHeight="259.0" prefWidth="328.0">
+                                                   <children>
+                                                                <Text fill="#3b3737" strokeType="OUTSIDE" strokeWidth="0.0" text="06 November 2019" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Irene Cynthia">
+                                                         <VBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Jl. Sriwijaya Blok D-05">
+                                                         <VBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="082-44555667">
+                                                         <VBox.margin>
+                                                            <Insets top="20.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                      <ScrollPane prefHeight="141.0" prefWidth="334.0">
+                                                        <content>
+                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="295.0" prefWidth="396.0">
+                                                               <children>
+                                                                  <Text layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="                Seumur hidup saya tidak perrnah mengalami hal yang tidak ingin dimiliki setiap wanita, oleh karena itu saya sangat kaget begitu mendapat perlakuan ini dari pasangan saya. Dua hari yang lalu dia memukul kepala bagian belakang saya hingga saya merasa pusing, awalnya saya tahan saja mungkin karena fikiran di kantor menumpuk" wrappingWidth="345.9999694824219" />
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets left="5.0" right="5.0" top="5.0" />
+                                                               </padding>
+                                                            </AnchorPane>
+                                                        </content>
+                                                         <VBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </VBox.margin>
+                                                      </ScrollPane>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                             <padding>
+                                                <Insets left="20.0" top="10.0" />
+                                             </padding>
+                                                    </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </ScrollPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

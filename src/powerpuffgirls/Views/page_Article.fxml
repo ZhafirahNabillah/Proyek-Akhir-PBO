@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="powerpuffgirls.Controller.PageArticleController">
+    <children>
+        <AnchorPane prefHeight="346.0" prefWidth="600.0" style="-fx-background-color: #fe4068;">
+            <children>
+                <AnchorPane prefHeight="412.0" prefWidth="57.0" style="-fx-background-color: #ff9999;" />
+                <AnchorPane layoutX="30.0" layoutY="34.0" prefHeight="378.0" prefWidth="38.0" style="-fx-background-color: #ffcccc;">
+                    <children>
+                        <AnchorPane layoutY="62.0" prefHeight="46.0" prefWidth="47.0">
+                     <children>
+                        <VBox layoutY="-6.0" prefHeight="151.0" prefWidth="49.0">
+                           <children>
+                                      <Button fx:id="btnHome" mnemonicParsing="false" onAction="#clickBtnHome" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #aaaa;">
+                                          <graphic>
+                                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                                  <image>
+                                                      <Image url="@../Gambar/clock (2).png" />
+                                                  </image>
+                                              </ImageView>
+                                          </graphic>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                                    <Button fx:id="btnPost" mnemonicParsing="false" onAction="#clickBtnPost" prefHeight="103.0" prefWidth="47.0" style="-fx-background-color: #ff00;">
+                                        <graphic>
+                                            <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                    <Image url="@../Gambar/plus.png" />
+                                                </image>
+                                            </ImageView>
+                                        </graphic>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                                    <Button fx:id="btnPsikolog" mnemonicParsing="false" onAction="#clickBtnPsikolog" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #ff00;">
+                                        <graphic>
+                                            <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                    <Image url="@../Gambar/message - Copy.png" />
+                                                </image>
+                                            </ImageView>
+                                        </graphic>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                                    <Button fx:id="btnProfile" mnemonicParsing="false" onAction="#clickBtnProfile" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #ff00;">
+                                        <graphic>
+                                            <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                    <Image url="@../Gambar/user.png" />
+                                                </image>
+                                            </ImageView>
+                                        </graphic>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#clickLogout" prefHeight="31.0" prefWidth="47.0" style="-fx-background-color: #ff00;">
+                                 <graphic>
+                                    <ImageView fitHeight="23.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Gambar/logout.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+                    </children></AnchorPane>
+                <AnchorPane layoutX="119.0" prefHeight="61.0" prefWidth="450.0" style="-fx-background-color: #ff9999; -fx-background-radius: 8;">
+                    <children>
+                  <Text fill="WHITE" layoutX="28.0" layoutY="26.0" stroke="#958b8b" strokeType="OUTSIDE" text="Kumpulan Artikel dan Berita Terbaru" textAlignment="CENTER" wrappingWidth="373.3333333333332">
+                     <font>
+                        <Font name="Bungee Inline" size="19.0" />
+                     </font>
+                  </Text>
+                    </children></AnchorPane>
+                <ImageView fitHeight="89.0" fitWidth="138.0" layoutX="-5.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Gambar/PPG_logo.png" />
+                    </image>
+                </ImageView>
+            <ScrollPane layoutX="119.0" layoutY="67.0" prefHeight="343.0" prefWidth="450.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" style="-fx-background-color: #ffcccc;">
+                     <children>
+                        <VBox prefHeight="541.0" prefWidth="401.0">
+                           <children>
+                              <Text fill="#ff9999" stroke="#6f13139e" strokeType="INSIDE" text="Cerita Nikita Mirzani Soal Tujuan Temui Dipo Latief, Tagih Harley" wrappingWidth="440.0">
+                                 <font>
+                                    <Font name="Square721 BT Bold" size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#5d5959" strokeType="OUTSIDE" strokeWidth="0.0" text="M Yusuf Manurung">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Square721 BT Bold" size="12.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#5d5959" strokeType="OUTSIDE" strokeWidth="0.0" text="Jakarta">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fill="#5d5959" strokeType="OUTSIDE" strokeWidth="0.0" text="06 November 2018">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fill="#5d5959" strokeType="OUTSIDE" strokeWidth="0.0" text="Artis Nikita Mirzani memberikan kesaksian sebagai terdakwa dalam kasus penganiayaan terhadap mantan suaminya, Dipo Latief di hadapan Majelis Hakim Pengadilan Negeri Jakarta Selatan pada Kamis, 28 Mei 2020.Dalam persidangan, Nikita mengaku tidak ingat betul adanya penganiayaan terhadap Dipo. Ia hanya mengakui sempat mencoba melempar asbak plastik ke teman Dipo, yakni Ferdiansyah alias Kiproy.&quot;Sempat mau melempar ke Kiproy, tapi ditangkis sama Dipo,&quot; ujar Nikita dalam persidangan.Keributan tersebut berlangsung dalam sebuah mobil di area parkir Jalan Benda Raya, Cilandak, Jakarta Selatan pada Kamis, 5 Juli 2018. Di dalam mobil itu, terdapat Dipo, Kiproy dan seorang lagi bernama Farid Riyanto.Nikita menjelaskan, dirinya mendatangi mobil tersebut untuk bertemu dengan Dipo guna membahas masalah rumah tangganya. Saat dia masuk ke dalam mobil, Dipo disebut duduk di bangku tengah. Nikita mengaku awalnya tidak menyadari ada Kiproy di dalam mobil.&quot;Pas mau masuk mobil ternyata ada si Kiproy, dia ngumpet di kursi belakang. Nah di situ saya gelap mata dan emosi,&quot; ujar Nikita.Nikita mengaku bahwa dirinya emosi melihat Kiproy karena menganggap pria tersebut selalu mengganggu rumah tangganya. Dia menuding Kiproy sebagai orang yang mempengaruhi mantan suaminya untuk 'main perempuan'. &quot;Malah kadang-kadang perempuannya dapat dari si Ferdiansyah itu,&quot; kata Nikita.Selain itu, kata Nikita, Kiproy juga tidak pernah mengangkat teleponnya selama dua hari sebelum peristiwa penganiayaan. Nikita mengaku menghubungi Kiproy untuk menanyakan keberadaan Dipo. Pada hari penganiayaan itu, Nikita mengaku tidak ingat melakukan kekerasan terhadap Dipo. Dia berujar hanya sedang ribut dengan Kiproy atau Ferdiansyah pada saat itu.&quot;Kan dia (Dipo) melerai terus, tiba-tiba dia teriak, 'aduh berdarah', langsung saya peluk tapi saya malah didorong,&quot; kata Nikita.Menurut Nikita, darah yang keluar dari kepala Dipo pada saat itu hanya sedikit atau tidak mengucur. Setelah insiden tersebut, Dipo disebut malah marah ke Nikita." wrappingWidth="400.0">
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="5.0" top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                           <padding>
+                              <Insets left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
