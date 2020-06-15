@@ -2,14 +2,18 @@ package powerpuffgirls.Controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+import powerpuffgirls.Models.User1;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import static powerpuffgirls.Utils.Helper.changePage;
 
-public class PageProfileController {
+public class PageProfileController implements Initializable {
 
     @FXML
     private AnchorPane profile;
@@ -33,22 +37,37 @@ public class PageProfileController {
     private Text txt_Username;
 
     @FXML
-    private TextField btnSearching;
-
-    @FXML
-    private Button btnNext;
-
-    @FXML
     private Button btnDetail;
 
     @FXML
-    private Text Username_post;
+    private TableView<?> tblpostingan;
 
     @FXML
-    private Button btnSetPostingan;
+    private TableColumn<?, ?> idpost;
 
     @FXML
-    private Text Date_Post;
+    private TableColumn<?, ?> namapost;
+
+    @FXML
+    private TableColumn<?, ?> usrnamepost;
+
+    @FXML
+    private TableColumn<?, ?> tglpost;
+
+    @FXML
+    private Text namadetail;
+
+    @FXML
+    private Text usrnmdetail;
+
+    @FXML
+    private DatePicker tgldetail;
+
+    @FXML
+    private TextArea isidetail;
+
+    @FXML
+    private Text status;
 
     @FXML
     void clickBtnHome(ActionEvent event) {changePage(event, "Dashboard");
@@ -84,16 +103,9 @@ public class PageProfileController {
     void clickLogout(ActionEvent event) { changePage(event,"login");
     }
 
-    @FXML
-    void clickSetPost(ActionEvent event){changePage(event,"set_postingan");
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        txt_Name.setText(User1.getNamalengkap());
+        txt_Username.setText(User1.getUsrname());
     }
-
-//    @Override
-//    public void initialize(URL url, ResourceBundle resourceBundle) {
-//        ArrayList<User> data= User.getUser();
-//        for (User user : data){
-//            txt_Name.getText().add(user.getNamaLengkap());
-//        }
-//        System.out.println(new Gson().toJson(data));
-//    }
 }

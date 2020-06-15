@@ -1,16 +1,14 @@
 package powerpuffgirls.Controller;
 
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import powerpuffgirls.Models.User1;
 import powerpuffgirls.Utils.DBConnection;
-
-import javax.swing.*;
-import java.awt.event.MouseEvent;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ResourceBundle;
 
 import static powerpuffgirls.Utils.Helper.changePage;
@@ -40,20 +38,50 @@ public class LoginController implements Initializable {
 
     @FXML
     void LogInClick(ActionEvent event) {
-        if (txtusername.getText().equals("")&&txtpassword.getText().equals("")){
-            JOptionPane.showMessageDialog(null,"username dan password tidak terisi", "Peringatan",JOptionPane.WARNING_MESSAGE);
-        }else {
-            changePage(event,"Dashboard");
+        DBConnection connec  = new DBConnection();
+        String nama = null;
+        String usr = null;
+        String pass = null;
+        String email = null;
+        String nohp = null;
+        String tgl = null;
+        try {
+            User1.setUsrname(txtusername.getText());
+            PreparedStatement ps = connec.connection().prepareStatement("Select * from user where Username ='"+txtusername.getText()+"'");
+            ResultSet st =ps.executeQuery();
+            while (st.next()){
+                nama=st.getString( "NamaLengkap");
+                usr=st.getString("Username");
+                pass=st.getString("Password");
+                email=st.getString("Email");
+                nohp=st.getString("NoHP");
+                tgl=st.getString("TanggalLahir");
+            }
+            User1.setNamalengkap(nama);
+            User1.setUsrname(usr);
+            User1.setPasswrd(pass);
+            User1.setMail(email);
+            User1.setNoHP(nohp);
+            User1.setTgllahir(tgl);
 
-//            JOptionPane.showMessageDialog (null, "Isi terlebih dahulu", "PERINGATAN", JOptionPane.INFORMATION_MESSAGE);
-//            JOptionPane.showMessageDialog (null, "Message", "Title", JOptionPane.WARNING_MESSAGE);
-//            JOptionPane.showMessageDialog (null, "Message", "Title", JOptionPane.ERROR_MESSAGE);
+            PreparedStatement pre = connec.connection().prepareStatement("SELECT * FROM user where Username=? and Password=?");
+            pre.setString(1, txtusername.getText());
+            pre.setString(2, txtpassword.getText());
+            ResultSet result = pre.executeQuery();
+
+
+            if (txtusername.getText().equals("") && txtpassword.getText().equals("")) {
+                Alert a = new Alert(Alert.AlertType.WARNING, "Username dan Password yang anda masukkan tidak lengkap");
+                a.showAndWait();
+            } else if (result.next()){
+                changePage(event,"Dashboard");
+            }else {
+                Alert alert = new Alert(Alert.AlertType.ERROR,"Maaf Username Password salah");
+                alert.showAndWait();
+            }
+        }catch (SQLException e) {
+            e.printStackTrace();
         }
-
-        String username= txtusername.getText();
-        String password=txtpassword.getText();
-
-
     }
 
     @FXML
@@ -67,15 +95,6 @@ public class LoginController implements Initializable {
 
     @FXML
     void clickBtnPsikolog(ActionEvent event) { changePage(event, "psikolog_login");
-
-    }
-
-    @FXML
-    void SignIn(MouseEvent event) {
-    }
-
-    @FXML
-    void SignUp(MouseEvent event) {
 
     }
 

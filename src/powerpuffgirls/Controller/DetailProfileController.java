@@ -2,13 +2,20 @@ package powerpuffgirls.Controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import powerpuffgirls.Models.User1;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import static powerpuffgirls.Utils.Helper.changePage;
 
 
-public class DetailProfileController {
+public class DetailProfileController implements Initializable {
 
     @FXML
     private Button btnHome;
@@ -23,57 +30,43 @@ public class DetailProfileController {
     private Button btnProfile;
 
     @FXML
+    private Button btnLogOut;
+
+    @FXML
     private Text txt_Name;
 
     @FXML
     private Text txt_Username;
 
     @FXML
-    private Button btnName;
+    private TextField nama;
 
     @FXML
-    private Button btnBirth;
+    private TextField tanggal;
 
     @FXML
-    private Button btnHandphone;
+    private TextField noHP;
 
     @FXML
-    private Button btnEmail;
+    private TextField email;
 
     @FXML
-    private Button btnUsername;
+    private TextField usrname;
 
     @FXML
-    private Button btnPassword;
+    private TextField pass;
 
     @FXML
-    private Button btnDetail;
+    private Button simpan;
 
     @FXML
-    private Button btnLogOut;
+    private Button hapus;
 
     @FXML
-    void clickBtnBirth(ActionEvent event) {
-
-    }
-
-    @FXML
-    void clickBtnEmail(ActionEvent event) {
-
-    }
+    private Button reset;
 
     @FXML
     void clickBtnHome(ActionEvent event) {changePage(event, "Dashboard");
-
-    }
-
-    @FXML
-    void clickBtnName(ActionEvent event) {
-
-    }
-
-    @FXML
-    void clickBtnPassword(ActionEvent event) {
 
     }
 
@@ -93,20 +86,34 @@ public class DetailProfileController {
     }
 
     @FXML
-    void clickBtnSetProfile(ActionEvent event) {changePage(event, "set_profile");
+    void clickHapus(ActionEvent event) {
 
     }
+
     @FXML
-    void clickBtnHandphone(ActionEvent event) {
+    void clickLogout(ActionEvent event) {changePage(event,"login");
 
     }
+
     @FXML
-    void clickBtnUsername(ActionEvent event) {
+    void clickReset(ActionEvent event) {
 
     }
+
     @FXML
-    void clickLogout(ActionEvent event){
-        changePage(event, "login");
+    void clickSimpan(ActionEvent event) {
+
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        txt_Name.setText(User1.getNamalengkap());
+        txt_Username.setText(User1.getUsrname());
+        nama.setText(User1.getNamalengkap());
+        usrname.setText(User1.getUsrname());
+        pass.setText(User1.getPasswrd());
+        email.setText(User1.getMail());
+        noHP.setText(User1.getNoHP());
+        tanggal.setText(User1.getTgllahir());
+    }
 }

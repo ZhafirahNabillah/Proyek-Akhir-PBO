@@ -3,20 +3,26 @@ package powerpuffgirls.Models;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class Psikolog {
-    public Psikolog(String id, String nama, String username, String password, String email, String nohp, String tanggal){
+public class User1 {
+
+
+    public User1(String id, String nama, String username, String password, String email, String noHP, String tanggal) {
         this.id = new SimpleStringProperty(id);
         this.nama = new SimpleStringProperty(nama);
         this.username = new SimpleStringProperty(username);
         this.password = new SimpleStringProperty(password);
         this.email = new SimpleStringProperty(email);
-        this.nohp = new SimpleStringProperty(nohp);
+        this.nohp = new SimpleStringProperty(noHP);
         this.tanggal = new SimpleStringProperty(tanggal);
+
     }
-    public static String usrname;
-    public static String pslogin;
-    public static String namaLengkap;
-    public static String noHandphone;
+
+    private static String usrname;
+    private static String namalengkap;
+    private static String passwrd;
+    private static String mail;
+    private static String noHP;
+    private static String tgllahir;
     private StringProperty id;
     private StringProperty nama;
     private StringProperty username;
@@ -24,6 +30,22 @@ public class Psikolog {
     private StringProperty email;
     private StringProperty nohp;
     private StringProperty tanggal;
+
+    public static String getUsrname() {
+        return usrname;
+    }
+
+    public static void setUsrname(String usrname) {
+        User1.usrname = usrname;
+    }
+
+    public static String getNamalengkap() {
+        return namalengkap;
+    }
+
+    public static void setNamalengkap(String namalengkap) {
+        User1.namalengkap = namalengkap;
+    }
 
     public String getId() {
         return id.get();
@@ -109,27 +131,35 @@ public class Psikolog {
         this.tanggal.set(tanggal);
     }
 
-    public static String getNamaLengkap() {
-        return namaLengkap;
+    public static String getPasswrd() {
+        return passwrd;
     }
 
-    public static void setNamaLengkap(String namaLengkap) {
-        Psikolog.namaLengkap = namaLengkap;
+    public static void setPasswrd(String passwrd) {
+        User1.passwrd = passwrd;
     }
 
-    public static String getNoHandphone() {
-        return noHandphone;
+    public static String getMail() {
+        return mail;
     }
 
-    public static void setNoHandphone(String noHandphone) {
-        Psikolog.noHandphone = noHandphone;
+    public static void setMail(String mail) {
+        User1.mail = mail;
     }
 
-    public static String getUsrname() {
-        return usrname;
+    public static String getNoHP() {
+        return noHP;
     }
 
-    public static void setUsrname(String usrname) {
-        Psikolog.usrname = usrname;
+    public static void setNoHP(String noHP) {
+        User1.noHP = noHP;
+    }
+
+    public static String getTgllahir() {
+        return tgllahir;
+    }
+
+    public static void setTgllahir(String tgllahir) {
+        User1.tgllahir = tgllahir;
     }
 }

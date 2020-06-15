@@ -2,12 +2,19 @@ package powerpuffgirls.Controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.text.Text;
+import powerpuffgirls.Models.User1;
+
 import javax.swing.*;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import static powerpuffgirls.Utils.Helper.changePage;
 
-public class PagePostController {
+public class PagePostController implements Initializable {
 
     @FXML
     private Button btnHome;
@@ -23,6 +30,12 @@ public class PagePostController {
 
     @FXML
     private Button btnPosting;
+
+    @FXML
+    private Text nama;
+
+    @FXML
+    private Text username;
 
     @FXML
     void clickBtnHome(ActionEvent event) {changePage(event, "Dashboard");
@@ -54,4 +67,9 @@ public class PagePostController {
         changePage(event,"login");
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        nama.setText(User1.getNamalengkap());
+        username.setText(User1.getUsrname());
+    }
 }

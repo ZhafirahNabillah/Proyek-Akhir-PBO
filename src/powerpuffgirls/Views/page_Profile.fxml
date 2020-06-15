@@ -2,11 +2,14 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -85,22 +88,22 @@
                     </children></AnchorPane>
             <AnchorPane layoutX="119.0" layoutY="34.0" prefHeight="365.0" prefWidth="450.0" style="-fx-background-color: #ff9999; -fx-background-radius: 8;">
                <children>
-                  <ImageView fitHeight="105.0" fitWidth="450.0" layoutY="1.0" opacity="0.5" pickOnBounds="true">
+                  <ImageView fitHeight="87.0" fitWidth="450.0" layoutY="1.0" opacity="0.5" pickOnBounds="true">
                      <image>
                         <Image url="@../Gambar/background profil.jpg" />
                      </image>
                   </ImageView>
-                  <Text fx:id="txt_Name" fill="WHITE" layoutX="31.0" layoutY="63.0" stroke="#565151f5" strokeType="OUTSIDE" strokeWidth="1.5" text="Irene Cynthia">
+                  <Text fx:id="txt_Name" fill="WHITE" layoutX="15.0" layoutY="42.0" stroke="#565151f5" strokeType="OUTSIDE" strokeWidth="1.5">
                      <font>
                         <Font name="Comic Sans MS" size="25.0" />
                      </font>
                   </Text>
-                  <Text fx:id="txt_Username" fill="WHITE" layoutX="31.0" layoutY="90.0" stroke="#565151f5" strokeType="OUTSIDE" strokeWidth="1.5" text="cyth_irene">
+                  <Text fx:id="txt_Username" fill="WHITE" layoutX="15.0" layoutY="69.0" stroke="#565151f5" strokeType="OUTSIDE" strokeWidth="1.5">
                      <font>
                         <Font name="Comic Sans MS" size="19.0" />
                      </font>
                   </Text>
-                  <Button fx:id="btnDetail" layoutX="394.0" layoutY="65.0" mnemonicParsing="false" onAction="#clickBtnDetail" style="-fx-background-color: #ff00;">
+                  <Button fx:id="btnDetail" layoutX="394.0" layoutY="15.0" mnemonicParsing="false" onAction="#clickBtnDetail" style="-fx-background-color: #ff00;">
                      <graphic>
                         <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -108,72 +111,64 @@
                            </image>
                         </ImageView>
                      </graphic></Button>
-                  <ScrollPane fx:id="postingan" layoutX="11.0" layoutY="114.0" prefHeight="247.0" prefWidth="428.0">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="292.0" prefWidth="423.0" style="-fx-background-color: #ffcccc;">
-                           <children>
-                              <VBox prefHeight="263.0" prefWidth="428.0">
-                                 <children>
-                                    <Text fill="#e87373" strokeType="OUTSIDE" strokeWidth="0.0" text="UNDANG-UNDANG NO. 23 TAHUN 2004 TENTANG PENGHAPUSAN KDRT" wrappingWidth="318.0">
-                                       <font>
-                                          <Font name="Square721 BT Bold" size="12.0" />
-                                       </font>
-                                       <VBox.margin>
-                                          <Insets left="10.0" top="10.0" />
-                                       </VBox.margin>
-                                    </Text>
-                                    <HBox prefHeight="19.0" prefWidth="428.0">
-                                       <children>
-                                          <Text fill="#565151" stroke="#979494" strokeType="OUTSIDE" strokeWidth="0.0" text="cynth_irene">
-                                             <font>
-                                                <Font name="Comic Sans MS" size="13.0" />
-                                             </font>
-                                             <HBox.margin>
-                                                <Insets top="2.0" />
-                                             </HBox.margin>
-                                          </Text>
-                                          <Button fx:id="btnSetPostingan" mnemonicParsing="false" onAction="#clickSetPost" style="-fx-background-color: #ff00;" textFill="WHITE">
-                                             <font>
-                                                <Font name="System Bold Italic" size="7.0" />
-                                             </font>
-                                             <graphic>
-                                                <ImageView fitHeight="16.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-                                                   <image>
-                                                      <Image url="@../Gambar/pen.png" />
-                                                   </image>
-                                                </ImageView>
-                                             </graphic>
-                                             <HBox.margin>
-                                                <Insets left="280.0" />
-                                             </HBox.margin>
-                                          </Button>
-                                       </children>
-                                       <VBox.margin>
-                                          <Insets left="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </HBox>
-                                    <Text fill="#565151" stroke="#979494" strokeType="OUTSIDE" strokeWidth="0.0" text="14/4/2020  ">
-                                       <font>
-                                          <Font name="Comic Sans MS" size="9.0" />
-                                       </font>
-                                       <VBox.margin>
-                                          <Insets left="10.0" />
-                                       </VBox.margin>
-                                    </Text>
-                                    <Text fill="#6f6969" strokeType="OUTSIDE" strokeWidth="0.0" text="Definisi Kekerasan dalam Rumah Tangga atau KDRT, sebagaimana dikemukakan  dalam Pasal 1 UU Nomor 23 tahun 2004 tentang Penghapusan Kekerasan dalam Rumah Tangga (UU PKDRT) adalah setiap perbuatan terhadap seseorang terutama perempuan, yang berakibat timbulnya kesengsaraan. Definisi Kekerasan dalam Rumah Tangga atau KDRT, sebagaimana dikemukakan  dalam Pasal 1 UU Nomor 23 tahun 2004 tentang Penghapusan Kekerasan dalam Rumah Tangga (UU PKDRT) adalah setiap perbuatan terhadap seseorang terutama perempuan, yang berakibat timbulnya kesengsaraan yang terjadi. karena itu undang-undang ini dibuat supaya kita semua para kaum wanita tidak hanya diam saja saat menerima perlakuan " wrappingWidth="393.3333740234375">
-                                       <font>
-                                          <Font name="Segoe UI" size="11.0" />
-                                       </font>
-                                       <VBox.margin>
-                                          <Insets left="10.0" top="10.0" />
-                                       </VBox.margin>
-                                    </Text>
-                                 </children>
-                              </VBox>
-                           </children>
-                        </AnchorPane>
-                    </content>
-                  </ScrollPane>
+                  <TableView fx:id="tblpostingan" layoutX="14.0" layoutY="97.0" prefHeight="91.0" prefWidth="409.0">
+                    <columns>
+                      <TableColumn fx:id="idpost" prefWidth="32.66668701171875" text="ID" />
+                      <TableColumn fx:id="namapost" prefWidth="177.9999542236328" text="Nama Lengkap" />
+                        <TableColumn fx:id="usrnamepost" prefWidth="75.0" text="Username" />
+                        <TableColumn fx:id="tglpost" prefWidth="121.33336385091144" text="Tanggal Postingan" />
+                    </columns>
+                  </TableView>
+                  <VBox layoutX="15.0" layoutY="194.0" prefHeight="182.0" prefWidth="113.0">
+                     <children>
+                        <Label text="Nama Lengkap" />
+                        <Label text="Username">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Tanggal Postingan">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Isi Postingan">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Status Postingan">
+                           <VBox.margin>
+                              <Insets top="60.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="161.0" layoutY="195.0" prefHeight="182.0" prefWidth="229.0">
+                     <children>
+                        <Text fx:id="namadetail" strokeType="OUTSIDE" strokeWidth="0.0" />
+                        <Text fx:id="usrnmdetail" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Text>
+                        <DatePicker fx:id="tgldetail">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </DatePicker>
+                        <TextArea fx:id="isidetail" prefHeight="69.0" prefWidth="217.0">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </TextArea>
+                        <Text fx:id="status" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <VBox.margin>
+                              <Insets top="3.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                  </VBox>
                </children></AnchorPane>
                 <ImageView fitHeight="89.0" fitWidth="138.0" layoutX="-5.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true">
                     <image>

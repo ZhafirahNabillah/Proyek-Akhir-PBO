@@ -9,6 +9,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class User extends ORM {
+
+
+
     private static final String TABLE_NAME="User";
     private static int IdUser;
     private static String NamaLengkap;
@@ -96,7 +99,7 @@ public class User extends ORM {
     }
 
     public void setUsername(String username) {
-        Username = username;
+        User.Username = username;
     }
 
     public String getPassword() {

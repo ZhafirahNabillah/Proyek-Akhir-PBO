@@ -71,12 +71,12 @@
                   <TextArea layoutX="22.0" layoutY="159.0" prefHeight="118.0" prefWidth="380.0" promptText="Tuliskan artikel atau cerita anda........" style="-fx-background-radius: 12;" />
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                   <Button fx:id="btnPosting" layoutX="185.0" layoutY="285.0" mnemonicParsing="false" onAction="#clickBtnPostingan" prefHeight="20.0" prefWidth="64.0" style="-fx-background-color: #fe4680; -fx-background-radius: 20;" text="Posting" textFill="#f0ecec" />
-                  <Text layoutX="22.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Irene Cynthia">
+                  <Text fx:id="nama" layoutX="22.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Irene Cynthia">
                      <font>
                         <Font name="Square721 BT Roman" size="15.0" />
                      </font>
                   </Text>
-                  <Text layoutX="22.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="cynthia">
+                  <Text fx:id="username" layoutX="22.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="cynthia">
                      <font>
                         <Font name="Calibri" size="12.0" />
                      </font>

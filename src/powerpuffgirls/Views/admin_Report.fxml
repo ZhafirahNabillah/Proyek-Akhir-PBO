@@ -7,10 +7,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="powerpuffgirls.Controller.AdminReportController">
     <children>
@@ -93,56 +90,7 @@
                     <tabs>
                         <Tab text="Laporan Diterima">
                             <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffcccc;">
-                                    <children>
-                                        <HBox layoutY="7.0" prefHeight="34.0" prefWidth="481.0">
-                                            <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Irene Cynthia  " wrappingWidth="150.0">
-                                                    <HBox.margin>
-                                                        <Insets left="20.0" />
-                                                    </HBox.margin></Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\@cynthiairene">
-                                                    <HBox.margin>
-                                                        <Insets left="-155.0" top="15.0" />
-                                                    </HBox.margin>
-                                                </Text>
-                                                <Button fx:id="btnDetail" mnemonicParsing="false" onAction="#clickDetail" style="-fx-background-color: #fe4680; -fx-background-radius: 8;" text="Detail" textFill="WHITE">
-                                                    <font>
-                                                        <Font name="Square721 BT Roman" size="12.0" />
-                                                    </font>
-                                                    <HBox.margin>
-                                                        <Insets bottom="5.0" left="270.0" right="10.0" top="5.0" />
-                                                    </HBox.margin>
-                                                </Button>
-                                            </children>
-                                        </HBox>
-                                        <HBox layoutY="41.0" prefHeight="39.0" prefWidth="481.0">
-                                            <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dewi Chantika Maya" wrappingWidth="147.3333740234375">
-                                                    <HBox.margin>
-                                                        <Insets left="20.0" />
-                                                    </HBox.margin>
-                                                </Text>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\@chantikamaya">
-                                                    <HBox.margin>
-                                                        <Insets left="-150.0" top="15.0" />
-                                                    </HBox.margin>
-                                                </Text>
-                                                <Button fx:id="btnDetail" mnemonicParsing="false" onAction="#clickDetail" style="-fx-background-color: #fe4680; -fx-background-radius: 8;" text="Detail" textFill="WHITE">
-                                                    <font>
-                                                        <Font name="Square721 BT Roman" size="12.0" />
-                                                    </font>
-                                                    <HBox.margin>
-                                                        <Insets bottom="5.0" left="260.0" top="5.0" />
-                                                    </HBox.margin>
-                                                </Button>
-                                            </children>
-                                            <padding>
-                                                <Insets top="5.0" />
-                                            </padding>
-                                        </HBox>
-                                    </children>
-                                </AnchorPane>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffcccc;" />
                             </content>
                         </Tab>
                     </tabs>
