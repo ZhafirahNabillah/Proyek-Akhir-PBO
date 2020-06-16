@@ -5,7 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import powerpuffgirls.Models.User1;
+import powerpuffgirls.Models.User;
 import powerpuffgirls.Utils.DBConnection;
 import java.net.URL;
 import java.sql.*;
@@ -46,7 +46,7 @@ public class LoginController implements Initializable {
         String nohp = null;
         String tgl = null;
         try {
-            User1.setUsrname(txtusername.getText());
+            User.setUsrname(txtusername.getText());
             PreparedStatement ps = connec.connection().prepareStatement("Select * from user where Username ='"+txtusername.getText()+"'");
             ResultSet st =ps.executeQuery();
             while (st.next()){
@@ -57,12 +57,12 @@ public class LoginController implements Initializable {
                 nohp=st.getString("NoHP");
                 tgl=st.getString("TanggalLahir");
             }
-            User1.setNamalengkap(nama);
-            User1.setUsrname(usr);
-            User1.setPasswrd(pass);
-            User1.setMail(email);
-            User1.setNoHP(nohp);
-            User1.setTgllahir(tgl);
+            User.setNamalengkap(nama);
+            User.setUsrname(usr);
+            User.setPasswrd(pass);
+            User.setMail(email);
+            User.setNoHP(nohp);
+            User.setTgllahir(tgl);
 
             PreparedStatement pre = connec.connection().prepareStatement("SELECT * FROM user where Username=? and Password=?");
             pre.setString(1, txtusername.getText());

@@ -1,136 +1,165 @@
 package powerpuffgirls.Models;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 
-public class User extends ORM {
+public class User {
 
 
+    public User(String id, String nama, String username, String password, String email, String noHP, String tanggal) {
+        this.id = new SimpleStringProperty(id);
+        this.nama = new SimpleStringProperty(nama);
+        this.username = new SimpleStringProperty(username);
+        this.password = new SimpleStringProperty(password);
+        this.email = new SimpleStringProperty(email);
+        this.nohp = new SimpleStringProperty(noHP);
+        this.tanggal = new SimpleStringProperty(tanggal);
 
-    private static final String TABLE_NAME="User";
-    private static int IdUser;
-    private static String NamaLengkap;
-    private static String Username;
-    private static String Password;
-    private static String Email;
-    private static String NoHP;
-    private static String TanggalLahir;
-
-    public User(int idUser, String namaLengkap, String username, String password, String email, String noHP, String tanggalLahir) {
-        IdUser = idUser  ;
-        NamaLengkap = namaLengkap;
-        Username = username;
-        Password = password;
-        Email = email;
-        NoHP = noHP;
-        TanggalLahir = tanggalLahir;
     }
 
-    public static ArrayList<User> getUser(){
-        ResultSet result = selectAll(TABLE_NAME);
-        ArrayList<User> users=new ArrayList<>();
-        try {
-            while (result.next()){
-                int IdUser= result.getInt("IdUser");
-                String NamaLengkap= result.getString("NamaLengkap");
-                String Username= result.getString("Username");
-                String Password= result.getString("Password");
-                String Email= result.getString("Email");
-                String NoHP= result.getString("NoHP");
-                String TanggalLahir= result.getString("TanggalLahir");
-                User usersModel = new User(IdUser,NamaLengkap,Username,Password,Email,NoHP,TanggalLahir);
-                users.add(usersModel);
-            }
-        }catch (Exception exception){
-            exception.printStackTrace();
-        }
-        return users;
+    private static String usrname;
+    private static String namalengkap;
+    private static String passwrd;
+    private static String mail;
+    private static String noHP;
+    private static String tgllahir;
+    private StringProperty id;
+    private StringProperty nama;
+    private StringProperty username;
+    private StringProperty password;
+    private StringProperty email;
+    private StringProperty nohp;
+    private StringProperty tanggal;
+
+    public static String getUsrname() {
+        return usrname;
     }
 
-//    public static int getLoginValue(Connection connection, PreparedStatement preparedStatement, ResultSet resultSet, String username, String password) {
-//        String query = "SELECT * FROM users WHERE username = ? AND password = ?";
-//        try {
-//            preparedStatement = connection.prepareStatement(query);
-//            preparedStatement.setString(1, username);
-//            preparedStatement.setString(2, password);
-//
-//            resultSet = preparedStatement.executeQuery();
-//
-//            if (!resultSet.next()) {
-//                return 0;
-//            } else {
-//                return resultSet.getInt("IdUser");
-//            }
-//
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//
-//        return 0;
-//    }
-
-    public static boolean insertUser(String namaLengkap,String username,String password,String email,String noHP,String tanggalLahir){
-        Map<String,String> data= new HashMap<String, String>();
-        data.put("NamaLengkap","'"+ namaLengkap +"'");
-        data.put("Username","'"+username+"'");
-        data.put("Password","'"+password+"'");
-        data.put("Email","'"+email+"'");
-        data.put("NoHP","'"+noHP+"'");
-        data.put("TanggalLahir","'"+tanggalLahir+"'");
-        boolean status= insert(TABLE_NAME,data);
-        return status;
+    public static void setUsrname(String usrname) {
+        User.usrname = usrname;
     }
 
-    public String getNamaLengkap() {
-        return NamaLengkap;
+    public static String getNamalengkap() {
+        return namalengkap;
     }
 
-    public void setNamaLengkap(String namaLengkap) {
-        NamaLengkap = namaLengkap;
+    public static void setNamalengkap(String namalengkap) {
+        User.namalengkap = namalengkap;
+    }
+
+    public String getId() {
+        return id.get();
+    }
+
+    public StringProperty idProperty() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id.set(id);
+    }
+
+    public String getNama() {
+        return nama.get();
+    }
+
+    public StringProperty namaProperty() {
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama.set(nama);
     }
 
     public String getUsername() {
-        return Username;
+        return username.get();
+    }
+
+    public StringProperty usernameProperty() {
+        return username;
     }
 
     public void setUsername(String username) {
-        User.Username = username;
+        this.username.set(username);
     }
 
     public String getPassword() {
-        return Password;
+        return password.get();
+    }
+
+    public StringProperty passwordProperty() {
+        return password;
     }
 
     public void setPassword(String password) {
-        Password = password;
+        this.password.set(password);
     }
 
     public String getEmail() {
-        return Email;
+        return email.get();
+    }
+
+    public StringProperty emailProperty() {
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email.set(email);
     }
 
-    public String getNoHP() {
-        return NoHP;
+    public String getNohp() {
+        return nohp.get();
     }
 
-    public void setNoHP(String noHP) {
-        NoHP = noHP;
+    public StringProperty nohpProperty() {
+        return nohp;
     }
 
-    public String getTanggalLahir() {
-        return TanggalLahir;
+    public void setNohp(String nohp) {
+        this.nohp.set(nohp);
     }
 
-    public void setTanggalLahir(String tanggalLahir) {
-        TanggalLahir = tanggalLahir;
+    public String getTanggal() {
+        return tanggal.get();
+    }
+
+    public StringProperty tanggalProperty() {
+        return tanggal;
+    }
+
+    public void setTanggal(String tanggal) {
+        this.tanggal.set(tanggal);
+    }
+
+    public static String getPasswrd() {
+        return passwrd;
+    }
+
+    public static void setPasswrd(String passwrd) {
+        User.passwrd = passwrd;
+    }
+
+    public static String getMail() {
+        return mail;
+    }
+
+    public static void setMail(String mail) {
+        User.mail = mail;
+    }
+
+    public static String getNoHP() {
+        return noHP;
+    }
+
+    public static void setNoHP(String noHP) {
+        User.noHP = noHP;
+    }
+
+    public static String getTgllahir() {
+        return tgllahir;
+    }
+
+    public static void setTgllahir(String tgllahir) {
+        User.tgllahir = tgllahir;
     }
 }

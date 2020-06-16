@@ -2,13 +2,12 @@ package powerpuffgirls.Controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import powerpuffgirls.Models.User;
+import javafx.scene.control.*;
+import powerpuffgirls.Utils.DBConnection;
 
-import javax.swing.*;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 import static powerpuffgirls.Utils.Helper.changePage;
 
 public class Register {
@@ -37,6 +36,8 @@ public class Register {
     @FXML
     private PasswordField password;
 
+    PreparedStatement ps;
+
     @FXML
     void LogInClick(ActionEvent event) {
         changePage(event, "login");
@@ -46,12 +47,20 @@ public class Register {
     void RegisterClick(ActionEvent event) {
         changePage(event, "login");
 
-        System.out.println(tanggalLahir.getValue().toString());
-    boolean status = User.insertUser(Name.getText(),username.getText(),password.getText(),email.getText(),noHP.getText(),tanggalLahir.getValue().toString());
-        if (status==true){
-            JOptionPane.showMessageDialog (null, "Akun anda telah aktif ! Silahkan Masuk !", "BERHASIL", JOptionPane.INFORMATION_MESSAGE);
-        }else{
-            JOptionPane.showMessageDialog (null, "Maaf, terjadi kesalahan dalam mendaftar ! Coba lagi !", "GAGAL", JOptionPane.WARNING_MESSAGE);
+        DBConnection connec=new DBConnection();
+        String name = Name.getText();
+        String user = username.getText();
+        String pass = password.getText();
+        String mail= email.getText();
+        String noHand = noHP.getText();
+        String tgl = tanggalLahir.getValue().toString();
+        try {
+            ps=connec.connection().prepareStatement("INSERT INTO user (NamaLengkap,Username,Password,Email,NoHP,TanggalLahir) values ('"+name+"','"+user+"','"+pass+"','"+mail+"','"+noHand +"','"+tgl+"')");
+            ps.execute();
+            Alert a = new Alert(Alert.AlertType.INFORMATION, "Akun Telah Aktif !");
+            a.showAndWait();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 }

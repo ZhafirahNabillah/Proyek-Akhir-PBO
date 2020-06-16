@@ -6,7 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
-import powerpuffgirls.Models.User1;
+import powerpuffgirls.Models.User;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -105,7 +105,7 @@ public class PageProfileController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        txt_Name.setText(User1.getNamalengkap());
-        txt_Username.setText(User1.getUsrname());
+        txt_Name.setText(User.getNamalengkap());
+        txt_Username.setText(User.getUsrname());
     }
 }

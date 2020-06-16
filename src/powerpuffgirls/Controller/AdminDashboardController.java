@@ -10,7 +10,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import powerpuffgirls.Models.Psikolog;
-import powerpuffgirls.Models.User1;
+import powerpuffgirls.Models.User;
 import powerpuffgirls.Utils.DBConnection;
 
 import java.net.URL;
@@ -24,25 +24,25 @@ import static powerpuffgirls.Utils.Helper.changePage;
 public class AdminDashboardController implements Initializable {
 
     @FXML
-    private TableView<User1> tblpenggu;
+    private TableView<User> tblpenggu;
 
     @FXML
-    private TableColumn<User1, Integer> idpengguna;
+    private TableColumn<User, Integer> idpengguna;
 
     @FXML
-    private TableColumn<User1, String> namapengguna;
+    private TableColumn<User, String> namapengguna;
 
     @FXML
-    private TableColumn<User1, String> uspengguna;
+    private TableColumn<User, String> uspengguna;
 
     @FXML
-    private TableColumn<User1, String> passwordpengguna;
+    private TableColumn<User, String> passwordpengguna;
 
     @FXML
-    private TableColumn<User1, String> emailpengguna;
+    private TableColumn<User, String> emailpengguna;
 
     @FXML
-    private TableColumn<User1, String> nopengguna;
+    private TableColumn<User, String> nopengguna;
 
     @FXML
     private Text iddetail;
@@ -125,7 +125,7 @@ public class AdminDashboardController implements Initializable {
     @FXML
     private Text idPSikolog;
 
-    ObservableList <User1> tbllpengguna;
+    ObservableList <User> tbllpengguna;
     ObservableList<Psikolog> tbllpsikolog;
     PreparedStatement ps;
     ResultSet rs;
@@ -163,7 +163,7 @@ public class AdminDashboardController implements Initializable {
             ps=connec.connection().prepareStatement("SELECT * FROM user");
             rs=ps.executeQuery();
             while (rs.next()){
-                tbllpengguna.add(new User1(rs.getString("idUser"),rs.getString("NamaLengkap"),rs.getString("Username"),rs.getString("Password"),rs.getString("Email"),rs.getString("NoHP"),rs.getString("TanggalLahir")));
+                tbllpengguna.add(new User(rs.getString("idUser"),rs.getString("NamaLengkap"),rs.getString("Username"),rs.getString("Password"),rs.getString("Email"),rs.getString("NoHP"),rs.getString("TanggalLahir")));
             }
             //[[]]
             //[[1,maya,username,pas][2,maya1,user]]
@@ -198,7 +198,7 @@ public class AdminDashboardController implements Initializable {
 
     private void nampilin2(){
         tblpenggu.setOnMouseClicked(e ->{
-            User1 akun=tblpenggu.getItems().get(tblpenggu.getSelectionModel().getFocusedIndex());
+            User akun=tblpenggu.getItems().get(tblpenggu.getSelectionModel().getFocusedIndex());
             iddetail.setText(akun.getId());
             namadetail.setText(akun.getNama());
             userdetail.setText(akun.getUsername());

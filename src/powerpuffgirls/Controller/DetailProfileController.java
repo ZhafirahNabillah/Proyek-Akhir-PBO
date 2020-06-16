@@ -4,10 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
-import powerpuffgirls.Models.User1;
+import powerpuffgirls.Models.User;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -107,13 +106,13 @@ public class DetailProfileController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        txt_Name.setText(User1.getNamalengkap());
-        txt_Username.setText(User1.getUsrname());
-        nama.setText(User1.getNamalengkap());
-        usrname.setText(User1.getUsrname());
-        pass.setText(User1.getPasswrd());
-        email.setText(User1.getMail());
-        noHP.setText(User1.getNoHP());
-        tanggal.setText(User1.getTgllahir());
+        txt_Name.setText(User.getNamalengkap());
+        txt_Username.setText(User.getUsrname());
+        nama.setText(User.getNamalengkap());
+        usrname.setText(User.getUsrname());
+        pass.setText(User.getPasswrd());
+        email.setText(User.getMail());
+        noHP.setText(User.getNoHP());
+        tanggal.setText(User.getTgllahir());
     }
 }

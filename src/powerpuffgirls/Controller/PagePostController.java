@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
-import powerpuffgirls.Models.User1;
+import powerpuffgirls.Models.User;
 
 import javax.swing.*;
 
@@ -69,7 +69,7 @@ public class PagePostController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        nama.setText(User1.getNamalengkap());
-        username.setText(User1.getUsrname());
+        nama.setText(User.getNamalengkap());
+        username.setText(User.getUsrname());
     }
 }

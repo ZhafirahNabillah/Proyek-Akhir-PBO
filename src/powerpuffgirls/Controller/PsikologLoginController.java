@@ -8,10 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import powerpuffgirls.Models.Psikolog;
-import powerpuffgirls.Models.User1;
 import powerpuffgirls.Utils.DBConnection;
-
-import javax.swing.*;
 
 import java.net.URL;
 import java.sql.PreparedStatement;
