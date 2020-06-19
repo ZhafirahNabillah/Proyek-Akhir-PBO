@@ -87,6 +87,12 @@ public class PageProfileController implements Initializable {
     @FXML
     private Text id;
 
+    @FXML
+    private Text idUser;
+
+    @FXML
+    private Button hapus;
+
     ObservableList<Postingan> tblpostingan2;
     PreparedStatement ps;
     ResultSet rs;
@@ -122,23 +128,52 @@ public class PageProfileController implements Initializable {
 
     @FXML
     void klikBatal(ActionEvent event) {
+        id.setText("");
+        namadetail.setText("");
+        usrnmdetail.setText("");
+        isidetail.setText("");
+        tgldetail.setText("");
+        status.setText("");
+    }
 
+    @FXML
+    void klikHapus(ActionEvent event) {
+        DBConnection connec=new DBConnection();
+        String idPostingan = id.getText();
+        String nama = namadetail.getText();
+        String us = usrnmdetail.getText();
+        String date = tgldetail.getText();
+        String isi = isidetail.getText();
+        String sta = status.getText();
+        String idUs = idUser.getText();
+
+        try {
+            ps=connec.connection().prepareStatement("DELETE FROM postingan where IdPostingan='"+idPostingan+"' ");
+            ps.execute();
+            Alert a = new Alert(Alert.AlertType.INFORMATION, "POSTINGAN TELAH DIHAPUS!");
+            a.showAndWait();
+            MasukPostingan();
+            Reset();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     void klikUbah(ActionEvent event) {
         DBConnection connec=new DBConnection();
-        String idPostingan=id.getText();
-        String name = namadetail.getText();
+        String idPostingan = id.getText();
+        String nama = namadetail.getText();
         String us = usrnmdetail.getText();
         String date = tgldetail.getText();
-        String post = isidetail.getText();
-        String stat = status.getText();
+        String isi = isidetail.getText();
+        String sta = status.getText();
+        String idUs = idUser.getText();
+
         try {
-            ps=connec.connection().prepareStatement("INSERT INTO postingan (IdPostingan,NamaLengkap,Username,IsiPostingan,TanggalPosting,StatusPostingan) values ('"+idPostingan+"','"+name+"','"+us+"','"+post+"','"+date+"','"+stat+"') on duplicate key update IdPostingan='"+idPostingan+"',NamaLengkap='"+name+"'" +
-                    ",Username='"+us+"',IsiPostingan='"+post+"',TanggalPosting='"+date+"',Status='"+stat+"'");
+            ps=connec.connection().prepareStatement("INSERT INTO postingan (IdPostingan,NamaLengkap,Username,IsiPostingan,TanggalPosting,StatusPostingan,IdUser) values ('"+idPostingan+"','"+nama+"','"+us+"','"+isi+"','"+date+"','"+sta+"','"+idUs+"') on duplicate key update IdPostingan='"+idPostingan+"',NamaLengkap='"+nama+"',Username='"+us+"',IsiPostingan='"+isi+"',TanggalPosting='"+date+"',StatusPostingan='"+sta+"',IdUser='"+idUs+"' ");
             ps.execute();
-            Alert a = new Alert(Alert.AlertType.INFORMATION, "Data Berhasil Diubah !");
+            Alert a = new Alert(Alert.AlertType.INFORMATION, "POSTINGAN DIUBAH!");
             a.showAndWait();
             MasukPostingan();
         } catch (SQLException e) {
@@ -148,9 +183,10 @@ public class PageProfileController implements Initializable {
 
     private void MasukPostingan(){
         DBConnection connec = new DBConnection();
+        String idUs = idUser.getText();
         try {
             tblpostingan2= FXCollections.observableArrayList();
-            ps=connec.connection().prepareStatement("SELECT * FROM postingan where NamaLengkap='"+txt_Name.getText()+"'&&Username='"+txt_Username.getText()+"'");
+            ps=connec.connection().prepareStatement("SELECT * FROM postingan where IdUser='"+idUs+"'");
             rs=ps.executeQuery();
             while (rs.next()){
                 tblpostingan2.add(new Postingan(rs.getString("IdPostingan"),rs.getString("NamaLengkap"),rs.getString("Username"),rs.getString("IsiPostingan"),rs.getString("TanggalPosting"),rs.getString("StatusPostingan"),rs.getString("IdUser")));
@@ -174,6 +210,7 @@ public class PageProfileController implements Initializable {
     public void nampilinpostingan(){
         tblpostingan.setOnMouseClicked(e ->{
             Postingan tampilan =tblpostingan.getItems().get(tblpostingan.getSelectionModel().getFocusedIndex());
+            id.setText(tampilan.getId());
             namadetail.setText(tampilan.getNama());
             usrnmdetail.setText(tampilan.getUsername());
             tgldetail.setText(tampilan.getTanggal());
@@ -182,10 +219,20 @@ public class PageProfileController implements Initializable {
         });
     }
 
+    public void Reset(){
+        id.setText("");
+        namadetail.setText("");
+        usrnmdetail.setText("");
+        isidetail.setText("");
+        tgldetail.setText("");
+        status.setText("");
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         txt_Name.setText(User.getNamalengkap());
         txt_Username.setText(User.getUsrname());
+        idUser.setText(User.getIduser());
         MasukPostingan();
         nampilinpostingan();
     }

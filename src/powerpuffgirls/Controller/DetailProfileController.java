@@ -65,9 +65,6 @@ public class DetailProfileController implements Initializable {
     private Button simpan;
 
     @FXML
-    private Button hapus;
-
-    @FXML
     private Button reset;
 
     @FXML
@@ -92,11 +89,6 @@ public class DetailProfileController implements Initializable {
 
     @FXML
     void clickBtnPsikolog(ActionEvent event) {changePage(event, "page_curhat");
-
-    }
-
-    @FXML
-    void clickHapus(ActionEvent event) {
 
     }
 
@@ -128,10 +120,9 @@ public class DetailProfileController implements Initializable {
         String mail = email.getText();
         String nohp= noHP.getText();
         String tgl = tanggal.getText();
-        String verif = "Konfirmasi ";
 
         try {
-            ps=connec.connection().prepareStatement("INSERT INTO user (IdUser,NamaLengkap,Username,Password,Email,NoHP,TanggalLahir,status) values ('"+id+"','"+name+"','"+usrnm+"','"+pas+"','"+mail+"','"+nohp+"','"+tgl+"','"+verif+"') on duplicate key update IdUser='"+id+"',NamaLengkap='"+name+"',Username='"+usrnm+"',Password='"+pas+"',Email='"+mail+"',NoHP='"+nohp+"',TanggalLahir='"+tgl+"',status = '"+verif+"' ");
+            ps=connec.connection().prepareStatement("INSERT INTO user (IdUser,NamaLengkap,Username,Password,Email,NoHP,TanggalLahir) values ('"+id+"','"+name+"','"+usrnm+"','"+pas+"','"+mail+"','"+nohp+"','"+tgl+"') on duplicate key update IdUser='"+id+"',NamaLengkap='"+name+"',Username='"+usrnm+"',Password='"+pas+"',Email='"+mail+"',NoHP='"+nohp+"',TanggalLahir='"+tgl+"'");
             ps.execute();
             Alert a = new Alert(Alert.AlertType.INFORMATION, "DATA BERHASIL DIUBAH !");
             a.showAndWait();

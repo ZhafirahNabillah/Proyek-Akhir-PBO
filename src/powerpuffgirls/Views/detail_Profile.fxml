@@ -220,12 +220,7 @@
                      <font>
                         <Font name="Century Gothic Bold" size="14.0" />
                      </font></Button>
-                  <Button fx:id="hapus" layoutX="533.0" layoutY="55.0" mnemonicParsing="false" onAction="#clickHapus" prefHeight="28.0" prefWidth="73.0" style="-fx-background-color: #cc0000; -fx-background-radius: 8;" text="Hapus" textFill="WHITE">
-                     <font>
-                        <Font name="Century Gothic Bold" size="14.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="reset" layoutX="623.0" layoutY="55.0" mnemonicParsing="false" onAction="#clickReset" prefHeight="28.0" prefWidth="73.0" style="-fx-background-color: #ffffff; -fx-background-radius: 8;" text="Reset" textFill="#fe4680">
+                  <Button fx:id="reset" layoutX="546.0" layoutY="55.0" mnemonicParsing="false" onAction="#clickReset" prefHeight="28.0" prefWidth="73.0" style="-fx-background-color: #ffffff; -fx-background-radius: 8;" text="Reset" textFill="#fe4680">
                      <font>
                         <Font name="Century Gothic Bold" size="14.0" />
                      </font>

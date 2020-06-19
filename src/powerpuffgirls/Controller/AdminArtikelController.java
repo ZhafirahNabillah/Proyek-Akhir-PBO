@@ -103,7 +103,7 @@ public class AdminArtikelController implements Initializable {
             Alert a = new Alert(Alert.AlertType.INFORMATION, "DATA TELAH SEPENUHNYA DIHAPUS");
             a.showAndWait();
             InsertTabel();
-            ViewTabel();
+            reset();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -111,7 +111,12 @@ public class AdminArtikelController implements Initializable {
 
     @FXML
     void klikReset(ActionEvent event) {
-
+        idArtikel.setText("");
+        nama.setText("");
+        kota.setText("");
+        date.setText("");
+        judul.setText("");
+        isi.setText("");
     }
 
     @FXML
@@ -120,7 +125,7 @@ public class AdminArtikelController implements Initializable {
         String id=idArtikel.getText();
         String name = nama.getText();
         String tempat = kota.getText();
-        String tgl = tanggal.getText();
+        String tgl = date.getText();
         String jdl= judul.getText();
         String artikel = isi.getText();
 
@@ -167,6 +172,15 @@ public class AdminArtikelController implements Initializable {
             judul.setText(artikel.getJudul());
             isi.setText(artikel.getIsiArtikel());
         });
+    }
+
+    public void reset(){
+        idArtikel.setText("");
+        nama.setText("");
+        kota.setText("");
+        date.setText("");
+        judul.setText("");
+        isi.setText("");
     }
 
     @Override

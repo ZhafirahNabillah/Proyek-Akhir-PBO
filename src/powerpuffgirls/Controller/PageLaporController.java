@@ -92,21 +92,24 @@ public class PageLaporController implements Initializable {
         try {
             PreparedStatement ps=connec.connection().prepareStatement("INSERT INTO laporan (NamaLengkap,TanggalKejadian,AlamatLengkap,NoHandphone,Kronologi,IdUser) values ('"+nama+"','"+tgl+"','"+rumah+"','"+no+"','"+cerita+"','"+id+"')");
             ps.execute();
-            if (tanggal.getValue().equals("")&&alamat.getText().equals("")&&noHp.getText().equals("")&&kronologi.getText().equals("")){
-                Alert a = new Alert(Alert.AlertType.WARNING, "DATA TIDAK BOLEH KOSONG!");
-                a.showAndWait();
-            }else{
                 Alert alert = new Alert(Alert.AlertType.INFORMATION,"DATA BERHASIL TERKIRIM!");
                 alert.showAndWait();
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+                reset();
+            } catch (SQLException ex) {
+            ex.printStackTrace();
         }
     }
 
     @FXML
     void clickBatal(ActionEvent event) {
+        reset();
+    }
 
+    public void reset(){
+        tanggal.getValue().equals("");
+        alamat.setText("");
+        noHp.setText("");
+        kronologi.setText("");
     }
 
     @Override

@@ -22,7 +22,7 @@
                         <AnchorPane layoutY="62.0" prefHeight="46.0" prefWidth="47.0" />
                   <VBox layoutY="70.0" prefHeight="123.0" prefWidth="55.0">
                      <children>
-                                <Button fx:id="btnAccount" mnemonicParsing="false" onAction="#clickAccount" prefHeight="36.0" prefWidth="55.0" style="-fx-background-color: #ff00;">
+                                <Button fx:id="btnAccount" mnemonicParsing="false" onAction="#clickAccount" prefHeight="36.0" prefWidth="55.0" style="-fx-background-color: #aaaa;">
                                     <graphic>
                                         <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
@@ -45,7 +45,7 @@
                               <Insets top="50.0" />
                            </VBox.margin>
                         </Button>
-                              <Button fx:id="btnReport" mnemonicParsing="false" onAction="#clickReport" prefHeight="36.0" prefWidth="55.0" style="-fx-background-color: #aaaa;">
+                              <Button fx:id="btnReport" mnemonicParsing="false" onAction="#clickReport" prefHeight="36.0" prefWidth="55.0" style="-fx-background-color: #ff00;">
                                   <graphic>
                                       <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                           <image>

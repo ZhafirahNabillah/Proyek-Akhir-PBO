@@ -84,6 +84,7 @@ public class AdminPostController implements Initializable {
             ps.execute();
             Alert a = new Alert(Alert.AlertType.INFORMATION, "DATA BERHASIL DI UPLOAD !");
             a.showAndWait();
+            reset();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -92,7 +93,7 @@ public class AdminPostController implements Initializable {
 
     @FXML
     void clickBatal(ActionEvent event) {
-
+        reset();
     }
 
     @FXML
@@ -102,6 +103,15 @@ public class AdminPostController implements Initializable {
     @FXML
     void clickLogout(ActionEvent event){changePage(event,"login");
 
+    }
+
+    public void reset(){
+        namaPen.setText("");
+        kota.setText("");
+        judul.setText("");
+        isi.setText("");
+        tanggal.getValue().equals("");
+        idAdmin.setText("");
     }
 
     @Override

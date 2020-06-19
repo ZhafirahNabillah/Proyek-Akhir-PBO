@@ -148,10 +148,10 @@
                      <children>
                         <Text fx:id="name" strokeType="OUTSIDE" strokeWidth="0.0">
                            <VBox.margin>
-                              <Insets bottom="15.0" />
+                              <Insets bottom="10.0" top="5.0" />
                            </VBox.margin>
                            <font>
-                              <Font size="14.0" />
+                              <Font name="Square721 BT Roman" size="14.0" />
                            </font>
                         </Text>
                         <DatePicker fx:id="tanggal" prefHeight="29.0" prefWidth="201.0">

@@ -95,14 +95,14 @@
                 </ImageView>
                 <AnchorPane layoutX="241.0" layoutY="68.0" prefHeight="500.0" prefWidth="787.0" style="-fx-background-color: #ffcccc; -fx-background-radius: 8;">
                     <children>
-                        <AnchorPane layoutY="-24.0" prefHeight="61.0" prefWidth="807.0" style="-fx-background-color: #ff9999; -fx-background-radius: 10;">
+                        <AnchorPane layoutY="-34.0" prefHeight="71.0" prefWidth="807.0" style="-fx-background-color: #ff9999; -fx-background-radius: 10;">
                             <children>
-                        <Text fx:id="namaPsi" layoutX="66.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" underline="true">
+                        <Text fx:id="namaPsi" layoutX="66.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0">
                            <font>
                               <Font name="Square721 BT Roman" size="14.0" />
                            </font>
                         </Text>
-                        <Text fx:id="noHP" layoutX="66.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                        <Text fx:id="noHP" layoutX="66.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0">
                            <font>
                               <Font name="Square721 BT Roman" size="14.0" />
                            </font>
@@ -120,29 +120,40 @@
                               <Font name="Square721 BT Roman" size="14.0" />
                            </font>
                         </Label>
-                        <Label layoutX="27.0" layoutY="69.0" text="Tanggal Lahir">
+                        <Label layoutX="27.0" layoutY="97.0" text="Tanggal Lahir">
                            <font>
                               <Font name="Square721 BT Roman" size="14.0" />
                            </font>
                         </Label>
-                        <Label layoutX="27.0" layoutY="114.0" text="Usia">
+                        <Label layoutX="27.0" layoutY="142.0" text="Usia">
                            <font>
                               <Font name="Square721 BT Roman" size="14.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="usia" layoutX="186.0" layoutY="108.0" prefHeight="30.0" prefWidth="184.0" promptText="Usia anda">
+                        <TextField fx:id="usia" layoutX="186.0" layoutY="136.0" prefHeight="30.0" prefWidth="184.0" promptText="Usia anda">
                            <font>
                               <Font size="14.0" />
                            </font></TextField>
-                        <TextField fx:id="nama" layoutX="186.0" layoutY="18.0" prefHeight="30.0" prefWidth="318.0" promptText="Nama lengkap anda">
-                           <font>
-                              <Font size="14.0" />
-                           </font></TextField>
-                        <DatePicker fx:id="tgl" layoutX="186.0" layoutY="63.0" prefHeight="30.0" prefWidth="248.0" />
-                        <TextArea fx:id="isiCurhat" layoutX="27.0" layoutY="146.0" prefHeight="239.0" prefWidth="534.0" promptText="Tuliskan Permasalahan dan Cerita anda secara detail.." style="-fx-background-color: #ff9999;">
+                        <DatePicker fx:id="tgl" layoutX="186.0" layoutY="91.0" prefHeight="30.0" prefWidth="248.0" />
+                        <TextArea fx:id="isiCurhat" layoutX="27.0" layoutY="179.0" prefHeight="206.0" prefWidth="534.0" promptText="Tuliskan Permasalahan dan Cerita anda secara detail.." style="-fx-background-color: #ff9999;">
                            <font>
                               <Font size="14.0" />
                            </font></TextArea>
+                        <Label layoutX="27.0" layoutY="58.0" text="No Handphone">
+                           <font>
+                              <Font name="Square721 BT Roman" size="14.0" />
+                           </font>
+                        </Label>
+                        <Text fx:id="noHand" layoutX="186.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <font>
+                              <Font name="Square721 BT Roman" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="nama" layoutX="186.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <font>
+                              <Font name="Square721 BT Roman" size="14.0" />
+                           </font>
+                        </Text>
                      </children>
                   </AnchorPane>
                   <Button fx:id="batal" layoutX="715.0" layoutY="266.0" mnemonicParsing="false" onAction="#klikBatal" prefHeight="28.0" prefWidth="65.0" style="-fx-background-color: #fe4680; -fx-background-radius: 15;" text="Batal" textFill="WHITE">
@@ -150,6 +161,7 @@
                         <Font name="Square721 BT Roman" size="14.0" />
                      </font>
                   </Button>
+                  <Text fx:id="idUser" layoutX="748.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" />
                     </children>
                 </AnchorPane>
             </children>
