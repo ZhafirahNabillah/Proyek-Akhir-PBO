@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
@@ -12,123 +13,148 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="powerpuffgirls.Controller.AdminPostController">
+<AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="powerpuffgirls.Controller.AdminPostController">
     <children>
-        <AnchorPane prefHeight="346.0" prefWidth="600.0" style="-fx-background-color: #fe4680;">
+        <AnchorPane prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: #fe4680;">
             <children>
-                <AnchorPane prefHeight="405.0" prefWidth="47.0" style="-fx-background-color: #ff9999;" />
-                <AnchorPane layoutX="30.0" layoutY="49.0" prefHeight="356.0" prefWidth="47.0" style="-fx-background-color: #ffcccc;">
+                <AnchorPane prefHeight="600.0" prefWidth="47.0" style="-fx-background-color: #ff9999;" />
+                <AnchorPane layoutX="30.0" layoutY="50.0" prefHeight="550.0" prefWidth="55.0" style="-fx-background-color: #ffcccc;">
                     <children>
-                  <VBox layoutY="23.0" prefHeight="173.0" prefWidth="47.0">
+                  <VBox layoutY="70.0" prefHeight="173.0" prefWidth="55.0">
                      <children>
                                 <Button fx:id="btnAccount" mnemonicParsing="false" onAction="#clickAccount" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #ff00;">
                                     <graphic>
-                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                        <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
                                                 <Image url="@../Gambar/user.png" />
                                             </image>
                                         </ImageView>
                                     </graphic>
                            <VBox.margin>
-                              <Insets top="20.0" />
+                              <Insets left="5.0" right="5.0" top="20.0" />
                            </VBox.margin>
                         </Button>
                               <Button fx:id="btnPostArticle" mnemonicParsing="false" onAction="#clickPostArticle" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #aaaa;">
                                   <graphic>
-                                      <ImageView fitHeight="22.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                      <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                           <image>
                                               <Image url="@../Gambar/plus.png" />
                                           </image>
                                       </ImageView>
                                   </graphic>
                            <VBox.margin>
-                              <Insets top="20.0" />
+                              <Insets left="5.0" right="5.0" top="50.0" />
                            </VBox.margin>
                         </Button>
                               <Button fx:id="btnReport" mnemonicParsing="false" onAction="#clickReport" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #ff00;">
                                   <graphic>
-                                      <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                      <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                           <image>
                                               <Image url="@../Gambar/folder.png" />
                                           </image>
                                       </ImageView>
                                   </graphic>
                            <VBox.margin>
-                              <Insets top="20.0" />
+                              <Insets left="5.0" right="5.0" top="50.0" />
                            </VBox.margin>
                         </Button>
-                        <Button fx:id="btnVerify" mnemonicParsing="false" onAction="#clickVerify" prefHeight="34.0" prefWidth="47.0" style="-fx-background-color: #ff00;">
+                        <Button mnemonicParsing="false" onAction="#klikArtikel" prefHeight="38.0" prefWidth="49.0" style="-fx-background-color: #ff00;">
                            <graphic>
-                              <ImageView fitHeight="150.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../Gambar/bell.png" />
+                                    <Image url="@../Gambar/edit.png" />
                                  </image>
                               </ImageView>
                            </graphic>
                            <VBox.margin>
-                              <Insets top="20.0" />
+                              <Insets left="5.0" right="5.0" top="50.0" />
                            </VBox.margin>
                         </Button>
                         <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#clickLogout" prefHeight="32.0" prefWidth="47.0" style="-fx-background-color: #ff00;">
                            <graphic>
-                                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                         <image>
                                             <Image url="@../Gambar/logout.png" />
                                         </image>
                                     </ImageView>
                            </graphic>
                            <VBox.margin>
-                              <Insets top="80.0" />
+                              <Insets left="5.0" right="5.0" top="50.0" />
                            </VBox.margin>
                         </Button>
                      </children>
                   </VBox>
                     </children></AnchorPane>
-                <ImageView fitHeight="93.0" fitWidth="173.0" layoutX="-5.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="131.0" fitWidth="250.0" layoutX="-5.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../Gambar/PPG_logo.png" />
                     </image>
                 </ImageView>
-            <AnchorPane layoutX="124.0" layoutY="47.0" prefHeight="347.0" prefWidth="460.0" style="-fx-background-color: #ffcccc; -fx-background-radius: 15;">
+            <AnchorPane layoutX="227.0" layoutY="98.0" prefHeight="471.0" prefWidth="835.0" style="-fx-background-color: #ffcccc; -fx-background-radius: 15;">
                <children>
-                  <Button fx:id="btnSend" layoutX="194.0" layoutY="315.0" mnemonicParsing="false" onAction="#clickSend" prefHeight="23.0" prefWidth="72.0" style="-fx-background-color: #fe4680; -fx-background-radius: 15;" text="Kirim" textFill="WHITE">
+                  <Button fx:id="btnSend" layoutX="369.0" layoutY="418.0" mnemonicParsing="false" onAction="#clickSend" prefHeight="23.0" prefWidth="72.0" style="-fx-background-color: #fe4680; -fx-background-radius: 15;" text="Kirim" textFill="WHITE">
                      <font>
-                        <Font name="Square721 BT Bold" size="12.0" />
+                        <Font name="Square721 BT Roman" size="14.0" />
                      </font>
                   </Button>
-                  <VBox layoutX="24.0" layoutY="19.0" prefHeight="65.0" prefWidth="165.0">
+                  <VBox layoutX="100.0" layoutY="43.0" prefHeight="65.0" prefWidth="165.0">
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Penerbit">
                            <font>
-                              <Font name="Square721 BT Roman" size="12.0" />
+                              <Font name="Square721 BT Roman" size="14.0" />
                            </font></Text>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kota Penerbit">
                            <VBox.margin>
-                              <Insets top="13.0" />
+                              <Insets top="20.0" />
                            </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
                         </Text>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal Penerbit">
                            <VBox.margin>
-                              <Insets top="13.0" />
+                              <Insets top="20.0" />
                            </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
                         </Text>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Judul Artikel/Berita">
                            <VBox.margin>
-                              <Insets top="13.0" />
+                              <Insets top="20.0" />
                            </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
                         </Text>
                      </children>
                   </VBox>
-                  <TextField layoutX="230.0" layoutY="15.0" prefHeight="25.0" prefWidth="203.0" />
-                  <TextField layoutX="230.0" layoutY="44.0" prefHeight="25.0" prefWidth="203.0" />
-                  <TextField layoutX="230.0" layoutY="73.0" prefHeight="25.0" prefWidth="203.0" />
-                  <TextField layoutX="230.0" layoutY="103.0" prefHeight="25.0" prefWidth="203.0" />
-                  <TextArea layoutX="14.0" layoutY="138.0" maxWidth="700.0" prefHeight="173.0" prefWidth="420.0" promptText="Tuliskan Artikel/Berita ..." style="-fx-background-radius: 10; -fx-background-color: #aaaa;" wrapText="true" />
+                  <TextField fx:id="namaPen" layoutX="339.0" layoutY="34.0" prefHeight="30.0" prefWidth="355.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+                  <TextField fx:id="kota" layoutX="339.0" layoutY="72.0" prefHeight="30.0" prefWidth="355.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+                  <TextField fx:id="judul" layoutX="339.0" layoutY="153.0" prefHeight="30.0" prefWidth="355.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+                  <TextArea fx:id="isi" layoutX="100.0" layoutY="206.0" maxWidth="700.0" prefHeight="173.0" prefWidth="640.0" promptText="Tuliskan Artikel/Berita ..." style="-fx-background-radius: 10; -fx-background-color: #aaaa;" wrapText="true" />
+                  <Button fx:id="batal" layoutX="484.0" layoutY="418.0" mnemonicParsing="false" onAction="#clickBatal" prefHeight="23.0" prefWidth="72.0" style="-fx-background-color: #fe4680; -fx-background-radius: 15;" text="Batal" textFill="WHITE">
+                     <font>
+                        <Font name="Square721 BT Roman" size="14.0" />
+                     </font>
+                  </Button>
+                  <DatePicker fx:id="tanggal" layoutX="339.0" layoutY="110.0" prefHeight="30.0" prefWidth="236.0" />
+                  <Label layoutX="20.0" layoutY="14.0" text="ADMIN" />
+                  <Text fx:id="idAdmin" layoutX="68.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" />
                </children>
             </AnchorPane>
-            <Label layoutX="314.0" layoutY="14.0" text="ARTIKEL" textFill="WHITE">
+            <Label layoutX="572.0" layoutY="23.0" text="ARTIKEL" textFill="WHITE">
                <font>
-                  <Font name="Square721 BT Bold" size="18.0" />
+                  <Font name="Segoe UI Italic" size="36.0" />
                </font>
             </Label>
             </children>

@@ -35,37 +35,50 @@ public class PsikologLoginController implements Initializable {
 
     @FXML
     void LogInClick(ActionEvent event) {
-        DBConnection connec  = new DBConnection();
-        String temp =null;
-        String tampung=null;
+        DBConnection connec = new DBConnection();
+        String id = null;
+        String nama = null;
+        String usrnm = null;
+        String pass = null;
+        String mail= null;
+        String nohp= null;
+        String tgl = null;
         try {
             Psikolog.setUsrname(username.getText());
-            PreparedStatement ps = connec.connection().prepareStatement("Select NamaLengkap from psikolog where Username ='"+username.getText()+"'");
-            ResultSet st =ps.executeQuery();
-            while (st.next()){
-                temp=st.getString( "NamaLengkap");
-                tampung=st.getString("NoHP");
+            PreparedStatement ps = connec.connection().prepareStatement("SELECT * from psikolog where Username='"+username.getText()+"'");
+            ResultSet set = ps.executeQuery();
+            while (set.next()){
+                id = set.getString("IdPsikolog");
+                nama=set.getString("NamaLengkap");
+                usrnm=set.getString("Username");
+                pass=set.getString("Password");
+                mail=set.getString("Email");
+                nohp=set.getString("NoHp");
+                tgl=set.getString("TanggalLahir");
             }
-            Psikolog.setNamaLengkap(temp);
-            Psikolog.setNoHandphone(tampung);
+            Psikolog.setIdPsi(id);
+            Psikolog.setNamaLengkap(nama);
+            Psikolog.setUsrname(usrnm);
+            Psikolog.setPass(pass);
+            Psikolog.setMail(mail);
+            Psikolog.setNoHandphone(nohp);
+            Psikolog.setTglLahir(tgl);
 
-            PreparedStatement pre = connec.connection().prepareStatement("SELECT * FROM psikolog where Username=? and Password=?");
-            pre.setString(1, username.getText());
-            pre.setString(2, password.getText());
-            ResultSet result = pre.executeQuery();
+            PreparedStatement pre = connec.connection().prepareStatement("SELECT * FROM psikolog where Username=? && Password=? ");
+            pre.setString(1,username.getText());
+            pre.setString(2,password.getText());
+            ResultSet resultSet = pre.executeQuery();
 
-            if (username.getText().equals("") && password.getText().equals("")) {
-//                JOptionPane.showMessageDialog(null, "username dan password kosong", "Peringatan", JOptionPane.WARNING_MESSAGE);
-                Alert a = new Alert(Alert.AlertType.WARNING, "Username dan Password yang anda masukkan tidak lengkap");
+            if (username.getText().equals("")&&password.getText().equals("")){
+                Alert a = new Alert(Alert.AlertType.WARNING,"Username dan Password tidak boleh kosong !");
                 a.showAndWait();
-            } else if (result.next()){
-                changePage(event,"psikolog_saran");
-            } else {
-//                JOptionPane.showMessageDialog(null, "username atau password salah", "Error", JOptionPane.ERROR_MESSAGE);
+            } else if (resultSet.next()){
+                changePage(event,"psikolog_curhat");
+            }else{
                 Alert alert = new Alert(Alert.AlertType.ERROR,"Maaf Username atau Password salah");
                 alert.showAndWait();
             }
-        }catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }

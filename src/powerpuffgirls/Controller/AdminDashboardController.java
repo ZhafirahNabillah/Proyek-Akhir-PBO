@@ -27,9 +27,6 @@ public class AdminDashboardController implements Initializable {
     private TableView<User> tblpenggu;
 
     @FXML
-    private TableColumn<User, Integer> idpengguna;
-
-    @FXML
     private TableColumn<User, String> namapengguna;
 
     @FXML
@@ -40,9 +37,6 @@ public class AdminDashboardController implements Initializable {
 
     @FXML
     private TableColumn<User, String> emailpengguna;
-
-    @FXML
-    private TableColumn<User, String> nopengguna;
 
     @FXML
     private Text iddetail;
@@ -137,7 +131,7 @@ public class AdminDashboardController implements Initializable {
             ps=connec.connection().prepareStatement("SELECT * FROM psikolog");
             rs=ps.executeQuery();
             while (rs.next()){
-                tbllpsikolog.add(new Psikolog(rs.getString("IdPsikolog"),rs.getString("NamaLengkap"),rs.getString("Username"),rs.getString("Password"),rs.getString("Email"),rs.getString("NoHP"),rs.getString("TanggalLahir")));
+                tbllpsikolog.add(new Psikolog(rs.getString("IdPsikolog"),rs.getString("NamaLengkap"),rs.getString("Username"),rs.getString("Password"),rs.getString("Email"),rs.getString("NoHp"),rs.getString("TanggalLahir")));
             }
             //[[]]
             //[[1,maya,username,pas][2,maya1,user]]
@@ -168,12 +162,10 @@ public class AdminDashboardController implements Initializable {
             //[[]]
             //[[1,maya,username,pas][2,maya1,user]]
 
-            idpengguna.setCellValueFactory(new PropertyValueFactory<>("id"));
             namapengguna.setCellValueFactory(new PropertyValueFactory<>("nama"));
             uspengguna.setCellValueFactory(new PropertyValueFactory<>("username"));
             passwordpengguna.setCellValueFactory(new PropertyValueFactory<>("password"));
             emailpengguna.setCellValueFactory(new PropertyValueFactory<>("email"));
-            nopengguna.setCellValueFactory(new PropertyValueFactory<>("nohp"));
 
             tblpenggu.setItems(null);
             tblpenggu.setItems(tbllpengguna);
@@ -224,10 +216,11 @@ public class AdminDashboardController implements Initializable {
     void clickReport(ActionEvent event) { changePage(event,"admin_report");}
 
     @FXML
-    void clickVerify(ActionEvent event){ changePage(event,"admin_verify");}
+    void clickLogout(ActionEvent event) {changePage(event,"login");}
 
     @FXML
-    void clickLogout(ActionEvent event) {changePage(event,"login");}
+    void klikArtikel(ActionEvent event) {changePage(event,"admin_artikel");
+    }
 
     @FXML
     void btnBatal(ActionEvent event) {
@@ -254,6 +247,10 @@ public class AdminDashboardController implements Initializable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    void klikVerify(ActionEvent event) {changePage(event,"admin_verify");
     }
 
     @Override

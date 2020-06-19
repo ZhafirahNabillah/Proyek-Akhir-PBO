@@ -4,6 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import powerpuffgirls.Models.Psikolog;
 import powerpuffgirls.Utils.DBConnection;
@@ -36,10 +39,29 @@ public class PageCurhatController implements Initializable {
     private Button btnSend;
 
     @FXML
-    private Text nama;
+    private Text namaPsi;
 
     @FXML
     private Text noHP;
+
+    @FXML
+    private TextField nama;
+
+    @FXML
+    private Button kirim;
+
+    @FXML
+    private TextField usia;
+
+    @FXML
+    private DatePicker tgl;
+
+    @FXML
+    private TextArea isiCurhat;
+
+    @FXML
+    private Button batal;
+
 
     @FXML
     void clickBtnHome(ActionEvent event) {changePage(event, "Dashboard");
@@ -57,44 +79,47 @@ public class PageCurhatController implements Initializable {
     }
 
     @FXML
-    void clickBtnPsikolog(ActionEvent event) {changePage(event, "page_curhat");
+    void clickBtnPsikolog(ActionEvent event) {
+        changePage(event, "page_curhat");
+    }
+
+
+    @FXML
+    void klikBatal(ActionEvent event) {
 
     }
 
     @FXML
-    void clickBtnSend(ActionEvent event) {
-        JOptionPane.showMessageDialog (null, "Berhasil Kirim !", "PEMBERITAHUAN", JOptionPane.INFORMATION_MESSAGE);
-    }
-
-    @FXML
-    void clickNotif(ActionEvent event) {
+    void klikKirim(ActionEvent event) {
 
     }
+
     @FXML
     void clickLogout(ActionEvent event) {
         changePage(event,"login");
     }
 
-    private void nampilin(){
-        DBConnection connec= new DBConnection();
-        String namaPsikolog = null;
-        String noHandphone = null;
+    private void Psi(){
+        DBConnection connec = new DBConnection();
+        String name = null;
+        String nohp= null;
         try {
-            PreparedStatement ps=connec.connection().prepareStatement("SELECT * from Psikolog");
-            ResultSet rs= ps.executeQuery();
-            while (rs.next()){
-                namaPsikolog=rs.getString("NamaLengkap");
-                noHandphone=rs.getString("NoHP");
+            PreparedStatement pre = connec.connection().prepareStatement("SELECT * FROM psikolog where IdPsikolog=1");
+            ResultSet rt = pre.executeQuery();
+            while (rt.next()){
+                name= rt.getString("NamaLengkap");
+                nohp=rt.getString("NoHp");
             }
-            nama.setText(namaPsikolog);
-            noHP.setText(noHandphone);
+            namaPsi.setText(name);
+            noHP.setText(nohp);
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        nampilin();
+       Psi();
     }
 }

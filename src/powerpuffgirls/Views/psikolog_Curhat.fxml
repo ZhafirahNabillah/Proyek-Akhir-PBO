@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="powerpuffgirls.Controller.PsikologCurhatController">
+    <children>
+        <AnchorPane prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: fe4068;">
+            <children>
+                <AnchorPane prefHeight="600.0" prefWidth="47.0" style="-fx-background-color: #ff9999;" />
+                <AnchorPane layoutX="30.0" layoutY="50.0" prefHeight="550.0" prefWidth="55.0" style="-fx-background-color: #ffcccc;">
+                    <children>
+                          <Button fx:id="btnCurhat" layoutY="166.0" mnemonicParsing="false" onAction="#clickCurhat" prefHeight="38.0" prefWidth="55.0" style="-fx-background-color: #aaaa;" AnchorPane.bottomAnchor="346.0" AnchorPane.topAnchor="166.0">
+                              <graphic>
+                                  <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                      <image>
+                                          <Image url="@../Gambar/folder.png" />
+                                      </image>
+                                  </ImageView>
+                              </graphic>
+                  </Button>
+                        <Button fx:id="btnProfile" layoutY="256.0" mnemonicParsing="false" onAction="#clickProfile" prefHeight="36.0" prefWidth="55.0" style="-fx-background-color: #ff00;">
+                            <graphic>
+                                <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Gambar/user.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic></Button>
+                  <Button layoutX="3.0" layoutY="425.0" mnemonicParsing="false" onAction="#clickLogout" prefHeight="37.0" prefWidth="50.0" style="-fx-background-color: #FF00;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Gambar/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                    </children></AnchorPane>
+                <ImageView fitHeight="131.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Gambar/PPG_logo.png" />
+                    </image>
+                </ImageView>
+                <AnchorPane layoutX="224.0" layoutY="33.0" prefHeight="532.0" prefWidth="791.0" style="-fx-background-color: #ffcccc; -fx-background-radius: 10;">
+                    <children>
+                  <ScrollPane layoutX="110.0" layoutY="296.0" prefHeight="214.0" prefWidth="553.0" AnchorPane.leftAnchor="110.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="325.0" prefWidth="577.0" style="-fx-background-color: #FFE4E1;">
+                           <children>
+                              <Text fx:id="isi" layoutX="14.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="507.3334045410156" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+                  <Group layoutX="151.8427734375" layoutY="236.892578125">
+                     <children>
+                                <Label layoutX="0.1572265625" layoutY="1.107421875" text="Nama Lengkap :">
+                                    <font>
+                                        <Font name="Square721 BT Roman" size="14.0" />
+                                    </font>
+                        </Label>
+                        <Text fx:id="umur" layoutX="408.1572265625" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="nama" layoutX="130.1572265625" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="noHand" layoutX="410.1572265625" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="tanggal" layoutX="130.1572265625" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Label layoutX="0.1572265625" layoutY="22.107421875" text="Tanggal Lahir :">
+                           <font>
+                              <Font name="Square721 BT Roman" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="286.1572265625" layoutY="21.107421875" text="No. Handphone :">
+                           <font>
+                              <Font name="Square721 BT Roman" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="286.1572265625" layoutY="1.107421875" text="Usia                :">
+                           <font>
+                              <Font name="Square721 BT Roman" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+                  <TableView fx:id="tblCurhat" layoutX="66.0" layoutY="38.0" prefHeight="177.0" prefWidth="631.0">
+                    <columns>
+                      <TableColumn fx:id="namaLengkap" prefWidth="244.6666259765625" text="Nama Lengkap" />
+                      <TableColumn fx:id="usia" prefWidth="130.0" text="Usia" />
+                        <TableColumn fx:id="noHP" prefWidth="256.0" text="No.Handphone" />
+                    </columns>
+                  </TableView>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+      <Accordion />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+    </children>
+</AnchorPane>

@@ -6,6 +6,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import powerpuffgirls.Models.Admin;
+import powerpuffgirls.Models.User;
 import powerpuffgirls.Utils.DBConnection;
 
 import javax.swing.*;
@@ -35,7 +37,16 @@ public class AdminLoginController {
     @FXML
     void LogInClick(ActionEvent event) {
         DBConnection connec  = new DBConnection();
+        String id1=null;
         try {
+            Admin.setUsrnm(username.getText());
+            PreparedStatement ps = connec.connection().prepareStatement("Select * from admin where Username ='"+username.getText()+"'");
+            ResultSet st =ps.executeQuery();
+            while (st.next()){
+                id1= st.getString("IdAdmin");
+            }
+            Admin.setIdAdmin(id1);
+
             PreparedStatement pre = connec.connection().prepareStatement("SELECT * FROM admin where Username=? and Password=?");
             pre.setString(1, username.getText());
             pre.setString(2, password.getText());

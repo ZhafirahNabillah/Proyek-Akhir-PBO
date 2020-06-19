@@ -15,6 +15,8 @@ public class Admin {
         this.tanggal = new SimpleStringProperty(tanggal);
     }
 
+    private static String idAdmin;
+    private static String usrnm;
     private StringProperty id;
     private StringProperty nama;
     private StringProperty username;
@@ -105,5 +107,21 @@ public class Admin {
 
     public void setTanggal(String tanggal) {
         this.tanggal.set(tanggal);
+    }
+
+    public static String getIdAdmin() {
+        return idAdmin;
+    }
+
+    public static void setIdAdmin(String idAdmin) {
+        Admin.idAdmin = idAdmin;
+    }
+
+    public static String getUsrnm() {
+        return usrnm;
+    }
+
+    public static void setUsrnm(String usrnm) {
+        Admin.usrnm = usrnm;
     }
 }

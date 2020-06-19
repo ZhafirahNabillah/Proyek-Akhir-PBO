@@ -39,6 +39,7 @@ public class LoginController implements Initializable {
     @FXML
     void LogInClick(ActionEvent event) {
         DBConnection connec  = new DBConnection();
+        String id=null;
         String nama = null;
         String usr = null;
         String pass = null;
@@ -50,6 +51,7 @@ public class LoginController implements Initializable {
             PreparedStatement ps = connec.connection().prepareStatement("Select * from user where Username ='"+txtusername.getText()+"'");
             ResultSet st =ps.executeQuery();
             while (st.next()){
+                id= st.getString("IdUser");
                 nama=st.getString( "NamaLengkap");
                 usr=st.getString("Username");
                 pass=st.getString("Password");
@@ -57,6 +59,7 @@ public class LoginController implements Initializable {
                 nohp=st.getString("NoHP");
                 tgl=st.getString("TanggalLahir");
             }
+            User.setIduser(id);
             User.setNamalengkap(nama);
             User.setUsrname(usr);
             User.setPasswrd(pass);

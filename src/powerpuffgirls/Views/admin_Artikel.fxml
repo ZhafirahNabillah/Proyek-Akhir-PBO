@@ -3,16 +3,18 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="powerpuffgirls.Controller.AdminReportController">
+<AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="powerpuffgirls.Controller.AdminArtikelController">
     <children>
         <AnchorPane prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: #fe4680;">
             <children>
@@ -45,7 +47,7 @@
                               <Insets top="50.0" />
                            </VBox.margin>
                         </Button>
-                              <Button fx:id="btnReport" mnemonicParsing="false" onAction="#clickReport" prefHeight="36.0" prefWidth="55.0" style="-fx-background-color: #aaaa;">
+                              <Button fx:id="btnReport" mnemonicParsing="false" onAction="#clickReport" prefHeight="36.0" prefWidth="55.0" style="-fx-background-color: #ff00;">
                                   <graphic>
                                       <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                           <image>
@@ -57,7 +59,7 @@
                               <Insets top="50.0" />
                            </VBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#klikArtikel" prefHeight="38.0" prefWidth="72.0" style="-fx-background-color: #ff00;">
+                        <Button mnemonicParsing="false" onAction="#klikArtikel" prefHeight="38.0" prefWidth="72.0" style="-fx-background-color: #aaaa;">
                            <VBox.margin>
                               <Insets top="50.0" />
                            </VBox.margin>
@@ -89,73 +91,117 @@
                         <Image url="@../Gambar/PPG_logo.png" />
                     </image>
                 </ImageView>
-            <AnchorPane layoutX="224.0" layoutY="43.0" prefHeight="525.0" prefWidth="848.0" style="-fx-background-color: #ffcccc; -fx-background-radius: 10;">
+            <AnchorPane layoutX="230.0" layoutY="47.0" prefHeight="525.0" prefWidth="825.0" style="-fx-background-color: #ffcccc; -fx-background-radius: 10;">
                <children>
-                  <TableView fx:id="tblLaporan" layoutX="132.0" layoutY="27.0" prefHeight="152.0" prefWidth="581.0">
+                  <TableView fx:id="tblArtikel" layoutX="111.0" layoutY="28.0" prefHeight="152.0" prefWidth="581.0">
                     <columns>
                       <TableColumn fx:id="tanggal" prefWidth="140.0" text="Tanggal" />
-                      <TableColumn fx:id="namaLengkap" prefWidth="205.99996948242188" text="Nama Lengkap" />
-                        <TableColumn fx:id="alamat" prefWidth="234.0" text="Alamat" />
+                      <TableColumn fx:id="namaPenerbit" prefWidth="205.99996948242188" text="Nama Penerbit" />
+                        <TableColumn fx:id="judulArtikel" prefWidth="234.0" text="Judul Artikel" />
                     </columns>
                   </TableView>
-                  <VBox layoutX="62.0" layoutY="226.0" prefHeight="200.0" prefWidth="129.0">
+                  <VBox layoutX="99.0" layoutY="223.0" prefHeight="200.0" prefWidth="129.0">
                      <children>
-                        <Label text="No Handphone">
+                        <Label text="Nama Penerbit">
                            <VBox.margin>
-                              <Insets bottom="10.0" />
+                              <Insets />
                            </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
                         </Label>
-                        <Label text="Nama Lengkap" />
-                        <Label text="Tanggal Kejadian">
+                        <Label text="Kota Penerbit">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
                            <VBox.margin>
-                              <Insets top="10.0" />
-                           </VBox.margin>
-                        </Label>
-                        <Label text="Alamat Pelapor">
-                           <VBox.margin>
-                              <Insets top="10.0" />
-                           </VBox.margin>
-                        </Label>
-                        <Label text="Kronologi Kejadian">
+                              <Insets top="20.0" />
+                           </VBox.margin></Label>
+                        <Label text="Tanggal Terbit">
                            <VBox.margin>
                               <Insets top="20.0" />
                            </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
                         </Label>
-                     </children>
-                  </VBox>
-                  <VBox layoutX="252.0" layoutY="215.0" prefHeight="261.0" prefWidth="541.0">
-                     <children>
-                        <Text fx:id="handphone" strokeType="OUTSIDE" strokeWidth="0.0">
-                           <VBox.margin>
-                              <Insets bottom="10.0" />
-                           </VBox.margin>
-                        </Text>
-                        <Text fx:id="nama" strokeType="OUTSIDE" strokeWidth="0.0" />
-                        <Text fx:id="tgl" strokeType="OUTSIDE" strokeWidth="0.0">
-                           <VBox.margin>
-                              <Insets top="10.0" />
-                           </VBox.margin>
-                        </Text>
-                        <Text fx:id="rumah" strokeType="OUTSIDE" strokeWidth="0.0">
-                           <VBox.margin>
-                              <Insets top="10.0" />
-                           </VBox.margin>
-                        </Text>
-                        <ScrollPane prefHeight="162.0" prefWidth="440.0">
-                          <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="564.0" style="-fx-background-color: #ffcccc;">
-                                 <children>
-                                    <Text fx:id="isi" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="400.0" />
-                                 </children>
-                              </AnchorPane>
-                          </content>
+                        <Label text="Judul Artikel">
                            <VBox.margin>
                               <Insets top="20.0" />
                            </VBox.margin>
-                        </ScrollPane>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Isi Artikel">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
                      </children>
                   </VBox>
-                  <Text fx:id="idLaporan" layoutX="66.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <VBox layoutX="268.0" layoutY="212.0" prefHeight="289.0" prefWidth="328.0">
+                     <children>
+                        <TextField fx:id="nama" promptText="Nama Penerbit">
+                           <VBox.margin>
+                              <Insets top="3.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="kota" promptText="Kota Penerbit">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="date">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="judul" promptText="Judul">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextArea fx:id="isi" prefHeight="116.0" prefWidth="328.0" promptText="Isi">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                  </VBox>
+                  <Text fx:id="idAdmin" layoutX="515.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Button layoutX="658.0" layoutY="278.0" mnemonicParsing="false" onAction="#klikSimpan" prefWidth="80.0" style="-fx-background-color: #fe4680; -fx-background-radius: 10;" text="Simpan" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Button layoutX="658.0" layoutY="323.0" mnemonicParsing="false" onAction="#klikReset" prefWidth="80.0" style="-fx-background-color: #fff9f9; -fx-background-radius: 10;" text="Reset" textFill="#d11818">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Button layoutX="658.0" layoutY="368.0" mnemonicParsing="false" onAction="#klikHapus" prefWidth="80.0" style="-fx-background-color: #c81010; -fx-background-radius: 10;" text="Hapus" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Text fx:id="idArtikel" layoutX="75.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Label layoutX="471.0" layoutY="188.0" text="ADMIN" />
                </children>
             </AnchorPane>
             </children>
